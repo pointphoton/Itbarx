@@ -99,7 +99,7 @@
                 <com.itbarx.custom.component.CustOpenBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="200"
+                    android:text="210"
                     android:textSize="17sp"
                     android:textColor="#666666"
                     android:layout_centerVertical="true"
