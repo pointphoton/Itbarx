@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <ImageView
+        android:id="@+id/item_imageView"
+        android:background="@android:color/darker_gray"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:contentDescription="item_imageView_contentDescription"
+        />
+    <TextView
+        android:id="@+id/item_fullNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_imageView"
+        android:text="full name"
+        />
+    <TextView
+        android:id="@+id/item_actionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_fullNameTextView"
+       android:text="liked"
+        />
+    <TextView
+        android:id="@+id/item_yourTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_actionTextView"
+        android:text="your"
+        />
+    <TextView
+        android:id="@+id/item_barkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_yourTextView"
+        android:text="your"
+        />
+</merge>

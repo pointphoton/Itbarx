@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    >
+    
+    
+    <RelativeLayout
+                android:id="@+id/changepassword_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="25" >
+
+                <TextView
+                    android:id="@+id/editprofile_activity_changepassword_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="10dp"
+                    android:text="@string/editprofile_activity_screen_changepassword_text"
+                    android:textColor="@color/editprofile_activity_info_text"
+                    android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+            </RelativeLayout>
+             <LinearLayout
+                android:id="@+id/changepassword_boxes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="150"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="3" >
+                
+                 <LinearLayout
+                    android:id="@+id/changepassword_oldpassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    
+                    android:background="@drawable/border_top_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_oldpassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_oldpassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_oldpassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_oldpassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+                
+                 <LinearLayout
+                    android:id="@+id/changepassword_newpassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                   
+                    android:background="@drawable/border_inner_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_newpassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_repassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_newpassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_newpassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/changepassword_repassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                                  android:background="@drawable/border_inner_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_repassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_repassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_repassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_repassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+</LinearLayout></LinearLayout>
+
+
+</LinearLayout>
+                
+ <!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/layout/test.xml -->

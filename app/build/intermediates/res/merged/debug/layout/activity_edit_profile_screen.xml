@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outer_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    android:scrollbarStyle="insideInset"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_bg"
+        android:minHeight="40dp"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/activity_edit_profile_screen_toolbar_leftarrow_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_left_arrow_createnewaccount" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="@string/editprofile_activity_screen_toolbar_text"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+      <ScrollView
+          android:id="@+id/content_scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_bg"
+         android:layout_below="@id/toolbar_layout"
+        android:layout_alignParentBottom="true"
+             android:fillViewport="true"
+        android:orientation="vertical" >
+        <LinearLayout 
+            android:id="@+id/content_scrollview_base_layout"
+             android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:orientation="vertical"
+        android:weightSum="1"
+        >
+        
+           <LinearLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="34" >
+                <View
+            android:id="@+id/left_space"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:visibility="invisible" />
+                
+                <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="33"
+            android:orientation="vertical"
+            android:weightSum="540" >
+
+            <View
+                android:id="@+id/top_space"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="10"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="60"
+                android:orientation="horizontal"
+                android:weightSum="13" >
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" >
+
+                    <ImageView
+                        android:id="@+id/activity_editprofile_screen_addphoto_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                       
+                        android:background="@color/imageview_addphoto_bg_createnewuser_activity"
+                        android:clickable="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/changephoto_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="20"
+                android:orientation="horizontal"
+                android:weightSum="13" >
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.5" />
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical|center_horizontal|center" >
+
+                    <TextView
+                        android:id="@+id/editprofile_activity_changephoto_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="@bool/choose_true"
+                        android:text="@string/editprofile_activity_screen_changephoto_text"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.5" />
+            </LinearLayout>
+
+            
+            <RelativeLayout
+                android:id="@+id/basicinfo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="25" >
+
+                <TextView
+                    android:id="@+id/editprofile_activity_basicinfo_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="10dp"
+                    android:text="@string/editprofile_activity_screen_basicinfo_text"
+                    android:textColor="@color/editprofile_activity_info_text"
+                    android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/basicinfo_boxes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="250"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="5" >
+
+                <LinearLayout
+                    android:id="@+id/basicinfo_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_top_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_name_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_name_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_name_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/basicinfo_username_layout"                
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                   android:background="@drawable/border_inner_editboxes_layout"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                      android:baselineAligned="false"
+                   
+                     
+                  >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" 
+                        android:background="@color/editprofile_activity_icons_bg">
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_username_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_username" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="left|center_vertical"
+                        android:background="@color/white" >
+
+                    <EditText
+                        android:id="@+id/editprofile_activity_screen_username_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:paddingLeft="10dp"
+                        android:background="#00000000"
+                        android:ems="10"
+                        android:hint="@string/editprofile_activity_screen_username_hint_edittext"
+                        android:textColor="@color/editprofile_activity_hints_edittext"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                     <requestFocus />
+                    </EditText>
+                      </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/basicinfo_place_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:baselineAligned="false"
+                    android:background="@drawable/border_inner_editboxes_layout" >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" 
+                        android:background="@color/editprofile_activity_icons_bg">
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_place_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_name" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="left|center_vertical"
+                         android:background="@color/white" >
+
+                    <EditText
+                        android:id="@+id/editprofile_activity_screen_place_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:paddingLeft="10dp"
+                        android:background="#00000000"
+                        android:ems="10"
+                        android:hint="@string/editprofile_activity_screen_place_hint_edittext"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/editprofile_activity_hints_edittext"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+<requestFocus />
+                       
+                    </EditText>
+                      </RelativeLayout>
+                      
+                </LinearLayout>
+ 
+ <LinearLayout
+                    android:id="@+id/basicinfo_yourwebsite_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                    android:baselineAligned="false"
+                      android:background="@drawable/border_inner_editboxes_layout">
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" 
+                        android:background="@color/editprofile_activity_icons_bg">
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_yourwebsite_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_web" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="left|center_vertical"
+                         android:background="@color/white" >
+
+                    <EditText
+                        android:id="@+id/editprofile_activity_screen_yourwebsite_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:paddingLeft="10dp"
+                        android:background="#00000000"
+                        android:ems="10"
+                        android:hint="@string/editprofile_activity_screen_yourwebsite_hint_edittext"
+                        android:inputType="textWebEmailAddress"
+                        android:textColor="@color/editprofile_activity_hints_edittext"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                      <requestFocus />
+                    </EditText>
+                      </RelativeLayout>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/basicinfo_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                      android:background="@drawable/border_inner_editboxes_layout"
+                      android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5" 
+                        android:background="@color/editprofile_activity_icons_bg">
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_email_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_mail" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:gravity="left|center_vertical"
+                         android:background="@color/white" >
+                        
+                            <EditText
+                        android:id="@+id/editprofile_activity_screen_email_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:paddingLeft="10dp"
+                        android:background="#00000000"
+                        android:ems="15"
+                        android:hint="@string/editprofile_activity_screen_mailaddress_edittext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/editprofile_activity_hints_edittext"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                        <requestFocus />
+                    </EditText>                  
+
+                    
+                      </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/changepassword_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="25" >
+
+                <TextView
+                    android:id="@+id/editprofile_activity_changepassword_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="10dp"
+                    android:text="@string/editprofile_activity_screen_changepassword_text"
+                    android:textColor="@color/editprofile_activity_info_text"
+                    android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+            </RelativeLayout>
+             <LinearLayout
+                android:id="@+id/changepassword_boxes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="150"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="3" >
+                
+                 <LinearLayout
+                    android:id="@+id/changepassword_oldpassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    
+                    android:background="@drawable/border_top_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_oldpassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_oldpassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_oldpassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_oldpassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+                
+                 <LinearLayout
+                    android:id="@+id/changepassword_newpassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                   
+                    android:background="@drawable/border_inner_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_newpassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_repassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_newpassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_newpassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/changepassword_repassword_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                                  android:background="@drawable/border_inner_editboxes_layout"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:weightSum="10" 
+                 >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/editprofile_activity_icons_bg" >
+
+                        <ImageView
+                            android:id="@+id/editprofile_activity_screen_repassword_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/editprofile_icon_repassword" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical" >
+
+                        <EditText
+                            android:id="@+id/editprofile_activity_screen_repassword_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:ems="10"
+                            android:hint="@string/editprofile_activity_screen_repassword_hint_edittext"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+                            <requestFocus />
+                        </EditText>
+                    </RelativeLayout>
+                </LinearLayout>
+             </LinearLayout>
+          
+        </LinearLayout>
+                
+                  <View
+            android:id="@+id/right_space"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:visibility="invisible" />
+               
+           </LinearLayout>
+          </LinearLayout>
+      </ScrollView>
+
+</RelativeLayout><!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/layout/activity_edit_profile_screen.xml -->

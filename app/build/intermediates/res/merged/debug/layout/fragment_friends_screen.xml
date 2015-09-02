@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="550" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="50"
+        android:background="@color/toolbar_bg"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/fragment_friends_screen_toolbar_leftarrow_imagee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_left_arrow_profile" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/friends_fragment_screen_toolbar_text"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="495"
+        android:orientation="horizontal"
+        android:weightSum="34" >
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="32"
+            android:orientation="vertical"
+            android:weightSum="495" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="100"
+                android:orientation="horizontal"
+                android:weightSum="34" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5" >
+
+                    <ImageView
+                        android:id="@+id/fragment_friends_screen_toolbar_userphoto_imagee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/user_male_icon" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="28"
+                    android:orientation="vertical"
+                    android:weightSum="10" >
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_toolbar_username_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:lines="1"
+                        android:text="@string/friends_fragment_screen_userinfo_name_text"
+                        android:textColorLink="@color/textview_changepassword_forgotpassword_activity"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_toolbar_place_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:lines="1"
+                        android:text="@string/friends_fragment_screen_userinfo_place_text"
+                        android:textColorLink="@color/textview_changepassword_forgotpassword_activity"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_toolbar_userpersonelinfo_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:lines="2"
+                        android:text="@string/friends_fragment_screen_userinfo_personalinfo_text"
+                        android:textColorLink="@color/textview_changepassword_forgotpassword_activity"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_toolbar_atmail_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:lines="1"
+                        android:text="@string/friends_fragment_screen_userinfo_atmail_text"
+                        android:textColor="@color/button_done_bg_createnewuser_activity"
+                        android:textColorLink="@color/textview_changepassword_forgotpassword_activity"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="40"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/fragment_friends_screen_imagebutton_rebarks_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:clickable="@bool/choose_true" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_rebarks_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="@bool/choose_true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_count_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_rebarks_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="@bool/choose_true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_rebarks_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/fragment_friends_screen_imagebutton_followers_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:clickable="@bool/choose_true" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_count_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_followers_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="@bool/choose_true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_followers_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <ImageView
+                        android:id="@+id/fragment_friends_screen_imagebutton_following_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:clickable="@bool/choose_true" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_following_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_count_text"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_imagebutton_following_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="@bool/choose_true"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_imagebutton_following_text"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="10"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="35"
+                android:background="@color/frame_bg_unfollow_friends_fragment"
+                android:clickable="true"
+                android:weightSum="34" >
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="14" >
+
+                    <ImageView
+                        android:id="@+id/fragment_friends_screen_unfollow_icon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_unfollow_friends" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20" >
+
+                    <TextView
+                        android:id="@+id/fragment_friends_screen_unfollow_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                         android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                        android:layout_weight="20"
+                        android:maxLines="1"
+                        android:text="@string/friends_fragment_screen_unfollow_text"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="10"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="300" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout><!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/layout/fragment_friends_screen.xml -->

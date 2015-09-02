@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              android:minHeight="270dp"
+              android:baselineAligned="false"
+              android:background="@color/white"
+              android:weightSum="24"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/row_fragment_timeline_screen_userinfo_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="4">
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:id="@+id/row_fragment_timeline_screen_video_and_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="15">
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/row_fragment_timeline_screen_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="4"
+        android:weightSum="3"
+        android:background="#FCFCFC"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/row_fragment_timeline_screen_like_count_button_container"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/row_fragment_timeline_screen_reply_count_button_container"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            >
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/row_fragment_timeline_screen_share_count_button_container"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:weightSum="15"
+            android:orientation="horizontal"
+
+            >
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                >
+                <ImageButton
+                    android:id="@+id/row_fragment_timeline_screen_reply_imageButton"
+                    android:src="@drawable/time_icon_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#FCFCFC"
+                    android:layout_centerVertical="true"
+                   android:layout_alignParentRight="true"
+                    android:clickable="false" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:gravity="center_vertical"
+                >
+                <com.itbarx.custom.component.CustOpenBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200"
+                    android:textSize="17sp"
+                    android:textColor="#666666"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                                       />
+            </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>

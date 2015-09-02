@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:drawable="@drawable/tab_icon_search" />
+</selector><!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/drawable/tab_search.xml -->

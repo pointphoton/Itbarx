@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <!-- edit profile layout vertical 600 -->
+    <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         android:orientation="vertical"
+      
+      android:overScrollMode="always"
+ android:scrollbarStyle="insideInset"
+ android:scrollbars="vertical"
+  android:fillViewport="true">
+  
+        <LinearLayout
+            android:id="@+id/activity_edit_lay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/toolbar_bg"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:weightSum="10" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/activity_edit_profile_screen_toolbar_leftarrow_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_left_arrow_createnewaccount" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="center_vertical|center_horizontal|center"
+                android:text="@string/editprofile_activity_screen_toolbar_text"
+                />
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:background="@drawable/main_bg"
+         android:layout_below="@id/activity_edit_lay"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <!-- edit profile toolbar 50 -->
+        
+        
+
+<LinearLayout 
+     android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:orientation="vertical"
+        android:weightSum="1">
+        
+        
+        <!-- edit profile inner screen 550 horizontal -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="34" >
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="33"
+                android:orientation="vertical"
+                android:weightSum="550" 
+            >
+                
+                  <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="10"
+                android:visibility="invisible" />
+                  
+                  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="60"
+            android:orientation="horizontal"
+            android:weightSum="13" >
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <ImageView
+                    android:id="@+id/editprofile_activity_screen_addphoto_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/editprofile_activity_imageview_addphoto_bg"
+                    android:clickable="@bool/choose_true" />
+
+                
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+            
+                  <!-- change photo  text -->   
+                <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="13" >
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="TextView" />
+                
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+                  
+                    <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="5"
+                android:visibility="invisible" />
+                
+                     <!-- basic info  text -->   
+                    
+               <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="30" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="TextView" />
+                
+            </RelativeLayout>
+                   
+               <!-- basic info  user input boxes -->  
+                  <LinearLayout 
+                        android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="200"
+                android:weightSum="4"
+                 android:orientation="vertical">
+                
+                  <!-- basic info  username box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+                               <!-- basic info  atmail box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_icon22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext22"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>   
+                         <!-- basic info  place box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_ico3n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext3"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>         
+                                  <!-- basic info  username box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_ico4n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext4"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+                  </LinearLayout>
+                  
+                  
+                              <!--   mail address box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="50"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_icon444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext343"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+    
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="30" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="TextView" />
+                
+            </RelativeLayout>
+            
+              <!-- change password user input editboxes -->
+                <LinearLayout 
+                        android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="150"
+                android:weightSum="3"
+                 android:orientation="vertical">
+                
+                  <!-- change password  old password box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_i7con"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittex66t"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+                               <!-- change password  new password box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_icon622"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext262"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>   
+                         <!-- change password  repassword box -->      
+                <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" >
+
+            <ImageView
+                android:id="@+id/activity_createnewaccount_screen_name_ico36n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_user_createnewaccount" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/activity_createnewaccount_screen_name_edittext36"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:ems="10"
+            android:hint="@string/createnewaccount_activity_screen_name_text"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/createnewuser_secreen_useragreement_text_size" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>         
+                                 
+                
+                  </LinearLayout>
+                 <!-- about me? text -->
+                 
+            
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:visibility="invisible" />
+        </LinearLayout>
+        
+      <LinearLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+       
+        android:background="@color/toolbar_bg"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" >
+
+            <ImageView
+                android:id="@+id/activity_edit_profile_screen_toolbar_leftarrow_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_left_arrow_createnewaccount" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="@string/editprofile_activity_screen_toolbar_text"
+            android:textColor="@color/white" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+        
+        </LinearLayout>
+       
+    </ScrollView>
+</RelativeLayout>
+<!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/layout/activity_edit_profile_screen_back.xml -->
