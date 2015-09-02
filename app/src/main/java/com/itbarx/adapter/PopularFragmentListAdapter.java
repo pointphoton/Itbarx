@@ -63,7 +63,7 @@ public class PopularFragmentListAdapter extends BaseAdapter {
             else{
                 Uri uri = Uri.parse("android.resource://" + IApplication.getContext().getPackageName() + "/" + R.raw.sample);
                 video.setVideoURI(uri);
-                 video.start();
+               //  video.start();
 
             }
 
