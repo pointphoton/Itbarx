@@ -51,7 +51,7 @@ public class PopularFragmentListAdapter extends BaseAdapter {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_popular_screen_user_videoView);
             CustOpenRegularTextView text = (CustOpenRegularTextView) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
 
-           /*
+
             if(model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL()!=null  && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false") )
             {
                 Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
@@ -66,7 +66,7 @@ public class PopularFragmentListAdapter extends BaseAdapter {
                  video.start();
 
             }
-            */
+
 
       //      Uri uri = Uri.parse("android.resource://" + IApplication.getContext().getPackageName() + "/" + R.raw.sample);
        //  video.setVideoURI(uri);
