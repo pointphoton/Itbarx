@@ -1,4 +1,4 @@
-package com.itbarx.model;
+package com.itbarx.application;
 
 import java.util.Locale;
 
@@ -15,6 +15,17 @@ public class ItbarxGlobal extends Application {
 	private static Context appContext;
 	private static SharedPreferences mSharedPrefs;
 	private static ItbarxGlobal instance = null;
+
+
+	@Override
+	public void onCreate() {
+		instance =this;
+		super.onCreate();
+	}
+
+	public static Context getContext(){
+		return instance;
+	}
 
 	public static ItbarxGlobal getInstance() {
 	if (instance == null) {

@@ -10,6 +10,7 @@ import android.widget.VideoView;
 
 import com.itbarx.R;
 import com.itbarx.application.IApplication;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.custom.component.CustOpenRegularTextView;
 import com.itbarx.model.post.PostPopularPostListModel;
 
@@ -57,14 +58,14 @@ public class PopularFragmentListAdapter extends BaseAdapter {
                 Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
                 video.setVideoURI(uri);
                 text.setText(model.getPostSpeechToText());
-                video.start();
+             //   video.start();
 
             }
             else{
-                Uri uri = Uri.parse("android.resource://" + IApplication.getContext().getPackageName() + "/" + R.raw.sample);
+                Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getContext().getPackageName() + "/" + R.raw.sample);
                 video.setVideoURI(uri);
                //  video.start();
-
+                text.setText(model.getPostSpeechToText());
             }
 
 

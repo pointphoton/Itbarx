@@ -14,7 +14,7 @@ import com.itbarx.listener.PostProcessesServiceListener;
 import com.itbarx.listener.ReBarkProcessesServiceListener;
 import com.itbarx.listener.ReplyProcessesServiceListener;
 import com.itbarx.listener.SearchProcessesServiceListener;
-import com.itbarx.model.ItbarxGlobal;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.model.account.AccountForgotSendMailModel;
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.account.AccountSendEmailCodeModel;
