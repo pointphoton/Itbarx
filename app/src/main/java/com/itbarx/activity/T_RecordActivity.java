@@ -7,9 +7,7 @@ import android.content.Context;
 
 import com.itbarx.R;
 
-/**
- * TODO: Add a class header comment!
- */
+
 public class T_RecordActivity extends BaseActivity  {
 
 
