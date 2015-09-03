@@ -59,7 +59,9 @@
         <activity
             android:name="com.itbarx.activity.T_HomeActivity"></activity>
         <activity
-            android:name="com.itbarx.activity.T_SecondActivity"></activity>
+        android:name="com.itbarx.activity.T_SecondActivity"></activity>
+        <activity
+            android:name="com.itbarx.activity.T_RecordActivity"></activity>
 
 
     </application>

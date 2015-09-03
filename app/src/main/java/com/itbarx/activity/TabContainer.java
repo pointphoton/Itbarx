@@ -41,7 +41,7 @@ TabHost tabHost;
 	{
 		addTab("HOME", R.drawable.tab_home, T_HomeActivity.class);
 		addTab("ACTIVITY", R.drawable.tab_activity, T_SecondActivity.class);
-		addTab("RECORD", R.drawable.tab_record, T_HomeActivity.class);
+		addTab("RECORD", R.drawable.tab_record, T_RecordActivity.class);
 		addTab("SEARCH", R.drawable.tab_search, T_HomeActivity.class);
 		addTab("PROFILE", R.drawable.tab_profile, T_HomeActivity.class);
 	}
