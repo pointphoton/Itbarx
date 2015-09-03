@@ -187,7 +187,7 @@
                 >
 
                 <com.itbarx.custom.component.CustOpenBoldTextView
-                    android:id="@+id/row_fragment_timeline_screen_time_TextView"
+                    android:id="@+id/row_fragment_timeline_screen_like_TextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"

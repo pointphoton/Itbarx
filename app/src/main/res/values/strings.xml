@@ -125,6 +125,10 @@
     <string name="activityrequest_fragment_screen_activity_text">etkinlik</string>
     <string name="activityrequest_fragment_screen_request_text">istek</string>
 
+    <!-- fragment record screen -->
+    <string name="record_fragment_screen_toolbar_text">yeni barx</string>
+
+
     <!-- fragment search/friendbarks/followers/following -->
     <string name="fragment_screen_search_hint_text">kişi ara</string>
 
