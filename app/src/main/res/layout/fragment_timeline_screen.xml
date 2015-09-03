@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:id="@+id/tab_fragment_first_timeline_layout"
-              xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="@drawable/main_bg"
-              android:orientation="vertical"
-              android:weightSum="530">
+<LinearLayout
+    android:id="@+id/tab_fragment_first_timeline_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    android:weightSum="530">
 
 
     <RelativeLayout
@@ -22,10 +23,10 @@
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:textColor="@color/white"
             android:text="@string/populartimeline_fragment_screen_timeline_text"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_size_toolbar"
-           />
+            />
     </RelativeLayout>
 
     <View
@@ -89,6 +90,7 @@
                     android:textSize="@dimen/text_size_button"/>
 
             </LinearLayout>
+
             <View
                 android:id="@+id/fragment_timeline_under_buttons"
                 android:layout_width="match_parent"
@@ -102,7 +104,20 @@
                 android:layout_height="0dip"
                 android:layout_weight="425"
                 android:orientation="vertical"
-                ></LinearLayout>
+                >
+
+                <ListView
+                    android:id="@+id/timeline_fragment_screen_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:divider="#00000000"
+                    android:dividerHeight="3dp"
+                    android:overScrollMode="ifContentScrolls"
+                    android:scrollbars="vertical"
+                    android:scrollingCache="true"
+                    android:transcriptMode="alwaysScroll"/>
+            </LinearLayout>
 
 
         </LinearLayout>

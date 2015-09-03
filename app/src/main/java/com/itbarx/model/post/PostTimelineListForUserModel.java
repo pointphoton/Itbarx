@@ -2,225 +2,220 @@ package com.itbarx.model.post;
 
 public class PostTimelineListForUserModel {
 
-	private String rowNum;
-	private String postID;
-	private String answerToPostId;
-	private String postSenderUserId;
-	private String addedDate;
-	private String postSpeechToText;
-	private String postText;
-	private String postSenderIP;
-	private String postTypeE;
-	private String isDeleted;
-	private String postLikeCount;
-	private String postReplyCount;
-	private String postShareCount;
-	private String postComplainCount;
-	private String postCommentCount;
-	private String isAdultContent;
-	private String postURL;
-	private String postPictureURL;
-	private String postVoiceUrl;
-	private String postOwner;
-	private String postOwnerPhoto;
+	private String RowNum;
+	private String PostID;
+	private String PostSenderUserId;
+	private String AddedDate;
+	private String PostSpeechToText;
+	private String PostText;
+	private String PostSenderIP;
+	private String PostTypeE;
+	private String IsDeleted;
+	private String PostLikeCount;
+	private String PostReplyCount;
+	private String PostShareCount;
+	private String PostComplainCount;
+	private String PostCommentCount;
+	private String IsAdultContent;
+	private String PostURL;
+	private String PostPictureURL;
+	private String PostVoiceUrl;
+	private String AddedTimeZoneId;
+	private String PostOwner;
+	private String PostOwnerPhoto;
 
 	public PostTimelineListForUserModel() {
-	super();
 	}
 
-	public PostTimelineListForUserModel(String rowNum, String postID, String answerToPostId, String postSenderUserId, String addedDate, String postSpeechToText, String postText, String postSenderIP,
-		String postTypeE, String isDeleted, String postLikeCount, String postReplyCount, String postShareCount, String postComplainCount, String postCommentCount, String isAdultContent,
-		String postURL, String postPictureURL, String postVoiceUrl, String postOwner, String postOwnerPhoto) {
-	super();
-	this.rowNum = rowNum;
-	this.postID = postID;
-	this.answerToPostId = answerToPostId;
-	this.postSenderUserId = postSenderUserId;
-	this.addedDate = addedDate;
-	this.postSpeechToText = postSpeechToText;
-	this.postText = postText;
-	this.postSenderIP = postSenderIP;
-	this.postTypeE = postTypeE;
-	this.isDeleted = isDeleted;
-	this.postLikeCount = postLikeCount;
-	this.postReplyCount = postReplyCount;
-	this.postShareCount = postShareCount;
-	this.postComplainCount = postComplainCount;
-	this.postCommentCount = postCommentCount;
-	this.isAdultContent = isAdultContent;
-	this.postURL = postURL;
-	this.postPictureURL = postPictureURL;
-	this.postVoiceUrl = postVoiceUrl;
-	this.postOwner = postOwner;
-	this.postOwnerPhoto = postOwnerPhoto;
+	public PostTimelineListForUserModel(String rowNum, String postID, String postSenderUserId, String addedDate, String postSpeechToText, String postText, String postSenderIP, String postTypeE, String isDeleted, String postLikeCount, String postReplyCount, String postShareCount, String postComplainCount, String postCommentCount, String isAdultContent, String postURL, String postPictureURL, String postVoiceUrl, String addedTimeZoneId, String postOwner, String postOwnerPhoto) {
+		RowNum = rowNum;
+		PostID = postID;
+		PostSenderUserId = postSenderUserId;
+		AddedDate = addedDate;
+		PostSpeechToText = postSpeechToText;
+		PostText = postText;
+		PostSenderIP = postSenderIP;
+		PostTypeE = postTypeE;
+		IsDeleted = isDeleted;
+		PostLikeCount = postLikeCount;
+		PostReplyCount = postReplyCount;
+		PostShareCount = postShareCount;
+		PostComplainCount = postComplainCount;
+		PostCommentCount = postCommentCount;
+		IsAdultContent = isAdultContent;
+		PostURL = postURL;
+		PostPictureURL = postPictureURL;
+		PostVoiceUrl = postVoiceUrl;
+		AddedTimeZoneId = addedTimeZoneId;
+		PostOwner = postOwner;
+		PostOwnerPhoto = postOwnerPhoto;
 	}
 
 	public String getRowNum() {
-	return rowNum;
+		return RowNum;
 	}
 
 	public void setRowNum(String rowNum) {
-	this.rowNum = rowNum;
+		RowNum = rowNum;
 	}
 
 	public String getPostID() {
-	return postID;
+		return PostID;
 	}
 
 	public void setPostID(String postID) {
-	this.postID = postID;
-	}
-
-	public String getAnswerToPostId() {
-	return answerToPostId;
-	}
-
-	public void setAnswerToPostId(String answerToPostId) {
-	this.answerToPostId = answerToPostId;
+		PostID = postID;
 	}
 
 	public String getPostSenderUserId() {
-	return postSenderUserId;
+		return PostSenderUserId;
 	}
 
 	public void setPostSenderUserId(String postSenderUserId) {
-	this.postSenderUserId = postSenderUserId;
+		PostSenderUserId = postSenderUserId;
 	}
 
 	public String getAddedDate() {
-	return addedDate;
+		return AddedDate;
 	}
 
 	public void setAddedDate(String addedDate) {
-	this.addedDate = addedDate;
+		AddedDate = addedDate;
 	}
 
 	public String getPostSpeechToText() {
-	return postSpeechToText;
+		return PostSpeechToText;
 	}
 
 	public void setPostSpeechToText(String postSpeechToText) {
-	this.postSpeechToText = postSpeechToText;
+		PostSpeechToText = postSpeechToText;
 	}
 
 	public String getPostText() {
-	return postText;
+		return PostText;
 	}
 
 	public void setPostText(String postText) {
-	this.postText = postText;
+		PostText = postText;
 	}
 
 	public String getPostSenderIP() {
-	return postSenderIP;
+		return PostSenderIP;
 	}
 
 	public void setPostSenderIP(String postSenderIP) {
-	this.postSenderIP = postSenderIP;
+		PostSenderIP = postSenderIP;
 	}
 
 	public String getPostTypeE() {
-	return postTypeE;
+		return PostTypeE;
 	}
 
 	public void setPostTypeE(String postTypeE) {
-	this.postTypeE = postTypeE;
+		PostTypeE = postTypeE;
 	}
 
 	public String getIsDeleted() {
-	return isDeleted;
+		return IsDeleted;
 	}
 
 	public void setIsDeleted(String isDeleted) {
-	this.isDeleted = isDeleted;
+		IsDeleted = isDeleted;
 	}
 
 	public String getPostLikeCount() {
-	return postLikeCount;
+		return PostLikeCount;
 	}
 
 	public void setPostLikeCount(String postLikeCount) {
-	this.postLikeCount = postLikeCount;
+		PostLikeCount = postLikeCount;
 	}
 
 	public String getPostReplyCount() {
-	return postReplyCount;
+		return PostReplyCount;
 	}
 
 	public void setPostReplyCount(String postReplyCount) {
-	this.postReplyCount = postReplyCount;
+		PostReplyCount = postReplyCount;
 	}
 
 	public String getPostShareCount() {
-	return postShareCount;
+		return PostShareCount;
 	}
 
 	public void setPostShareCount(String postShareCount) {
-	this.postShareCount = postShareCount;
+		PostShareCount = postShareCount;
 	}
 
 	public String getPostComplainCount() {
-	return postComplainCount;
+		return PostComplainCount;
 	}
 
 	public void setPostComplainCount(String postComplainCount) {
-	this.postComplainCount = postComplainCount;
+		PostComplainCount = postComplainCount;
 	}
 
 	public String getPostCommentCount() {
-	return postCommentCount;
+		return PostCommentCount;
 	}
 
 	public void setPostCommentCount(String postCommentCount) {
-	this.postCommentCount = postCommentCount;
+		PostCommentCount = postCommentCount;
 	}
 
 	public String getIsAdultContent() {
-	return isAdultContent;
+		return IsAdultContent;
 	}
 
 	public void setIsAdultContent(String isAdultContent) {
-	this.isAdultContent = isAdultContent;
+		IsAdultContent = isAdultContent;
 	}
 
 	public String getPostURL() {
-	return postURL;
+		return PostURL;
 	}
 
 	public void setPostURL(String postURL) {
-	this.postURL = postURL;
+		PostURL = postURL;
 	}
 
 	public String getPostPictureURL() {
-	return postPictureURL;
+		return PostPictureURL;
 	}
 
 	public void setPostPictureURL(String postPictureURL) {
-	this.postPictureURL = postPictureURL;
+		PostPictureURL = postPictureURL;
 	}
 
 	public String getPostVoiceUrl() {
-	return postVoiceUrl;
+		return PostVoiceUrl;
 	}
 
 	public void setPostVoiceUrl(String postVoiceUrl) {
-	this.postVoiceUrl = postVoiceUrl;
+		PostVoiceUrl = postVoiceUrl;
+	}
+
+	public String getAddedTimeZoneId() {
+		return AddedTimeZoneId;
+	}
+
+	public void setAddedTimeZoneId(String addedTimeZoneId) {
+		AddedTimeZoneId = addedTimeZoneId;
 	}
 
 	public String getPostOwner() {
-	return postOwner;
+		return PostOwner;
 	}
 
 	public void setPostOwner(String postOwner) {
-	this.postOwner = postOwner;
+		PostOwner = postOwner;
 	}
 
 	public String getPostOwnerPhoto() {
-	return postOwnerPhoto;
+		return PostOwnerPhoto;
 	}
 
 	public void setPostOwnerPhoto(String postOwnerPhoto) {
-	this.postOwnerPhoto = postOwnerPhoto;
+		PostOwnerPhoto = postOwnerPhoto;
 	}
-
 }

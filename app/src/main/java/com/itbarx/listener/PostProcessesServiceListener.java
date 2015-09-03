@@ -11,7 +11,7 @@ import com.itbarx.model.post.PostWallListForUserModel;
 
 public interface PostProcessesServiceListener<T> extends BaseServiceListener<T> {
 
-	public void getTimelineListForUser(List<PostTimelineListForUserModel> postTimelineListForUserModel);
+	public abstract void getTimelineListForUser(List<PostTimelineListForUserModel> postTimelineListForUserModel);
 
 	public void getWallListForUser(List<PostWallListForUserModel> postWallListForUserModel);
 

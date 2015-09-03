@@ -167,7 +167,7 @@ public class PostProcessesServiceSL extends BasePostServiceSL<String> {
 
 	// ---GET TIMELINE LIST FOR USER---
 	if (responseEvent.getMethodName().equalsIgnoreCase(PostProcessLinks.GET_TIMELINE.toString())) {
-		ServiceResponseModel model = ItbarxUtils.getServiceResponseModelDataKey(result);
+		ServiceResponseModel model = ItbarxUtils.getServiceResponseArrayModelDataKey(result);
 		List<PostTimelineListForUserModel> postTimelineListForUserModelResponse = null;
 		if (model != null) {
 		postTimelineListForUserModelResponse = new PostModelParserJSON().getPostTimelineListForUserModelFromJSON(model.getModel());
@@ -181,7 +181,7 @@ public class PostProcessesServiceSL extends BasePostServiceSL<String> {
 		}
 	} // ---GET WALL LIST FOR USER---
 	else if (responseEvent.getMethodName().equalsIgnoreCase(PostProcessLinks.GET_WALL.toString())) {
-		ServiceResponseModel model = ItbarxUtils.getServiceResponseModelDataKey(result);
+		ServiceResponseModel model = ItbarxUtils.getServiceResponseArrayModelDataKey(result);
 		List<PostWallListForUserModel> postWallListForUserModelResponse = null;
 		if (model != null) {
 		postWallListForUserModelResponse = new PostModelParserJSON().getPostWallListForUserModelFromJSON(model.getModel());

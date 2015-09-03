@@ -14,7 +14,7 @@ public class ItbarxGlobal extends Application {
 	private AccountGetUserByLoginInfoModel userLoginInfoModel;
 	private static Context appContext;
 	private static SharedPreferences mSharedPrefs;
-	private static ItbarxGlobal instance = null;
+	private static ItbarxGlobal instance =null;
 
 
 	@Override
