@@ -4,7 +4,7 @@ public class AccountGetUserByLoginInfoModel {
 	private String userID;
 	private String name;
 	private String itBarxUserName;
-	private String locationID_FK;
+	private String locationID_fk;
 	private String signUpDate;
 	private String profileUpdateDate;
 	private String userBio;
@@ -14,273 +14,267 @@ public class AccountGetUserByLoginInfoModel {
 	private String userPassword;
 	private String userAccountStatus;
 	private String userProfilePhoto;
-	private String lastWallSeenDate;
-	private String favouriteUserCount;
-	private String notificationCount;
-	private String userRole;
-	private String mentionName;
-	private String userWebsite;
+	private String LastWallSeenDate;
+	private String FavouriteUserCount;
+	private String NotificationCount;
+	private String userrole;
+	private String mentionname;
+	private String userwebsite;
 	private String userPassEmailCode;
 	private String userPasswordChangedDate;
-	private String mediaContainerId;
-	private String isNotificationActive;
-	private String photoContainerId;
-	private String locationId;
-	private String locationName;
-	private String countryId;
+	private String MediaContainerId;
+	private String IsNotificationActive;
+	private String PhotoContainerId;
+	private String LocationId;
+	private String LocationName;
+	private String CountryId;
 
 	public AccountGetUserByLoginInfoModel() {
-	super();
 	}
 
-	public AccountGetUserByLoginInfoModel(String userID, String name, String itBarxUserName, String locationID_FK, String signUpDate, String profileUpdateDate, String userBio, String genderEnumCode,
-		String userFollowStatus, String userEmail, String userPassword, String userAccountStatus, String userProfilePhoto, String lastWallSeenDate, String favouriteUserCount, String notificationCount,
-		String userRole, String mentionName, String userWebsite, String userPassEmailCode, String userPasswordChangedDate, String mediaContainerId, String isNotificationActive,
-		String photoContainerId, String locationId, String locationName, String countryId) {
-	super();
-	this.userID = userID;
-	this.name = name;
-	this.itBarxUserName = itBarxUserName;
-	this.locationID_FK = locationID_FK;
-	this.signUpDate = signUpDate;
-	this.profileUpdateDate = profileUpdateDate;
-	this.userBio = userBio;
-	this.genderEnumCode = genderEnumCode;
-	this.userFollowStatus = userFollowStatus;
-	this.userEmail = userEmail;
-	this.userPassword = userPassword;
-	this.userAccountStatus = userAccountStatus;
-	this.userProfilePhoto = userProfilePhoto;
-	this.lastWallSeenDate = lastWallSeenDate;
-	this.favouriteUserCount = favouriteUserCount;
-	this.notificationCount = notificationCount;
-	this.userRole = userRole;
-	this.mentionName = mentionName;
-	this.userWebsite = userWebsite;
-	this.userPassEmailCode = userPassEmailCode;
-	this.userPasswordChangedDate = userPasswordChangedDate;
-	this.mediaContainerId = mediaContainerId;
-	this.isNotificationActive = isNotificationActive;
-	this.photoContainerId = photoContainerId;
-	this.locationId = locationId;
-	this.locationName = locationName;
-	this.countryId = countryId;
+	public AccountGetUserByLoginInfoModel(String userID, String name, String itBarxUserName, String locationID_fk, String signUpDate, String profileUpdateDate, String userBio, String genderEnumCode, String userFollowStatus, String userEmail, String userPassword, String userAccountStatus, String userProfilePhoto, String lastWallSeenDate, String favouriteUserCount, String notificationCount, String userrole, String mentionname, String userwebsite, String userPassEmailCode, String userPasswordChangedDate, String mediaContainerId, String isNotificationActive, String photoContainerId, String locationId, String locationName, String countryId) {
+		this.userID = userID;
+		this.name = name;
+		this.itBarxUserName = itBarxUserName;
+		this.locationID_fk = locationID_fk;
+		this.signUpDate = signUpDate;
+		this.profileUpdateDate = profileUpdateDate;
+		this.userBio = userBio;
+		this.genderEnumCode = genderEnumCode;
+		this.userFollowStatus = userFollowStatus;
+		this.userEmail = userEmail;
+		this.userPassword = userPassword;
+		this.userAccountStatus = userAccountStatus;
+		this.userProfilePhoto = userProfilePhoto;
+		LastWallSeenDate = lastWallSeenDate;
+		FavouriteUserCount = favouriteUserCount;
+		NotificationCount = notificationCount;
+		this.userrole = userrole;
+		this.mentionname = mentionname;
+		this.userwebsite = userwebsite;
+		this.userPassEmailCode = userPassEmailCode;
+		this.userPasswordChangedDate = userPasswordChangedDate;
+		MediaContainerId = mediaContainerId;
+		IsNotificationActive = isNotificationActive;
+		PhotoContainerId = photoContainerId;
+		LocationId = locationId;
+		LocationName = locationName;
+		CountryId = countryId;
 	}
 
 	public String getUserID() {
-	return userID;
+		return userID;
 	}
 
 	public void setUserID(String userID) {
-	this.userID = userID;
+		this.userID = userID;
 	}
 
 	public String getName() {
-	return name;
+		return name;
 	}
 
 	public void setName(String name) {
-	this.name = name;
+		this.name = name;
 	}
 
 	public String getItBarxUserName() {
-	return itBarxUserName;
+		return itBarxUserName;
 	}
 
 	public void setItBarxUserName(String itBarxUserName) {
-	this.itBarxUserName = itBarxUserName;
+		this.itBarxUserName = itBarxUserName;
 	}
 
-	public String getLocationID_FK() {
-	return locationID_FK;
+	public String getLocationID_fk() {
+		return locationID_fk;
 	}
 
-	public void setLocationID_FK(String locationID_FK) {
-	this.locationID_FK = locationID_FK;
+	public void setLocationID_fk(String locationID_fk) {
+		this.locationID_fk = locationID_fk;
 	}
 
 	public String getSignUpDate() {
-	return signUpDate;
+		return signUpDate;
 	}
 
 	public void setSignUpDate(String signUpDate) {
-	this.signUpDate = signUpDate;
+		this.signUpDate = signUpDate;
 	}
 
 	public String getProfileUpdateDate() {
-	return profileUpdateDate;
+		return profileUpdateDate;
 	}
 
 	public void setProfileUpdateDate(String profileUpdateDate) {
-	this.profileUpdateDate = profileUpdateDate;
+		this.profileUpdateDate = profileUpdateDate;
 	}
 
 	public String getUserBio() {
-	return userBio;
+		return userBio;
 	}
 
 	public void setUserBio(String userBio) {
-	this.userBio = userBio;
+		this.userBio = userBio;
 	}
 
 	public String getGenderEnumCode() {
-	return genderEnumCode;
+		return genderEnumCode;
 	}
 
 	public void setGenderEnumCode(String genderEnumCode) {
-	this.genderEnumCode = genderEnumCode;
+		this.genderEnumCode = genderEnumCode;
 	}
 
 	public String getUserFollowStatus() {
-	return userFollowStatus;
+		return userFollowStatus;
 	}
 
 	public void setUserFollowStatus(String userFollowStatus) {
-	this.userFollowStatus = userFollowStatus;
+		this.userFollowStatus = userFollowStatus;
 	}
 
 	public String getUserEmail() {
-	return userEmail;
+		return userEmail;
 	}
 
 	public void setUserEmail(String userEmail) {
-	this.userEmail = userEmail;
+		this.userEmail = userEmail;
 	}
 
 	public String getUserPassword() {
-	return userPassword;
+		return userPassword;
 	}
 
 	public void setUserPassword(String userPassword) {
-	this.userPassword = userPassword;
+		this.userPassword = userPassword;
 	}
 
 	public String getUserAccountStatus() {
-	return userAccountStatus;
+		return userAccountStatus;
 	}
 
 	public void setUserAccountStatus(String userAccountStatus) {
-	this.userAccountStatus = userAccountStatus;
+		this.userAccountStatus = userAccountStatus;
 	}
 
 	public String getUserProfilePhoto() {
-	return userProfilePhoto;
+		return userProfilePhoto;
 	}
 
 	public void setUserProfilePhoto(String userProfilePhoto) {
-	this.userProfilePhoto = userProfilePhoto;
+		this.userProfilePhoto = userProfilePhoto;
 	}
 
 	public String getLastWallSeenDate() {
-	return lastWallSeenDate;
+		return LastWallSeenDate;
 	}
 
 	public void setLastWallSeenDate(String lastWallSeenDate) {
-	this.lastWallSeenDate = lastWallSeenDate;
+		LastWallSeenDate = lastWallSeenDate;
 	}
 
 	public String getFavouriteUserCount() {
-	return favouriteUserCount;
+		return FavouriteUserCount;
 	}
 
 	public void setFavouriteUserCount(String favouriteUserCount) {
-	this.favouriteUserCount = favouriteUserCount;
+		FavouriteUserCount = favouriteUserCount;
 	}
 
 	public String getNotificationCount() {
-	return notificationCount;
+		return NotificationCount;
 	}
 
 	public void setNotificationCount(String notificationCount) {
-	this.notificationCount = notificationCount;
+		NotificationCount = notificationCount;
 	}
 
-	public String getUserRole() {
-	return userRole;
+	public String getUserrole() {
+		return userrole;
 	}
 
-	public void setUserRole(String userRole) {
-	this.userRole = userRole;
+	public void setUserrole(String userrole) {
+		this.userrole = userrole;
 	}
 
-	public String getMentionName() {
-	return mentionName;
+	public String getMentionname() {
+		return mentionname;
 	}
 
-	public void setMentionName(String mentionName) {
-	this.mentionName = mentionName;
+	public void setMentionname(String mentionname) {
+		this.mentionname = mentionname;
 	}
 
-	public String getUserWebsite() {
-	return userWebsite;
+	public String getUserwebsite() {
+		return userwebsite;
 	}
 
-	public void setUserWebsite(String userWebsite) {
-	this.userWebsite = userWebsite;
+	public void setUserwebsite(String userwebsite) {
+		this.userwebsite = userwebsite;
 	}
 
 	public String getUserPassEmailCode() {
-	return userPassEmailCode;
+		return userPassEmailCode;
 	}
 
 	public void setUserPassEmailCode(String userPassEmailCode) {
-	this.userPassEmailCode = userPassEmailCode;
+		this.userPassEmailCode = userPassEmailCode;
 	}
 
 	public String getUserPasswordChangedDate() {
-	return userPasswordChangedDate;
+		return userPasswordChangedDate;
 	}
 
 	public void setUserPasswordChangedDate(String userPasswordChangedDate) {
-	this.userPasswordChangedDate = userPasswordChangedDate;
+		this.userPasswordChangedDate = userPasswordChangedDate;
 	}
 
 	public String getMediaContainerId() {
-	return mediaContainerId;
+		return MediaContainerId;
 	}
 
 	public void setMediaContainerId(String mediaContainerId) {
-	this.mediaContainerId = mediaContainerId;
+		MediaContainerId = mediaContainerId;
 	}
 
 	public String getIsNotificationActive() {
-	return isNotificationActive;
+		return IsNotificationActive;
 	}
 
 	public void setIsNotificationActive(String isNotificationActive) {
-	this.isNotificationActive = isNotificationActive;
+		IsNotificationActive = isNotificationActive;
 	}
 
 	public String getPhotoContainerId() {
-	return photoContainerId;
+		return PhotoContainerId;
 	}
 
 	public void setPhotoContainerId(String photoContainerId) {
-	this.photoContainerId = photoContainerId;
+		PhotoContainerId = photoContainerId;
 	}
 
 	public String getLocationId() {
-	return locationId;
+		return LocationId;
 	}
 
 	public void setLocationId(String locationId) {
-	this.locationId = locationId;
+		LocationId = locationId;
 	}
 
 	public String getLocationName() {
-	return locationName;
+		return LocationName;
 	}
 
 	public void setLocationName(String locationName) {
-	this.locationName = locationName;
+		LocationName = locationName;
 	}
 
 	public String getCountryId() {
-	return countryId;
+		return CountryId;
 	}
 
 	public void setCountryId(String countryId) {
-	this.countryId = countryId;
+		CountryId = countryId;
 	}
-
 }

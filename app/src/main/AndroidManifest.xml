@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.itbarx"
-          xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    package="com.itbarx"
+    xmlns:android="http://schemas.android.com/apk/res/android"
 
-          android:installLocation="preferExternal"
-          android:versionCode="1"
-          android:versionName="1.2">
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.2">
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -54,14 +55,12 @@
 
 
         <!-- TAB AND TAB ACTIVITIES-->
-        <activity android:name="com.itbarx.activity.TabContainer">
-        </activity>
-        <activity
-            android:name="com.itbarx.activity.T_HomeActivity"></activity>
-        <activity
-        android:name="com.itbarx.activity.T_SecondActivity"></activity>
-        <activity
-            android:name="com.itbarx.activity.T_RecordActivity"></activity>
+        <activity android:name="com.itbarx.activity.TabContainer"></activity>
+        <activity  android:name="com.itbarx.activity.T_HomeActivity"></activity>
+        <activity  android:name="com.itbarx.activity.T_SecondActivity"></activity>
+        <activity  android:name="com.itbarx.activity.T_RecordActivity"></activity>
+        <activity  android:name="com.itbarx.activity.T_SearchActivity"></activity>
+        <activity  android:name="com.itbarx.activity.T_ProfileActivity"></activity>
 
 
     </application>

@@ -2,6 +2,7 @@ package com.itbarx.activity;
 
 import com.itbarx.R;
 import com.itbarx.adapter.ActivityFragmentListAdapter;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.enums.Fragments;
@@ -68,9 +69,9 @@ public class F_ActivityFragment extends Fragment {
 		ActivityModel requestModel = new ActivityModel();
 		requestModel.setPage("1");
 		requestModel.setRecPerPage("10");
-		requestModel.setUserID("10027");
+		//requestModel.setUserID("10027");
 	//	requestModel.setUserID("10032");
-		//requestModel.setUserID(ItbarxGlobal.getInstance().getAccountModel().getUserID());
+		requestModel.setUserID(ItbarxGlobal.getInstance().getAccountModel().getUserID());
 		return requestModel;
 	}
 

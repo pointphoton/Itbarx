@@ -92,9 +92,10 @@
     <string name="profile_fragment_screen_userinfo_personalinfo_text">User Experience Developer / Designer, Adobe Certified Expert, Adobe Certified Instructor, AdobeAddict, Web Craftsman</string>
     <string name="profile_fragment_screen_userinfo_atmail_text">\u0040gokhangokova</string>
     <string name="profile_fragment_screen_imagebutton_count_text">135</string>
-    <string name="profile_fragment_screen_imagebutton_rebarks_text">rebarks</string>
+    <string name="profile_fragment_screen_imagebutton_barks_text">barks</string>
     <string name="profile_fragment_screen_imagebutton_followers_text">followers</string>
     <string name="profile_fragment_screen_imagebutton_following_text">following</string>
+    <string name="profile_fragment_screen_edit_profile_text">profil düzenle</string>
 
     <!-- fragment friends screen -->
     <string name="friends_fragment_screen_toolbar_text">arkadaş profili</string>
@@ -127,6 +128,9 @@
 
     <!-- fragment record screen -->
     <string name="record_fragment_screen_toolbar_text">yeni barx</string>
+
+
+
 
 
     <!-- fragment search/friendbarks/followers/following -->

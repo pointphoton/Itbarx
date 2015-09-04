@@ -2,6 +2,7 @@ package com.itbarx.activity;
 
 import com.itbarx.R;
 import com.itbarx.adapter.PopularFragmentListAdapter;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.custom.component.ActivityFragmentItem;
@@ -148,6 +149,7 @@ public class F_PopularFragment extends Fragment {
         public void getPopularPostList(List<PostPopularPostListModel> popularPostListModel) {
             t_homeActivity.dismissProgress();
             postPopularPostListModels = popularPostListModel;
+            ItbarxGlobal.setPopularListModel(popularPostListModel);
             reqVidListView.setAdapter(new PopularFragmentListAdapter(t_homeActivity.getContext(), postPopularPostListModels));
 
         }

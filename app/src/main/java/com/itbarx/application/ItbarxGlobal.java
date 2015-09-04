@@ -1,8 +1,10 @@
 package com.itbarx.application;
 
+import java.util.List;
 import java.util.Locale;
 
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
+import com.itbarx.model.post.PostPopularPostListModel;
 
 import android.app.Application;
 import android.content.Context;
@@ -12,6 +14,7 @@ public class ItbarxGlobal extends Application {
 
 	private String userToken;
 	private AccountGetUserByLoginInfoModel userLoginInfoModel;
+	private static List<PostPopularPostListModel> popularListModel;
 	private static Context appContext;
 	private static SharedPreferences mSharedPrefs;
 	private static ItbarxGlobal instance =null;
@@ -74,6 +77,14 @@ public class ItbarxGlobal extends Application {
 
 	public void setAccountModel(AccountGetUserByLoginInfoModel accountModel) {
 	this.userLoginInfoModel = accountModel;
+	}
+
+	public static List<PostPopularPostListModel> getPopularListModel(){
+		return popularListModel;
+	}
+
+	public static void setPopularListModel( List<PostPopularPostListModel> models){
+		popularListModel =models;
 	}
 
 	public String getSystemLanguage() {
