@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.itbarx.R;
@@ -52,25 +53,35 @@ public class ProfilFragmentListAdapter extends BaseAdapter {
         if (model != null) {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_profile_screen_user_videoView);
             TextViewRegular text = (TextViewRegular) convertView.findViewById(R.id.row_fragment_profile_screen_subtitle_textView);
-
+            MediaController controller = new MediaController(context);
 
             if(model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL()!=null  && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false") )
             {
-                Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
+            //    Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
+                Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
                 video.setVideoURI(uri);
-                text.setText(model.getPostSpeechToText());
+                video.setMediaController(controller);
+                controller.requestFocus();
+                text.setText((null != model.getPostSpeechToText()) ? model.getPostSpeechToText() : text.getText());
                 video.stopPlayback();
                 video.pause();
+                //   video.start();
+                //    video.start();
+                controller.show();
                 //   video.start();
 
             }
             else{
                 Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
+                video.setMediaController(controller);
                 video.setVideoURI(uri);
+                controller.requestFocus();
                 //  video.start();
                 video.stopPlayback();
                 video.pause();
-                text.setText(model.getPostSpeechToText());
+                //    video.start();
+                controller.show();
+                text.setText((null != model.getPostSpeechToText()) ? model.getPostSpeechToText() : text.getText());
             }
 
 

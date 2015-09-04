@@ -3,13 +3,16 @@ package com.itbarx.activity;
 import com.itbarx.R;
 import com.itbarx.adapter.ProfilFragmentListAdapter;
 import com.itbarx.application.ItbarxGlobal;
+import com.itbarx.custom.component.EditTextRegular;
 import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostPopularPostListModel;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,17 @@ public class F_ProfileFragment extends Fragment {
     private TextViewBold userNameTextView;
     private TextViewRegular userLocationTextView;
     private TextViewRegular userBioTextView;
+   private TextViewBold barkTxtView,followerTxtView,followingTxtView;
+
+    private float textSizeMiniButton = 0;
+    private float textSizeBtn = 0;
+    private float textSizeListView = 0;
+    private float textSizeToolbar = 0;
+    private float textSizeUserName = 0;
+    private float textSizePlace = 0;
+    private float textSizeBio = 0;
+    private TextViewRegular txtToolbar;
+
 ListView userProfilePopularPostsListView;
     private VideoView video;
     public F_ProfileFragment() {
@@ -54,15 +68,28 @@ ListView userProfilePopularPostsListView;
             accLoginInfoModel = ItbarxGlobal.getInstance().getAccountModel();
         }
 
+        textSizeUserName = TextSizeUtil.getProfileUsernameTextSize() / (getResources().getDisplayMetrics().density);
+        textSizePlace = TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeBio =  TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeToolbar= TextSizeUtil.getToolbarTextSize() / (getResources().getDisplayMetrics().density);
         // set user name
         userNameTextView = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
         userNameTextView.setText((null != accLoginInfoModel.getName() && !accLoginInfoModel.getName().equals("")) ? accLoginInfoModel.getName() : userNameTextView.getText());
+        userNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeUserName);
         //set user location
         userLocationTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_place_text);
         userLocationTextView.setText((null != accLoginInfoModel.getLocationName() && !accLoginInfoModel.getLocationName().equals("")) ? accLoginInfoModel.getLocationName() : userLocationTextView.getText());
+        userLocationTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizePlace);
         //set user biography
         userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
         userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
+        userBioTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBio);
+
+        //set mini button text size
+        userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
+        userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
+        userBioTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBio);
+
 
         //fills up the listview
         userProfilePopularPostsListView= (ListView) t_profileActivity.findViewById(R.id.profile_fragment_screen_listView);
@@ -78,4 +105,6 @@ ListView userProfilePopularPostsListView;
         mc.show();
 
     }
+
+
 }
