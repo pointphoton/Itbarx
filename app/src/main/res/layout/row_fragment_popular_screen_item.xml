@@ -31,7 +31,7 @@
 
         </RelativeLayout>
 
-        <com.itbarx.custom.component.CustOpenRegularTextView
+        <com.itbarx.custom.component.TextViewRegular
             android:id="@+id/row_fragment_popular_screen_subtitle_textView"
             android:layout_width="wrap_content"
             android:layout_toRightOf="@id/row_fragment_popular_screen_user_videoView_container"

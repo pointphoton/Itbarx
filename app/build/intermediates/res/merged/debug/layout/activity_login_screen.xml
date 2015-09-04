@@ -15,7 +15,7 @@
         android:layout_weight="50"
         android:background="@color/toolbar_bg" >
 
-        <com.itbarx.custom.component.CustOpenRegularTextView
+        <com.itbarx.custom.component.TextViewRegular
             android:id="@+id/login_activity_screen_toolbar_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
 
                         <ImageView
                             android:id="@+id/login_activity_screen_username_icon"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
@@ -122,10 +122,10 @@
                         android:background="@color/white"
                         android:gravity="left|center_vertical" >
 
-                        <EditText
+                        <com.itbarx.custom.component.EditTextRegular
                             android:id="@+id/login_activity_screen_username_edittext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:background="#00000000"
                             android:ems="10"
                             android:hint="@string/login_activity_screen_username_text"
@@ -133,9 +133,10 @@
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
 
-                            android:text="user5">
+                            android:text="user5"
+                           >
                             <requestFocus />
-                        </EditText>
+                        </com.itbarx.custom.component.EditTextRegular>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -172,20 +173,20 @@
                         android:background="@color/white"
                         android:gravity="left|center_vertical" >
 
-                        <EditText
+                        <com.itbarx.custom.component.EditTextRegular
                             android:id="@+id/login_activity_screen_password_edittext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:background="#00000000"
                             android:ems="10"
                             android:hint="@string/login_activity_screen_password_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
-
-                            android:text="test">
+                            android:text="test"
+                          >
                              <requestFocus />
-                        </EditText>
+                        </com.itbarx.custom.component.EditTextRegular>
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -213,7 +214,7 @@
                         android:src="@drawable/icon_remember_me_not_checked_login" />
                 </RelativeLayout>
 
-                <com.itbarx.custom.component.CustOpenRegularTextView
+                <com.itbarx.custom.component.TextViewBold
                     android:id="@+id/login_activity_screen_rememberme_plaintext"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
@@ -221,7 +222,7 @@
                     android:layout_weight="8"
                     android:ems="10"
                     android:text="@string/login_activity_screen_rememberme_text"
-                   />
+                    />
             </LinearLayout>
 
             <View
@@ -244,14 +245,14 @@
                     android:layout_weight="165"
                     android:background="@drawable/login_activity_forgotpassword_button_border" >
 
-                    <Button
+                    <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_forgotpassword_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/login_activity_button_forgotpassword_bg"
                         android:text="@string/login_activity_screen_forgotpassword_button_text"
                         android:textColor="@color/login_activity_button_forgotpassword_text"
-                       />
+                         />
                 </LinearLayout>
 
                 <View
@@ -266,7 +267,7 @@
                     android:layout_weight="165"
                     android:background="@drawable/login_activity_loginbutton_border" >
 
-                    <Button
+                    <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_login_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -290,7 +291,7 @@
                 android:layout_weight="50"
                 android:background="@drawable/login_activity_createnewuser_button_border" >
 
-                <Button
+                <com.itbarx.custom.component.ButtonBold
                     android:id="@+id/login_activity_screen_createnewaccount_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -336,7 +337,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="6" >
 
-                    <com.itbarx.custom.component.CustOpenRegularTextView
+                    <com.itbarx.custom.component.TextViewBold
                         android:id="@+id/login_activity_screen_or_plaintext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -347,7 +348,7 @@
                         android:gravity="center"
                         android:text="@string/login_activity_screen_or_text"
                         android:textColor="@color/login_activity_text_or"
-                         />
+                        />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -387,14 +388,14 @@
                     android:layout_weight="165"
                     android:background="@drawable/login_activity_facebook_button_border" >
 
-                    <Button
+                    <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_facebook_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/button_facebook_bg"
                         android:text="@string/login_activity_screen_facebook_button_text"
                         android:textColor="@color/white"
-                       />
+                        />
                 </LinearLayout>
 
                 <View
@@ -409,14 +410,14 @@
                     android:layout_weight="165"
                     android:background="@drawable/login_activity_twitter_button_border" >
 
-                    <Button
+                    <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_twitter_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/button_twitter_bg"
                         android:text="@string/login_activity_screen_twitter_button_text"
-                        android:textColor="@color/white"
-                       />
+                      android:textColor="@color/white"
+                        />
                 </LinearLayout>
             </LinearLayout>
 

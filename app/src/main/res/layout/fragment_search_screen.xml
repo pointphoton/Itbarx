@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="8" >
 
-            <com.itbarx.custom.component.CustOpenRegularTextView
+            <com.itbarx.custom.component.TextViewRegular
 
                 android:id="@+id/search_fragment__toolbar_textView"
                 android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
                     android:layout_weight="29.5"
                     android:gravity="center" >
 
-                    <EditText
+                    <com.itbarx.custom.component.EditTextRegular
                         android:id="@+id/search_fragment_screen_search_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -107,7 +107,7 @@
                         >
 
                         <requestFocus />
-                    </EditText>
+                    </com.itbarx.custom.component.EditTextRegular>
                 </RelativeLayout>
 
                 <View

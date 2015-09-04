@@ -67,16 +67,16 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <com.itbarx.custom.component.CustOpenSansButton
+                <com.itbarx.custom.component.ButtonRegular
                     android:id="@+id/activity_fragment_activity_button"
                     style="@style/fragments_non_clickable_upper_buttons_default"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/activityrequest_fragment_screen_activity_text"
-                    />
+                    android:textSize="@dimen/text_size_button" />
 
-                <com.itbarx.custom.component.CustOpenSansButton
+                <com.itbarx.custom.component.ButtonRegular
                     android:id="@+id/activity_fragment_request_button"
                     style="@style/fragments_clickable_upper_buttons_default"
                     android:background="@drawable/button_fragments"

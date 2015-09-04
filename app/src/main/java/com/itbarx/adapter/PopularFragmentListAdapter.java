@@ -11,10 +11,9 @@ import android.widget.VideoView;
 import com.itbarx.R;
 
 import com.itbarx.application.ItbarxGlobal;
-import com.itbarx.custom.component.CustOpenRegularTextView;
+import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.post.PostPopularPostListModel;
 
-import java.net.URI;
 import java.util.List;
 
 
@@ -50,7 +49,7 @@ public class PopularFragmentListAdapter extends BaseAdapter {
         PostPopularPostListModel model = (PostPopularPostListModel) getItem(position);
         if (model != null) {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_popular_screen_user_videoView);
-            CustOpenRegularTextView text = (CustOpenRegularTextView) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
+            TextViewRegular text = (TextViewRegular) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
 
 
             if(model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL()!=null  && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false") )

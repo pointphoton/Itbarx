@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="8" >
 
-            <com.itbarx.custom.component.CustOpenRegularTextView
+            <com.itbarx.custom.component.TextViewRegular
 
                 android:id="@+id/search_fragment__toolbar_textView"
                 android:layout_width="wrap_content"
@@ -37,6 +37,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerInParent="true"
                 android:layout_centerVertical="true"
+                android:textSize="16sp"
                 android:text="@string/search_fragment_screen_toolbar_text"
                 android:textColor="@color/white" />
         </RelativeLayout>
@@ -92,19 +93,21 @@
                     android:layout_weight="29.5"
                     android:gravity="center" >
 
-                    <EditText
+                    <com.itbarx.custom.component.EditTextRegular
                         android:id="@+id/search_fragment_screen_search_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
                         android:ems="10"
+
                         android:hint="@string/fragment_screen_search_hint_text"
+                        android:textSize="16sp"
                         android:inputType="text"
                         android:textColor="@color/textview_userinputs_hints_forgotpassword_activity"
                         >
 
                         <requestFocus />
-                    </EditText>
+                    </com.itbarx.custom.component.EditTextRegular>
                 </RelativeLayout>
 
                 <View

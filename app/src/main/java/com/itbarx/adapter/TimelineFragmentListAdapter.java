@@ -13,7 +13,6 @@ import com.itbarx.R;
 import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.model.post.PostTimelineListForUserModel;
 
-import java.sql.Time;
 import java.util.List;
 
 
@@ -58,10 +57,10 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
                 //photo yu al
             }
             //user name
-            com.itbarx.custom.component.CustOpenBoldTextView txtFullname = (com.itbarx.custom.component.CustOpenBoldTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_fullName_TextView);
+            com.itbarx.custom.component.TextViewBold txtFullname = (com.itbarx.custom.component.TextViewBold) convertView.findViewById(R.id.row_fragment_timeline_screen_fullName_TextView);
             txtFullname.setText(model.getPostOwner());
             //post time info
-            com.itbarx.custom.component.CustOpenRegularTextView txtTimeInfo = (com.itbarx.custom.component.CustOpenRegularTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_time_info_TextView);
+            com.itbarx.custom.component.TextViewRegular txtTimeInfo = (com.itbarx.custom.component.TextViewRegular) convertView.findViewById(R.id.row_fragment_timeline_screen_time_info_TextView);
             String addedDate = model.getAddedDate().replace("T", " ").substring(0, model.getAddedDate().indexOf("."));
             txtTimeInfo.setText(addedDate + " " + " eklendi.");
             //posted video
@@ -77,19 +76,19 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
                 //  video.start();
             }
             //text to speech
-            com.itbarx.custom.component.CustOpenRegularTextView txtSubs = (com.itbarx.custom.component.CustOpenRegularTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_subtitles_TextView);
+            com.itbarx.custom.component.TextViewRegular txtSubs = (com.itbarx.custom.component.TextViewRegular) convertView.findViewById(R.id.row_fragment_timeline_screen_subtitles_TextView);
             txtSubs.setText( (model.getPostSpeechToText() != null ) ?  model.getPostSpeechToText() : txtSubs.getText());
 
             //add like count
-            com.itbarx.custom.component.CustOpenBoldTextView txtLike = (com.itbarx.custom.component.CustOpenBoldTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_like_TextView);
+            com.itbarx.custom.component.TextViewBold txtLike = (com.itbarx.custom.component.TextViewBold) convertView.findViewById(R.id.row_fragment_timeline_screen_like_TextView);
             txtLike.setText((model.getPostLikeCount()!=null && !model.getPostLikeCount().equals("")) ? model.getPostLikeCount()  : "0");
 
             //add rebark / share count
-            com.itbarx.custom.component.CustOpenBoldTextView txtReBark = (com.itbarx.custom.component.CustOpenBoldTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_rebark_TextView);
+            com.itbarx.custom.component.TextViewBold txtReBark = (com.itbarx.custom.component.TextViewBold) convertView.findViewById(R.id.row_fragment_timeline_screen_rebark_TextView);
             txtReBark.setText((model.getPostShareCount()!=null && !model.getPostShareCount().equals("")) ? model.getPostShareCount()  : "0");
 
             //add reply count
-            com.itbarx.custom.component.CustOpenBoldTextView txtReply = (com.itbarx.custom.component.CustOpenBoldTextView) convertView.findViewById(R.id.row_fragment_timeline_screen_reply_TextView);
+            com.itbarx.custom.component.TextViewBold txtReply = (com.itbarx.custom.component.TextViewBold) convertView.findViewById(R.id.row_fragment_timeline_screen_reply_TextView);
             txtReply.setText((model.getPostReplyCount()!=null && !model.getPostReplyCount().equals("")) ? model.getPostReplyCount()  : "0");
 
 

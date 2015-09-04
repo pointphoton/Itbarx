@@ -1,11 +1,10 @@
 package com.itbarx.activity;
 
 import com.itbarx.R;
-import com.itbarx.adapter.PopularFragmentListAdapter;
 import com.itbarx.adapter.ProfilFragmentListAdapter;
 import com.itbarx.application.ItbarxGlobal;
-import com.itbarx.custom.component.CustOpenBoldTextView;
-import com.itbarx.custom.component.CustOpenRegularTextView;
+import com.itbarx.custom.component.TextViewBold;
+import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostPopularPostListModel;
 
@@ -14,9 +13,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -25,9 +22,9 @@ public class F_ProfileFragment extends Fragment {
     private T_ProfileActivity t_profileActivity;
     private AccountGetUserByLoginInfoModel accLoginInfoModel;
     private List<PostPopularPostListModel> postPopularPostListModels;
-    private CustOpenBoldTextView userNameTextView;
-    private CustOpenRegularTextView userLocationTextView;
-    private CustOpenRegularTextView userBioTextView;
+    private TextViewBold userNameTextView;
+    private TextViewRegular userLocationTextView;
+    private TextViewRegular userBioTextView;
 ListView userProfilePopularPostsListView;
     public F_ProfileFragment() {
 
@@ -55,13 +52,13 @@ ListView userProfilePopularPostsListView;
         }
 
         // set user name
-        userNameTextView = (CustOpenBoldTextView) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
+        userNameTextView = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
         userNameTextView.setText((null != accLoginInfoModel.getName() && !accLoginInfoModel.getName().equals("")) ? accLoginInfoModel.getName() : userNameTextView.getText());
         //set user location
-        userLocationTextView = (CustOpenRegularTextView) t_profileActivity.findViewById(R.id.profile_fragment_screen_place_text);
+        userLocationTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_place_text);
         userLocationTextView.setText((null != accLoginInfoModel.getLocationName() && !accLoginInfoModel.getLocationName().equals("")) ? accLoginInfoModel.getLocationName() : userLocationTextView.getText());
         //set user biography
-        userBioTextView = (CustOpenRegularTextView) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
+        userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
         userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
 
         //fills up the listview

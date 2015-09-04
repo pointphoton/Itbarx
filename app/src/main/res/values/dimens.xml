@@ -36,11 +36,11 @@
     <dimen name="text_size_35">35sp</dimen>
     
       <!--FONT SIZES  -->
-    <dimen name="text_size_button">17sp</dimen>
-    <dimen name="text_size_toolbar">21sp</dimen>
-    <dimen name="text_size_editbox">17sp</dimen>
-    <dimen name="login_text_size_or">21sp</dimen>
-    <dimen name="login_text_size_remember">21sp</dimen>
+    <dimen name="text_size_button">27sp</dimen>
+    <dimen name="text_size_toolbar">30sp</dimen>
+    <dimen name="text_size_editbox">25sp</dimen>
+    <dimen name="login_text_size_or">30sp</dimen>
+    <dimen name="login_text_size_remember">30sp</dimen>
     
     
     <!-- TAB SIZES -->
@@ -49,8 +49,8 @@
     <dimen name="tab_space_top">1dp</dimen>
     <dimen name="tab_space">0dp</dimen>
     <dimen name="tab_space_plus1">3dp</dimen>
-    <dimen name="tab_space_bottom_line">10sp</dimen>
-    <dimen name="tab_space_unselected_top">10sp</dimen>     
+    <dimen name="tab_space_bottom_line">1sp</dimen>
+    <dimen name="tab_space_unselected_top">1sp</dimen>
     
     
 

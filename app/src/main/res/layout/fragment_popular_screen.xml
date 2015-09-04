@@ -67,7 +67,7 @@
                 android:orientation="horizontal"
                 android:weightSum="2">
 
-                <com.itbarx.custom.component.CustOpenSansButton
+                <com.itbarx.custom.component.ButtonRegular
                     android:id="@+id/popular_fragment_popular_button"
                     style="@style/fragments_non_clickable_upper_buttons_default"
                     android:layout_width="0dip"
@@ -77,7 +77,7 @@
                     android:textSize="@dimen/text_size_button"
                     />
 
-                <com.itbarx.custom.component.CustOpenSansButton
+                <com.itbarx.custom.component.ButtonRegular
                     android:id="@+id/popular_fragment_timeline_button"
                     style="@style/fragments_clickable_upper_buttons_default"
                     android:background="@drawable/button_fragments"

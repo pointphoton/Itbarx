@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.itbarx.R;
 import com.itbarx.model.activity.ActivityListModel;
@@ -53,10 +52,10 @@ public class ActivityFragmentListAdapter extends BaseAdapter {
                 //photo yu al
             }
 
-            com.itbarx.custom.component.CustOpenBoldTextView txtFullname = (com.itbarx.custom.component.CustOpenBoldTextView)convertView.findViewById(R.id.row_fragment_activity_screen_activities_fullName_textView);
+            com.itbarx.custom.component.TextViewBold txtFullname = (com.itbarx.custom.component.TextViewBold)convertView.findViewById(R.id.row_fragment_activity_screen_activities_fullName_textView);
             txtFullname.setText(model.getItBarxUserName());
 
-            com.itbarx.custom.component.CustOpenRegularTextView txtAction= (com.itbarx.custom.component.CustOpenRegularTextView)convertView.findViewById(R.id.row_fragment_activity_screen_activities_action_textView);
+            com.itbarx.custom.component.TextViewRegular txtAction= (com.itbarx.custom.component.TextViewRegular)convertView.findViewById(R.id.row_fragment_activity_screen_activities_action_textView);
             txtAction.setText(model.getActivityText().replace(model.getItBarxUserName(),""));
         }
 

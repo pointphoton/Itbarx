@@ -32,7 +32,7 @@
             />
             </RelativeLayout>
 
-        <com.itbarx.custom.component.CustOpenBoldTextView
+        <com.itbarx.custom.component.TextViewBold
             android:id="@+id/row_fragment_request_screen_fullName_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
