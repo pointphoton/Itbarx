@@ -106,7 +106,7 @@
 
                         <ImageView
                             android:id="@+id/login_activity_screen_username_icon"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
@@ -124,8 +124,8 @@
 
                         <EditText
                             android:id="@+id/login_activity_screen_username_edittext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:background="#00000000"
                             android:ems="10"
                             android:hint="@string/login_activity_screen_username_text"
@@ -133,7 +133,8 @@
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
 
-                            android:text="user5">
+                            android:text="user5"
+                            android:textSize="18sp">
                             <requestFocus />
                         </EditText>
                     </RelativeLayout>
@@ -174,8 +175,8 @@
 
                         <EditText
                             android:id="@+id/login_activity_screen_password_edittext"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:background="#00000000"
                             android:ems="10"
                             android:hint="@string/login_activity_screen_password_text"
@@ -183,7 +184,8 @@
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
 
-                            android:text="test">
+                            android:text="test"
+                            android:textSize="18sp">
                              <requestFocus />
                         </EditText>
                     </RelativeLayout>
@@ -221,7 +223,7 @@
                     android:layout_weight="8"
                     android:ems="10"
                     android:text="@string/login_activity_screen_rememberme_text"
-                   />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <View
@@ -250,8 +252,9 @@
                         android:layout_height="match_parent"
                         android:background="@color/login_activity_button_forgotpassword_bg"
                         android:text="@string/login_activity_screen_forgotpassword_button_text"
+                        android:textStyle="bold"
                         android:textColor="@color/login_activity_button_forgotpassword_text"
-                       />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <View
@@ -272,8 +275,9 @@
                         android:layout_height="match_parent"
                         android:background="@color/login_activity_button_login_bg"
                         android:text="@string/login_activity_screen_login_button_text"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                         />
+                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -296,8 +300,9 @@
                     android:layout_height="match_parent"
                     android:background="@color/login_activity_button_createnewaccount_bg"
                     android:text="@string/login_activity_screen_createnewaccount_button_text"
+                    android:textStyle="bold"
                     android:textColor="@color/white"
-                    />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -347,7 +352,7 @@
                         android:gravity="center"
                         android:text="@string/login_activity_screen_or_text"
                         android:textColor="@color/login_activity_text_or"
-                         />
+                        android:textSize="18sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -393,8 +398,9 @@
                         android:layout_height="match_parent"
                         android:background="@color/button_facebook_bg"
                         android:text="@string/login_activity_screen_facebook_button_text"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                       />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <View
@@ -415,8 +421,9 @@
                         android:layout_height="match_parent"
                         android:background="@color/button_twitter_bg"
                         android:text="@string/login_activity_screen_twitter_button_text"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                       />
+                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -74,7 +74,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="@string/activityrequest_fragment_screen_activity_text"
-                    />
+                    android:textSize="@dimen/text_size_button" />
 
                 <com.itbarx.custom.component.CustOpenSansButton
                     android:id="@+id/activity_fragment_request_button"
