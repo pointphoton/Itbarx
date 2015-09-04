@@ -2,10 +2,13 @@ package com.itbarx.adapter;
 
 import android.content.Context;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.itbarx.R;
@@ -50,34 +53,45 @@ public class PopularFragmentListAdapter extends BaseAdapter {
         if (model != null) {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_popular_screen_user_videoView);
             TextViewRegular text = (TextViewRegular) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
+            MediaController controller = new MediaController(context);
 
 
-            if(model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL()!=null  && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false") )
-            {
-                Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
-                video.setVideoURI(uri);
-                text.setText(model.getPostSpeechToText());
-                video.stopPlayback();
-                video.pause();
-             //   video.start();
+            if (model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL() != null && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false")) {
+             //   Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net" + model.getPostURL());
 
-            }
-            else{
+                // video.setSurfaceTextureListener();
+
                 Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
                 video.setVideoURI(uri);
-               //  video.start();
+                video.setMediaController(controller);
+                controller.requestFocus();
+                text.setText((null != model.getPostSpeechToText()) ? model.getPostSpeechToText() : text.getText());
                 video.stopPlayback();
                 video.pause();
+                //   video.start();
+            //    video.start();
+                controller.show();
+
+            } else {
+                Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
+
+                video.setMediaController(controller);
+                video.setVideoURI(uri);
+                controller.requestFocus();
+                //  video.start();
+                video.stopPlayback();
+                video.pause();
+            //    video.start();
+                controller.show();
                 text.setText(model.getPostSpeechToText());
+
+
+                //      Uri uri = Uri.parse("android.resource://" + IApplication.getContext().getPackageName() + "/" + R.raw.sample);
+                //  video.setVideoURI(uri);
+                //  video.start();
             }
 
 
-      //      Uri uri = Uri.parse("android.resource://" + IApplication.getContext().getPackageName() + "/" + R.raw.sample);
-       //  video.setVideoURI(uri);
-          //  video.start();
-
-        }
-        return convertView;
-
+        } return convertView;
     }
 }

@@ -83,6 +83,7 @@ import com.itbarx.sl.PostProcessesServiceSL;
 import com.itbarx.sl.ReBarkProcessesServiceSL;
 import com.itbarx.sl.ReplyProcessesServiceSL;
 import com.itbarx.sl.SearchProcessesServiceSL;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.content.Context;
 import android.util.TypedValue;
@@ -101,10 +102,6 @@ public class LoginActivity extends BaseActivity {
     TextViewBold txtViewRembMe, txtViewOr;
     EditTextRegular edtUserName, edtPassword;
     String strUserName, strPassword;
-    private static float EDIT_BOX_TEXT_SIZE =25;
-    private static float TOOLBAR_TEXT_SIZE=33;
-    private static float BUTTON_TEXT_SIZE =27;
-    private static float TEXTVIEW_TEXT_SIZE =30;
     private float textSizeEdtTxt = 0;
     private float textSizeBtn = 0;
     private float textSizeTextView = 0;
@@ -124,10 +121,10 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
-        textSizeEdtTxt = EDIT_BOX_TEXT_SIZE / (getResources().getDisplayMetrics().density);
-        textSizeBtn = BUTTON_TEXT_SIZE / (getResources().getDisplayMetrics().density);
-        textSizeToolbar = TOOLBAR_TEXT_SIZE / (getResources().getDisplayMetrics().density);
-        textSizeTextView = TEXTVIEW_TEXT_SIZE / (getResources().getDisplayMetrics().density);
+        textSizeEdtTxt = TextSizeUtil.getEditBoxTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeBtn = TextSizeUtil.getLoginButtonsTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeToolbar = TextSizeUtil.getToolbarTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeTextView = TextSizeUtil.getLoginTextfieldTextSize() / (getResources().getDisplayMetrics().density);
         edtUserName = (EditTextRegular) findViewById(R.id.login_activity_screen_username_edittext);
         edtPassword = (EditTextRegular) findViewById(R.id.login_activity_screen_password_edittext);
         edtUserName.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeEdtTxt);

@@ -24,7 +24,7 @@
        android:adjustViewBounds="true"
        android:maxWidth="100dip"
        android:maxHeight="100dip"
-
+       android:background="#0000"
        />
 
 

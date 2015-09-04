@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class F_ProfileFragment extends Fragment {
     private TextViewRegular userLocationTextView;
     private TextViewRegular userBioTextView;
 ListView userProfilePopularPostsListView;
+    private VideoView video;
     public F_ProfileFragment() {
 
     }
@@ -65,6 +68,14 @@ ListView userProfilePopularPostsListView;
         userProfilePopularPostsListView= (ListView) t_profileActivity.findViewById(R.id.profile_fragment_screen_listView);
         postPopularPostListModels=ItbarxGlobal.getPopularListModel();
         userProfilePopularPostsListView.setAdapter(new ProfilFragmentListAdapter(t_profileActivity.getContext(), postPopularPostListModels));
+
+        //control the video
+        MediaController mc = new MediaController(t_profileActivity.getContext());
+        video = (VideoView) t_profileActivity.findViewById(R.id.row_fragment_popular_screen_user_videoView);
+        video.setMediaController(mc);
+        video.stopPlayback();
+       // video.start();
+        mc.show();
 
     }
 }
