@@ -94,13 +94,13 @@
     <dimen name="corner_radius_zero">0dp</dimen>
     <dimen name="createnewuser_secreen_useragreement_text_size">10dp</dimen>
     <dimen name="login_secreen_login_button_text_size">15dp</dimen>
-    <dimen name="login_text_size_or">25sp</dimen>
-    <dimen name="login_text_size_remember">25sp</dimen>
+    <dimen name="login_text_size_or">21sp</dimen>
+    <dimen name="login_text_size_remember">21sp</dimen>
     <dimen name="small_text_size">8dp</dimen>
     <dimen name="tab_space">0dp</dimen>
     <dimen name="tab_space_bottom_line">10sp</dimen>
     <dimen name="tab_space_plus1">3dp</dimen>
-    <dimen name="tab_space_top">10dp</dimen>
+    <dimen name="tab_space_top">1dp</dimen>
     <dimen name="tab_space_unselected_top">10sp</dimen>
     <dimen name="text_size_10">10sp</dimen>
     <dimen name="text_size_11">11sp</dimen>
@@ -130,9 +130,9 @@
     <dimen name="text_size_35">35sp</dimen>
     <dimen name="text_size_8">8sp</dimen>
     <dimen name="text_size_9">9sp</dimen>
-    <dimen name="text_size_button">25sp</dimen>
-    <dimen name="text_size_editbox">21sp</dimen>
-    <dimen name="text_size_toolbar">30sp</dimen>
+    <dimen name="text_size_button">17sp</dimen>
+    <dimen name="text_size_editbox">17sp</dimen>
+    <dimen name="text_size_toolbar">21sp</dimen>
     <!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="BrokenData">Doğrulanamayan data alındı</string>
@@ -215,15 +215,17 @@
     <string name="newuserdone_activity_screen_toolbar_text">Itbarx</string>
     <string name="populartimeline_fragment_screen_popular_text">popüler</string>
     <string name="populartimeline_fragment_screen_timeline_text">zaman tüneli</string>
+    <string name="profile_fragment_screen_edit_profile_text">profil düzenle</string>
+    <string name="profile_fragment_screen_imagebutton_barks_text">barks</string>
     <string name="profile_fragment_screen_imagebutton_count_text">135</string>
     <string name="profile_fragment_screen_imagebutton_followers_text">followers</string>
     <string name="profile_fragment_screen_imagebutton_following_text">following</string>
-    <string name="profile_fragment_screen_imagebutton_rebarks_text">rebarks</string>
     <string name="profile_fragment_screen_toolbar_text">profil</string>
     <string name="profile_fragment_screen_userinfo_atmail_text">\u0040gokhangokova</string>
     <string name="profile_fragment_screen_userinfo_name_text">kullanıcı adı</string>
     <string name="profile_fragment_screen_userinfo_personalinfo_text">User Experience Developer / Designer, Adobe Certified Expert, Adobe Certified Instructor, AdobeAddict, Web Craftsman</string>
     <string name="profile_fragment_screen_userinfo_place_text">bayrampaşa / istanbul - Türkiye</string>
+    <string name="record_fragment_screen_toolbar_text">yeni barx</string>
     <string name="request_fragment_screen_activity_buttonlayout_text">activity</string>
     <string name="request_fragment_screen_request_buttonlayout_text">request</string>
     <string name="root_service_url">http://itbarxapp.azurewebsites.net/api</string>

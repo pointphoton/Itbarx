@@ -29,7 +29,9 @@
             android:layout_height="match_parent"
             android:layout_weight="8" >
 
-            <TextView
+            <com.itbarx.custom.component.CustOpenRegularTextView
+
+                android:id="@+id/search_fragment__toolbar_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -40,7 +42,7 @@
         </RelativeLayout>
     </LinearLayout>
     <View
-        android:id="@+id/request_space_toolbar_layout"
+        android:id="@+id/search_fragment_space_toolbar_layout"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="5"
@@ -49,7 +51,7 @@
 
 
     <LinearLayout
-          android:id="@+id/popular_fragment_container"
+          android:id="@+id/search_fragment_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="475"
@@ -64,7 +66,7 @@
             android:visibility="invisible" />
 
         <LinearLayout
-             android:id="@+id/popular_fragment_content"
+             android:id="@+id/search_fragment_fragment_content"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="33"
@@ -91,7 +93,7 @@
                     android:gravity="center" >
 
                     <EditText
-                        android:id="@+id/fragment_search_screen_search_edittext"
+                        android:id="@+id/search_fragment_screen_search_edittext"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
@@ -99,7 +101,7 @@
                         android:hint="@string/fragment_screen_search_hint_text"
                         android:inputType="text"
                         android:textColor="@color/textview_userinputs_hints_forgotpassword_activity"
-                        android:textSize="@dimen/small_text_size" >
+                        >
 
                         <requestFocus />
                     </EditText>

@@ -59,6 +59,8 @@ public class ProfilFragmentListAdapter extends BaseAdapter {
                 Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net"+model.getPostURL());
                 video.setVideoURI(uri);
                 text.setText(model.getPostSpeechToText());
+                video.stopPlayback();
+                video.pause();
                 //   video.start();
 
             }
@@ -66,6 +68,8 @@ public class ProfilFragmentListAdapter extends BaseAdapter {
                 Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
                 video.setVideoURI(uri);
                 //  video.start();
+                video.stopPlayback();
+                video.pause();
                 text.setText(model.getPostSpeechToText());
             }
 

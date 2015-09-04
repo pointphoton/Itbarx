@@ -41,10 +41,12 @@
         </activity>
 
         <!-- TAB AND TAB ACTIVITIES -->
-        <activity android:name="com.itbarx.activity.TabContainer" >
-        </activity>
+        <activity android:name="com.itbarx.activity.TabContainer" />
         <activity android:name="com.itbarx.activity.T_HomeActivity" />
         <activity android:name="com.itbarx.activity.T_SecondActivity" />
+        <activity android:name="com.itbarx.activity.T_RecordActivity" />
+        <activity android:name="com.itbarx.activity.T_SearchActivity" />
+        <activity android:name="com.itbarx.activity.T_ProfileActivity" />
     </application>
 
 </manifest>

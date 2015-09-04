@@ -81,6 +81,7 @@ import com.itbarx.sl.ReplyProcessesServiceSL;
 import com.itbarx.sl.SearchProcessesServiceSL;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -91,10 +92,18 @@ public class LoginActivity extends BaseActivity {
 	// ************************//
 	// ---ATTRIBUTES---
 	// ************************//
-	Button btnLogIn, btnCreateNewAcc, btnForgotPwd, btnFacebook, btnTwitter, btnTest;
+	Button btnLogIn, btnCreateNewAcc, btnForgotPwd, btnFacebook, btnTwitter;
+	com.itbarx.custom.component.CustOpenRegularTextView txtViewRembMe, txtViewOr,txtToolbar;
 	EditText edtUserName, edtPassword;
 	String strUserName, strPassword;
-
+	private static float EDIT_BOX_TEXT_SIZE=21;
+	private static float TOOLBAR_TEXT_SIZE=30;
+	private static float BUTTON_TEXT_SIZE=25;
+	private static float TEXTVIEW_TEXT_SIZE=25;
+	private float textSizeEdtTxt=0;
+	private float textSizeBtn=0;
+	private float textSizeTextView=0;
+	private float textSizeToolbar=0;
 	@Override
 	protected int getLayoutResourceId() {
 
@@ -109,7 +118,34 @@ public class LoginActivity extends BaseActivity {
 
 	@Override
 	protected void initViews() {
+		textSizeEdtTxt = EDIT_BOX_TEXT_SIZE / (getResources().getDisplayMetrics().density);
+		textSizeBtn= BUTTON_TEXT_SIZE / (getResources().getDisplayMetrics().density);
+		textSizeToolbar = TOOLBAR_TEXT_SIZE / (getResources().getDisplayMetrics().density);
+		textSizeTextView= TEXTVIEW_TEXT_SIZE / (getResources().getDisplayMetrics().density);
+		edtUserName = (EditText) findViewById(R.id.login_activity_screen_username_edittext);
+		edtPassword = (EditText) findViewById(R.id.login_activity_screen_password_edittext);
+		edtUserName.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeEdtTxt);
+		edtPassword.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeEdtTxt);
+		strUserName = "";
+		strPassword = "";
+		btnLogIn = (Button) findViewById(R.id.login_activity_screen_login_button);
+		btnForgotPwd = (Button) findViewById(R.id.login_activity_screen_forgotpassword_button);
+		btnCreateNewAcc = (Button) findViewById(R.id.login_activity_screen_createnewaccount_button);
+		btnTwitter = (Button) findViewById(R.id.login_activity_screen_twitter_button);
+		btnFacebook = (Button) findViewById(R.id.login_activity_screen_facebook_button);
+		btnLogIn.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeBtn);
+		btnForgotPwd.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeBtn);
+		btnCreateNewAcc.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeBtn);
+		btnFacebook.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeBtn);
+		btnTwitter.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeBtn);
+		txtViewOr = (com.itbarx.custom.component.CustOpenRegularTextView) findViewById(R.id.login_activity_screen_or_plaintext);
+		txtViewRembMe = (com.itbarx.custom.component.CustOpenRegularTextView) findViewById(R.id.login_activity_screen_rememberme_plaintext);
+		txtToolbar=(com.itbarx.custom.component.CustOpenRegularTextView) findViewById(R.id.login_activity_screen_toolbar_textView);
+		txtViewOr.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeTextView);
+		txtViewRembMe.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeTextView);
+		txtToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeToolbar);
 
+	//	btnLogIn.setTextSize();
 	logInStart();
 	forgotStart();
 	createNewAccStart();
@@ -122,35 +158,32 @@ public class LoginActivity extends BaseActivity {
 
 	// LOGIN BUTTON EVENTS
 	private void logInStart() {
-	btnLogIn = (Button) findViewById(R.id.login_activity_screen_login_button);
-	edtUserName = (EditText) findViewById(R.id.login_activity_screen_username_edittext);
-	edtPassword = (EditText) findViewById(R.id.login_activity_screen_password_edittext);
-	strUserName = "";
-	strPassword = "";
+
+
 	btnLogIn.setOnClickListener(logInClickListener);
 	}
 
 	// FORGOT BUTTON EVENTS
 	private void forgotStart() {
-	btnForgotPwd = (Button) findViewById(R.id.login_activity_screen_forgotpassword_button);
+
 	btnForgotPwd.setOnClickListener(forgotPwdCreateClickListener);
 	}
 
 	// CREATE NEW ACCOUNT BUTTON EVENTS
 	private void createNewAccStart() {
-	btnCreateNewAcc = (Button) findViewById(R.id.login_activity_screen_createnewaccount_button);
+
 	btnCreateNewAcc.setOnClickListener(newUserCreateClickListener);
 	}
 
 	// TWITTER BUTTON EVENTS
 	private void twitterStart() {
-	btnTwitter = (Button) findViewById(R.id.login_activity_screen_twitter_button);
+
 	btnTwitter.setOnClickListener(twitterClickListener);
 	}
 
 	// FACEBOOK BUTTON EVENTS
 	private void facebookStart() {
-	btnFacebook = (Button) findViewById(R.id.login_activity_screen_facebook_button);
+
 	btnFacebook.setOnClickListener(facebookClickListener);
 	}
 

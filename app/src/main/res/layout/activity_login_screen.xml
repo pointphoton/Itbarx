@@ -15,7 +15,8 @@
         android:layout_weight="50"
         android:background="@color/toolbar_bg" >
 
-        <TextView
+        <com.itbarx.custom.component.CustOpenRegularTextView
+            android:id="@+id/login_activity_screen_toolbar_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -23,7 +24,7 @@
             android:layout_centerVertical="true"
             android:text="@string/login_activity_screen_toolbar_text"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_toolbar" />
+            />
     </RelativeLayout>
 
     <LinearLayout
@@ -131,7 +132,7 @@
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
-                            android:textSize="@dimen/text_size_editbox"
+
                             android:text="user5">
                             <requestFocus />
                         </EditText>
@@ -181,7 +182,7 @@
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
                             android:textColor="@color/editprofile_activity_hints_edittext"
-                            android:textSize="@dimen/text_size_editbox"
+
                             android:text="test">
                              <requestFocus />
                         </EditText>
@@ -212,7 +213,7 @@
                         android:src="@drawable/icon_remember_me_not_checked_login" />
                 </RelativeLayout>
 
-                <TextView
+                <com.itbarx.custom.component.CustOpenRegularTextView
                     android:id="@+id/login_activity_screen_rememberme_plaintext"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
@@ -220,7 +221,7 @@
                     android:layout_weight="8"
                     android:ems="10"
                     android:text="@string/login_activity_screen_rememberme_text"
-                    android:textSize="@dimen/login_text_size_remember" />
+                   />
             </LinearLayout>
 
             <View
@@ -250,7 +251,7 @@
                         android:background="@color/login_activity_button_forgotpassword_bg"
                         android:text="@string/login_activity_screen_forgotpassword_button_text"
                         android:textColor="@color/login_activity_button_forgotpassword_text"
-                        android:textSize="@dimen/text_size_button" />
+                       />
                 </LinearLayout>
 
                 <View
@@ -272,7 +273,7 @@
                         android:background="@color/login_activity_button_login_bg"
                         android:text="@string/login_activity_screen_login_button_text"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_button" />
+                         />
                 </LinearLayout>
             </LinearLayout>
 
@@ -296,7 +297,7 @@
                     android:background="@color/login_activity_button_createnewaccount_bg"
                     android:text="@string/login_activity_screen_createnewaccount_button_text"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_button" />
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -335,7 +336,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="6" >
 
-                    <TextView
+                    <com.itbarx.custom.component.CustOpenRegularTextView
                         android:id="@+id/login_activity_screen_or_plaintext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -346,7 +347,7 @@
                         android:gravity="center"
                         android:text="@string/login_activity_screen_or_text"
                         android:textColor="@color/login_activity_text_or"
-                        android:textSize="@dimen/login_text_size_or" />
+                         />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -393,7 +394,7 @@
                         android:background="@color/button_facebook_bg"
                         android:text="@string/login_activity_screen_facebook_button_text"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_button" />
+                       />
                 </LinearLayout>
 
                 <View
@@ -415,7 +416,7 @@
                         android:background="@color/button_twitter_bg"
                         android:text="@string/login_activity_screen_twitter_button_text"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_size_button" />
+                       />
                 </LinearLayout>
             </LinearLayout>
 

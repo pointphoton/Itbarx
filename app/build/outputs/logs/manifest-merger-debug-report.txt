@@ -1,103 +1,115 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:2:1-67:12
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:2:1-68:12
 	xmlns:android
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:3:11-69
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:4:5-63
 	package
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:2:11-31
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:3:5-25
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:7:11-36
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:8:5-30
 	android:versionCode
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:6:11-34
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:7:5-28
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 	android:installLocation
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:5:11-51
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:6:5-45
 uses-sdk
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:9:5-11:40
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:10:5-12:40
 	android:targetSdkVersion
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:11:9-38
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:12:9-38
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:11:9-35
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 		INJECTED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:14:5-66
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:15:5-66
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:14:22-64
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:15:22-64
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:15:5-81
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:15:22-79
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:16:22-79
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:16:5-80
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:17:5-80
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:16:22-78
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:17:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:17:5-78
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:18:5-78
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:17:22-76
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:18:22-76
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:18:5-91
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:19:5-91
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:18:22-72
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:19:22-72
 application
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:20:5-65:19
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:21:5-66:19
 	android:label
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:24:9-41
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:25:9-41
 	android:allowBackup
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:22:9-35
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:23:9-35
 	android:icon
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:23:9-45
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:24:9-45
 	android:theme
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:25:9-56
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:26:9-56
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:21:9-59
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:22:9-59
 activity#com.itbarx.activity.LoginActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:26:9-34:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:27:9-35:20
 	android:label
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:28:13-45
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:29:13-45
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:27:13-61
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:28:13-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:29:13-33:29
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:30:17-68
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:31:17-68
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:30:25-66
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:32:17-76
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:33:17-76
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:33:27-74
 activity#com.itbarx.activity.CreateNewAccountActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:35:9-38:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:36:9-39:20
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:36:13-72
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:37:13-72
 activity#com.itbarx.activity.EditProfileActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:40:9-43:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:41:9-44:20
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:41:13-67
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:42:13-67
 activity#com.itbarx.activity.ForgotPasswordActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:45:9-48:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:46:9-49:20
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:46:13-70
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:47:13-70
 activity#com.itbarx.activity.NewUserDoneActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:50:9-53:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:51:9-54:20
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:51:13-67
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:52:13-67
 activity#com.itbarx.activity.TabContainer
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:57:9-58:20
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:58:9-78
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:57:19-66
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:58:19-66
 activity#com.itbarx.activity.T_HomeActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:59:9-60:74
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:59:9-81
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:60:13-62
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:59:20-69
 activity#com.itbarx.activity.T_SecondActivity
-ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:61:9-62:76
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:60:9-83
 	android:name
-		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:62:13-64
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:60:20-71
+activity#com.itbarx.activity.T_RecordActivity
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:61:9-83
+	android:name
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:61:20-71
+activity#com.itbarx.activity.T_SearchActivity
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:62:9-83
+	android:name
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:62:20-71
+activity#com.itbarx.activity.T_ProfileActivity
+ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:63:9-84
+	android:name
+		ADDED from G:\SSD_Develop\ProjectFiles\Itbarx\app\src\main\AndroidManifest.xml:63:20-72

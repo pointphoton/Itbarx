@@ -110,13 +110,13 @@
 
 
 
-            <ScrollView
+            <RelativeLayout
                 android:id="@+id/row_fragment_timeline_screen_text_scroller_container"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="20"
-                android:scrollbars="vertical"
-                android:fillViewport="true">
+
+              >
 
             <com.itbarx.custom.component.CustOpenRegularTextView
                 android:layout_width="fill_parent"
@@ -126,7 +126,7 @@
                 android:id="@+id/row_fragment_timeline_screen_subtitles_TextView"
                 />
 
-            </ScrollView>
+            </RelativeLayout>
 
     </LinearLayout>
 

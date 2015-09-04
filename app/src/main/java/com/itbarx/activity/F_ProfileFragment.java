@@ -42,7 +42,7 @@ ListView userProfilePopularPostsListView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+
         View rootView = inflater.inflate(R.layout.fragment_profile_screen, container, false);
         return rootView;
     }

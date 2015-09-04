@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Photon\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
-        jumboMode="false"
-        revision="23.0.0"
-        sha1="a60a5e993c98c864010053cb901b7eab25306568">
-        <dex dex="G:\SSD_Develop\ProjectFiles\Itbarx\app\build\intermediates\pre-dexed\debug\gson-2.2.4-e2da9708b83b3699bbc303aa623f290dceb25225.jar" />
-    </item>
-    <item
         jar="G:\SSD_Develop\Android\android-sdk_r24.3.3-windows\android-sdk-windows\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="false"
         revision="23.0.0"
         sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
         <dex dex="G:\SSD_Develop\ProjectFiles\Itbarx\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-5b39c16fe7e8d4f350eebf847a7d6f6228262e32.jar" />
+    </item>
+    <item
+        jar="C:\Users\Photon\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="G:\SSD_Develop\ProjectFiles\Itbarx\app\build\intermediates\pre-dexed\debug\gson-2.2.4-e2da9708b83b3699bbc303aa623f290dceb25225.jar" />
     </item>
 
 </items>

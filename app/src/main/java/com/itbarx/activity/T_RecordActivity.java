@@ -11,6 +11,10 @@ import com.itbarx.R;
 public class T_RecordActivity extends BaseActivity  {
 
 
+
+
+
+
     @Override
     protected int getLayoutResourceId() {
         return R.layout.t_record_activity;
