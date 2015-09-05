@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostPopularPostListModel;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.app.Application;
 import android.content.Context;
@@ -18,11 +19,15 @@ public class ItbarxGlobal extends Application {
 	private static Context appContext;
 	private static SharedPreferences mSharedPrefs;
 	private static ItbarxGlobal instance =null;
+	private static float DENSITY;
+
 
 
 	@Override
 	public void onCreate() {
 		instance =this;
+
+		setDensity();
 		super.onCreate();
 	}
 
@@ -50,6 +55,7 @@ public class ItbarxGlobal extends Application {
 	private static void init(Context context) {
 	appContext = context;
 	mSharedPrefs = appContext.getSharedPreferences("xmlFile", MODE_PRIVATE);
+
 	}
 
 	public static Boolean IsContexNull() {
@@ -90,5 +96,17 @@ public class ItbarxGlobal extends Application {
 	public String getSystemLanguage() {
 	return Locale.getDefault().getLanguage();
 	}
+
+	//set density
+
+	private static void setDensity(){
+	DENSITY =	getInstance().getResources().getDisplayMetrics().density;
+	}
+
+	public static  float getDENSITY(){
+		return  DENSITY;
+	}
+
+
 
 }

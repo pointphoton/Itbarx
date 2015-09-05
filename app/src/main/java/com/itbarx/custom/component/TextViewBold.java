@@ -24,7 +24,7 @@ public class TextViewBold extends TextView {
 
 	private void 	setFont() {
 	if (!isInEditMode()) {
-		Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSansBold.ttf");
+		Typeface tf = Typeface.createFromAsset(getContext().getAssets(), "fonts/OpenSansSemibold.ttf");
 		setTypeface(tf);
 
 	}

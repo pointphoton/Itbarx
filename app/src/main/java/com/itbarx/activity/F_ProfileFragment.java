@@ -3,6 +3,7 @@ package com.itbarx.activity;
 import com.itbarx.R;
 import com.itbarx.adapter.ProfilFragmentListAdapter;
 import com.itbarx.application.ItbarxGlobal;
+import com.itbarx.custom.component.ButtonBold;
 import com.itbarx.custom.component.EditTextRegular;
 import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewRegular;
@@ -30,10 +31,13 @@ public class F_ProfileFragment extends Fragment {
     private TextViewBold userNameTextView;
     private TextViewRegular userLocationTextView;
     private TextViewRegular userBioTextView;
-   private TextViewBold barkTxtView,followerTxtView,followingTxtView;
+    private TextViewBold barkTxtViewC,followerTxtViewC,followingTxtViewC;
+    private TextViewRegular barkTxtView,followerTxtView,followingTxtView;
+    private ButtonBold btnProfil;
 
-    private float textSizeMiniButton = 0;
-    private float textSizeBtn = 0;
+    private float textSizeMiniButtonCountText = 0;
+    private float textSizeMiniButtonsText = 0;
+    private float textSizeBtnProfil = 0;
     private float textSizeListView = 0;
     private float textSizeToolbar = 0;
     private float textSizeUserName = 0;
@@ -72,6 +76,9 @@ ListView userProfilePopularPostsListView;
         textSizePlace = TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
         textSizeBio =  TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
         textSizeToolbar= TextSizeUtil.getToolbarTextSize() / (getResources().getDisplayMetrics().density);
+      //  textSizeBtnProfil = TextSizeUtil.getProfileButtonTextSize() / (getResources().getDisplayMetrics().density);
+        textSizeMiniButtonCountText =  TextSizeUtil.getProfileMiniButtonCountTextSize() / (getResources().getDisplayMetrics().density);
+
         // set user name
         userNameTextView = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
         userNameTextView.setText((null != accLoginInfoModel.getName() && !accLoginInfoModel.getName().equals("")) ? accLoginInfoModel.getName() : userNameTextView.getText());
@@ -89,6 +96,10 @@ ListView userProfilePopularPostsListView;
         userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
         userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
         userBioTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBio);
+
+        btnProfil = (ButtonBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_edit_profile_button);
+        btnProfil.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtnProfil);
+
 
 
         //fills up the listview

@@ -1,41 +1,105 @@
 package com.itbarx.utils;
 
+import com.itbarx.application.ItbarxGlobal;
+
 /**
  * TODO: Add a class header comment!
  */
 public class TextSizeUtil {
-    private static float EDIT_BOX_TEXT_SIZE=25;
-    private static float TOOLBAR_TEXT_SIZE=33;
-    private static float LOGIN_BUTTONS_TEXT_SIZE=25;
-    private static float LOGIN_TEXTFIELD_TEXT_SIZE=30;
 
-    //
+    private static float DENSITY=ItbarxGlobal.getDENSITY();
+
+    //COMMON SD
+    private static float EDIT_BOX_TEXT_SIZE=27f;
+    private static float TOOLBAR_TEXT_SIZE=35f;
+    private static float BUTTON_TEXT_SIZE=25f;
+    //COMMON HD
+    private static float EDIT_BOX_TEXT_SIZE_HD=EDIT_BOX_TEXT_SIZE*1.4f;
+    private static float TOOLBAR_TEXT_SIZE_HD=TOOLBAR_TEXT_SIZE*1.4f;
+    private static float BUTTON_TEXT_SIZE_HD=BUTTON_TEXT_SIZE*1.4f;
+    //COMMON FULL HD
+    private static float EDIT_BOX_TEXT_SIZE_FULL_HD=EDIT_BOX_TEXT_SIZE*2f;
+    private static float TOOLBAR_TEXT_SIZE_FULL_HD=TOOLBAR_TEXT_SIZE*2f;
+    private static float BUTTON_TEXT_SIZE_FULL_HD=BUTTON_TEXT_SIZE*2f;
+    //LOGIN SD
+    private static float LOGIN_OR_TEXT_SIZE=27f;
+    private static float LOGIN_REMEMBER_ME_TEXT_SIZE=30f;
+    //LOGIN HD
+    private static float LOGIN_OR_TEXT_SIZE_HD=LOGIN_OR_TEXT_SIZE*1.4f;
+    private static float LOGIN_REMEMBER_ME_TEXT_SIZE_HD=LOGIN_REMEMBER_ME_TEXT_SIZE*1.4f;
+    //LOGIN FULL HD
+    private static float LOGIN_OR_TEXT_SIZE_FULL_HD=LOGIN_OR_TEXT_SIZE*2f;
+    private static float LOGIN_REMEMBER_ME_TEXT_SIZE_FULL_HD=LOGIN_REMEMBER_ME_TEXT_SIZE*2f;
+
+
+    //PROFILE FRAGMENT
     private static float PROFILE_USERNAME_TEXT_SIZE=14;
     private static float PROFILE_USER_BIO_TEXT_SIZE=12;
     private static float PROFILE_USER_PLACE_TEXT_SIZE=12;
-    private static float PROFILE_BUTTON_TEXT_SIZE=25;
     private static float PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE=15;
     private static float PROFILE_MINI_BUTTON_TEXT_SIZE=14;
 
-    public static float getProfileMiniButtonTextSize() {
-        return PROFILE_MINI_BUTTON_TEXT_SIZE;
+    public static float getSPFont(float textSize){
+        return (textSize/ DENSITY);
     }
 
+//COMMON COMPONENTS METHODS
     public static float getEditBoxTextSize() {
+        if (DENSITY>2.0){
+            return (EDIT_BOX_TEXT_SIZE_FULL_HD / DENSITY);
+        }
+      else   if (DENSITY>1.0){
+            return (EDIT_BOX_TEXT_SIZE_HD / DENSITY);
+        }
         return EDIT_BOX_TEXT_SIZE;
     }
 
     public static float getToolbarTextSize() {
-        return TOOLBAR_TEXT_SIZE;
+        if (DENSITY>2.0){
+            return (TOOLBAR_TEXT_SIZE_FULL_HD / DENSITY);
+        }
+     else   if (DENSITY>1.0){
+           return (TOOLBAR_TEXT_SIZE_HD / DENSITY);
+       }
+        return (TOOLBAR_TEXT_SIZE/DENSITY);
     }
 
-    public static float getLoginButtonsTextSize() {
-        return LOGIN_BUTTONS_TEXT_SIZE;
+    public static float getButtonTextSize() {
+        if (DENSITY>2.0){
+            return (BUTTON_TEXT_SIZE_FULL_HD / DENSITY);
+        }
+       else if (DENSITY>1.0){
+            return (BUTTON_TEXT_SIZE_HD / DENSITY);
+        }
+
+        return (BUTTON_TEXT_SIZE/DENSITY);
     }
 
-    public static float getLoginTextfieldTextSize() {
-        return LOGIN_TEXTFIELD_TEXT_SIZE;
+    // LOGIN COMPONENTS METHODS
+    public static float getLoginOrTextSize() {
+        if (DENSITY>2.0){
+            return (LOGIN_OR_TEXT_SIZE_FULL_HD / DENSITY);
+        }
+        else if (DENSITY>1.0){
+            return (LOGIN_OR_TEXT_SIZE_HD / DENSITY);
+        }
+
+        return (LOGIN_OR_TEXT_SIZE/DENSITY);
     }
+
+    public static float getLoginRememberMeTextSize() {
+        if (DENSITY>2.0){
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE_FULL_HD / DENSITY);
+        }
+        else if (DENSITY>1.0){
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE_HD / DENSITY);
+        }
+
+        return LOGIN_REMEMBER_ME_TEXT_SIZE;
+    }
+
+
+
 
     public static float getProfileUsernameTextSize() {
         return PROFILE_USERNAME_TEXT_SIZE;
@@ -49,11 +113,11 @@ public class TextSizeUtil {
         return PROFILE_USER_PLACE_TEXT_SIZE;
     }
 
-    public static float getProfileButtonTextSize() {
-        return PROFILE_BUTTON_TEXT_SIZE;
-    }
-
     public static float getProfileMiniButtonCountTextSize() {
         return PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE;
+    }
+
+    public static float getProfileMiniButtonTextSize() {
+        return PROFILE_MINI_BUTTON_TEXT_SIZE;
     }
 }

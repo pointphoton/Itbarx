@@ -91,6 +91,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import org.w3c.dom.Text;
+
 
 public class LoginActivity extends BaseActivity {
 
@@ -102,10 +104,7 @@ public class LoginActivity extends BaseActivity {
     TextViewBold txtViewRembMe, txtViewOr;
     EditTextRegular edtUserName, edtPassword;
     String strUserName, strPassword;
-    private float textSizeEdtTxt = 0;
-    private float textSizeBtn = 0;
-    private float textSizeTextView = 0;
-    private float textSizeToolbar = 0;
+
 
     @Override
     protected int getLayoutResourceId() {
@@ -121,14 +120,9 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
-        textSizeEdtTxt = TextSizeUtil.getEditBoxTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeBtn = TextSizeUtil.getLoginButtonsTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeToolbar = TextSizeUtil.getToolbarTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeTextView = TextSizeUtil.getLoginTextfieldTextSize() / (getResources().getDisplayMetrics().density);
+
         edtUserName = (EditTextRegular) findViewById(R.id.login_activity_screen_username_edittext);
         edtPassword = (EditTextRegular) findViewById(R.id.login_activity_screen_password_edittext);
-        edtUserName.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeEdtTxt);
-        edtPassword.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeEdtTxt);
         strUserName = "";
         strPassword = "";
         btnLogIn = (ButtonBold) findViewById(R.id.login_activity_screen_login_button);
@@ -136,25 +130,35 @@ public class LoginActivity extends BaseActivity {
         btnCreateNewAcc = (ButtonBold) findViewById(R.id.login_activity_screen_createnewaccount_button);
         btnTwitter = (ButtonBold) findViewById(R.id.login_activity_screen_twitter_button);
         btnFacebook = (ButtonBold) findViewById(R.id.login_activity_screen_facebook_button);
-        btnLogIn.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtn);
-        btnForgotPwd.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtn);
-        btnCreateNewAcc.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtn);
-        btnFacebook.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtn);
-        btnTwitter.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtn);
         txtViewOr = (TextViewBold) findViewById(R.id.login_activity_screen_or_plaintext);
         txtViewRembMe = (TextViewBold) findViewById(R.id.login_activity_screen_rememberme_plaintext);
         txtToolbar = (TextViewRegular) findViewById(R.id.login_activity_screen_toolbar_textView);
-        txtViewOr.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTextView);
-        txtViewRembMe.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeTextView);
-        txtToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeToolbar);
 
-        //	btnLogIn.setTextSize();
+
+        //SET FONTS
+        setCompFonts();
+        //START OTHER ACTIVITIES
         logInStart();
         forgotStart();
         createNewAccStart();
         twitterStart();
         facebookStart();
     }
+
+    //LOGIN COMPONENTS SETUP METHODS
+    private void setCompFonts() {
+        btnLogIn.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        btnForgotPwd.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        btnCreateNewAcc.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        btnFacebook.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        btnTwitter.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        txtViewOr.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getLoginOrTextSize());
+        txtViewRembMe.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getLoginRememberMeTextSize());
+        txtToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+        edtUserName.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
+        edtPassword.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
+    }
+
     // *************************************//
     // ---LOGIN ACTIVITY ACTION METHODS---
     // *************************************//

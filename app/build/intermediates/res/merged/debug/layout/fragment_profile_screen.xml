@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:layout_weight="8">
 
-            <TextView
+            <com.itbarx.custom.component.TextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -37,7 +37,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/profile_fragment_screen_toolbar_text"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_toolbar"/>
+               />
         </RelativeLayout>
 
 
@@ -375,7 +375,7 @@
                 >
 
 
-                <Button
+                <com.itbarx.custom.component.ButtonBold
                     android:id="@+id/profile_fragment_screen_edit_profile_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
