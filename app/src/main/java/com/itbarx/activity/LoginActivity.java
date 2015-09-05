@@ -123,8 +123,6 @@ public class LoginActivity extends BaseActivity {
 
         edtUserName = (EditTextRegular) findViewById(R.id.login_activity_screen_username_edittext);
         edtPassword = (EditTextRegular) findViewById(R.id.login_activity_screen_password_edittext);
-        strUserName = "";
-        strPassword = "";
         btnLogIn = (ButtonBold) findViewById(R.id.login_activity_screen_login_button);
         btnForgotPwd = (ButtonBold) findViewById(R.id.login_activity_screen_forgotpassword_button);
         btnCreateNewAcc = (ButtonBold) findViewById(R.id.login_activity_screen_createnewaccount_button);
@@ -134,6 +132,8 @@ public class LoginActivity extends BaseActivity {
         txtViewRembMe = (TextViewBold) findViewById(R.id.login_activity_screen_rememberme_plaintext);
         txtToolbar = (TextViewRegular) findViewById(R.id.login_activity_screen_toolbar_textView);
 
+        strUserName = "";
+        strPassword = "";
 
         //SET FONTS
         setCompFonts();

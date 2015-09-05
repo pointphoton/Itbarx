@@ -4,13 +4,13 @@ import com.itbarx.R;
 import com.itbarx.adapter.ProfilFragmentListAdapter;
 import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.custom.component.ButtonBold;
-import com.itbarx.custom.component.EditTextRegular;
 import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostPopularPostListModel;
 import com.itbarx.utils.TextSizeUtil;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -26,27 +26,19 @@ import java.util.List;
 public class F_ProfileFragment extends Fragment {
 
     private T_ProfileActivity t_profileActivity;
-    private AccountGetUserByLoginInfoModel accLoginInfoModel;
+    private AccountGetUserByLoginInfoModel accLoginInfoModel=null;
     private List<PostPopularPostListModel> postPopularPostListModels;
-    private TextViewBold userNameTextView;
-    private TextViewRegular userLocationTextView;
-    private TextViewRegular userBioTextView;
-    private TextViewBold barkTxtViewC,followerTxtViewC,followingTxtViewC;
-    private TextViewRegular barkTxtView,followerTxtView,followingTxtView;
+    private TextViewBold txtUserName, txtAtMail;
+    private TextViewRegular txtLocationName, txtUserBio;
+    private TextViewRegular txtProfileToolbar;
+    private TextViewBold txtBarkCount, txtFollowerCount, txtFollowingCount;
+    private TextViewRegular txtBarkText, txtFollowerText, txtFollowingText;
     private ButtonBold btnProfil;
 
-    private float textSizeMiniButtonCountText = 0;
-    private float textSizeMiniButtonsText = 0;
-    private float textSizeBtnProfil = 0;
-    private float textSizeListView = 0;
-    private float textSizeToolbar = 0;
-    private float textSizeUserName = 0;
-    private float textSizePlace = 0;
-    private float textSizeBio = 0;
-    private TextViewRegular txtToolbar;
 
-ListView userProfilePopularPostsListView;
+    ListView userProfilePopularPostsListView;
     private VideoView video;
+
     public F_ProfileFragment() {
 
     }
@@ -54,67 +46,86 @@ ListView userProfilePopularPostsListView;
     public F_ProfileFragment(T_ProfileActivity t_profileActivity) {
         this.t_profileActivity = t_profileActivity;
     }
-    /*
-	 * public F_ProfileFragment(FiveTabFragmentsContainerActivity container) { mainActivity = container; }
-	 */
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (null != ItbarxGlobal.getInstance().getAccountModel()) {
+            accLoginInfoModel = ItbarxGlobal.getInstance().getAccountModel();
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_profile_screen, container, false);
-        return rootView;
+        return inflater.inflate(R.layout.fragment_profile_screen, container, false);
+
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (null != ItbarxGlobal.getInstance().getAccountModel()) {
-            accLoginInfoModel = ItbarxGlobal.getInstance().getAccountModel();
-        }
 
-        textSizeUserName = TextSizeUtil.getProfileUsernameTextSize() / (getResources().getDisplayMetrics().density);
-        textSizePlace = TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeBio =  TextSizeUtil.getProfileUserBioTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeToolbar= TextSizeUtil.getToolbarTextSize() / (getResources().getDisplayMetrics().density);
-      //  textSizeBtnProfil = TextSizeUtil.getProfileButtonTextSize() / (getResources().getDisplayMetrics().density);
-        textSizeMiniButtonCountText =  TextSizeUtil.getProfileMiniButtonCountTextSize() / (getResources().getDisplayMetrics().density);
 
-        // set user name
-        userNameTextView = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
-        userNameTextView.setText((null != accLoginInfoModel.getName() && !accLoginInfoModel.getName().equals("")) ? accLoginInfoModel.getName() : userNameTextView.getText());
-        userNameTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeUserName);
-        //set user location
-        userLocationTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_place_text);
-        userLocationTextView.setText((null != accLoginInfoModel.getLocationName() && !accLoginInfoModel.getLocationName().equals("")) ? accLoginInfoModel.getLocationName() : userLocationTextView.getText());
-        userLocationTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizePlace);
-        //set user biography
-        userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
-        userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
-        userBioTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBio);
-
-        //set mini button text size
-        userBioTextView = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
-        userBioTextView.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : userBioTextView.getText());
-        userBioTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBio);
-
+        txtProfileToolbar = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_toolbar_text);
+        txtUserName = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_username_text);
+        txtLocationName = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_place_text);
+        txtUserBio = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_user_bio_text);
+        txtAtMail = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_atmail_text);
         btnProfil = (ButtonBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_edit_profile_button);
-        btnProfil.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeBtnProfil);
-
-
-
+        txtBarkCount = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_barks_count_TextView);
+        txtFollowerCount = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_followers_count_TextView);
+        txtFollowingCount = (TextViewBold) t_profileActivity.findViewById(R.id.profile_fragment_screen_following_count_TextView);
+        txtBarkText = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_barks_TextView);
+        txtFollowerText = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_followers_TextView);
+        txtFollowingText = (TextViewRegular) t_profileActivity.findViewById(R.id.profile_fragment_screen_following_TextView);
+/*
         //fills up the listview
-        userProfilePopularPostsListView= (ListView) t_profileActivity.findViewById(R.id.profile_fragment_screen_listView);
-        postPopularPostListModels=ItbarxGlobal.getPopularListModel();
+        userProfilePopularPostsListView = (ListView) t_profileActivity.findViewById(R.id.profile_fragment_screen_listView);
+        postPopularPostListModels = ItbarxGlobal.getPopularListModel();
         userProfilePopularPostsListView.setAdapter(new ProfilFragmentListAdapter(t_profileActivity.getContext(), postPopularPostListModels));
-
+*/
         //control the video
+        /*
         MediaController mc = new MediaController(t_profileActivity.getContext());
         video = (VideoView) t_profileActivity.findViewById(R.id.row_fragment_popular_screen_user_videoView);
         video.setMediaController(mc);
         video.stopPlayback();
-       // video.start();
+        // video.start();
         mc.show();
+        */
+        setTextSize();
+        setText();
 
+    }
+
+    private void setText() {
+
+     //   txtUserName.setText((null != accLoginInfoModel.getName() && !accLoginInfoModel.getName().equals("")) ? accLoginInfoModel.getName() : txtUserName.getText());
+      //  txtLocationName.setText((null != accLoginInfoModel.getLocationName() && !accLoginInfoModel.getLocationName().equals("")) ? accLoginInfoModel.getLocationName() : txtLocationName.getText());
+      //  txtUserBio.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : txtUserBio.getText());
+        // txtUserBio.setText((null != accLoginInfoModel.getUserBio() && !accLoginInfoModel.getUserBio().equals("")) ? accLoginInfoModel.getUserBio() : txtUserBio.getText());
+    }
+
+    private void setTextSize() {
+        txtProfileToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+        txtUserName.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileUsernameTextSize());
+        txtLocationName.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileUserPlaceTextSize());
+        txtUserBio.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileUserBioTextSize());
+        txtAtMail.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileUserBioTextSize());
+        btnProfil.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        txtBarkCount.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonCountTextSize());
+        txtFollowerCount.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonCountTextSize());
+        txtFollowingCount.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonCountTextSize());
+        txtBarkText.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonTextSize());
+        txtFollowerText.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonTextSize());
+        txtFollowingText.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getProfileMiniButtonTextSize());
     }
 
 

@@ -30,6 +30,7 @@
             android:layout_weight="8">
 
             <com.itbarx.custom.component.TextViewRegular
+                android:id="@+id/profile_fragment_screen_toolbar_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -153,7 +154,7 @@
                             android:textColorLink="@color/textview_changepassword_forgotpassword_activity"
                             android:textSize="@dimen/small_text_size"/>
 
-                        <com.itbarx.custom.component.TextViewRegular
+                        <com.itbarx.custom.component.TextViewBold
                             android:id="@+id/profile_fragment_screen_atmail_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -397,12 +398,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="290">
-
+<!--
                 <ListView
                     android:id="@+id/profile_fragment_screen_listView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
+
+                    -->
             </LinearLayout>
         </LinearLayout>
 
