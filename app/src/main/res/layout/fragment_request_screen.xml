@@ -15,8 +15,8 @@
         android:layout_weight="50"
         android:background="@color/toolbar_bg">
 
-        <TextView
-            android:id="@+id/request_toolbar_text"
+        <com.itbarx.custom.component.TextViewRegular
+            android:id="@+id/request_fragment_toolbar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -24,7 +24,7 @@
             android:layout_centerVertical="true"
             android:textColor="@color/white"
             android:text="@string/activityrequest_fragment_screen_request_text"
-            android:textSize="@dimen/text_size_toolbar"
+
             />
     </RelativeLayout>
 
@@ -85,18 +85,18 @@
                     android:layout_weight="1"
                     android:text="@string/activityrequest_fragment_screen_request_text"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_button"/>
+                  />
 
             </LinearLayout>
             <View
-                android:id="@+id/request_timeline_under_buttons"
+                android:id="@+id/request_under_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="5"
                 android:visibility="invisible"/>
 
             <LinearLayout
-                android:id="@+id/request_timeline_others"
+                android:id="@+id/request_fragment_others"
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="425"
@@ -104,7 +104,7 @@
                 >
 
                 <ListView
-                    android:id="@+id/fragment_request_screen_listview"
+                    android:id="@+id/request_fragment_screen_listView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 

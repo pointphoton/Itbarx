@@ -14,6 +14,7 @@ import android.widget.VideoView;
 import com.itbarx.R;
 
 import com.itbarx.application.ItbarxGlobal;
+import com.itbarx.custom.component.TextViewListItemReg;
 import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.post.PostPopularPostListModel;
 
@@ -52,7 +53,7 @@ public class PopularFragmentListAdapter extends BaseAdapter {
         PostPopularPostListModel model = (PostPopularPostListModel) getItem(position);
         if (model != null) {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_popular_screen_user_videoView);
-            TextViewRegular text = (TextViewRegular) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
+            TextViewListItemReg text = (TextViewListItemReg) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
             MediaController controller = new MediaController(context);
 
 

@@ -40,7 +40,7 @@ import java.util.List;
 
 public class F_PopularFragment extends Fragment {
 
-    Button btnOpenTimeline,btnPopular;
+    ButtonRegular btnOpenTimeline,btnPopular;
     Communicator comm;
     T_HomeActivity t_homeActivity;
     List<PostPopularPostListModel> postPopularPostListModels;

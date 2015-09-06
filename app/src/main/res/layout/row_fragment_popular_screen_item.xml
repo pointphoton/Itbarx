@@ -31,12 +31,12 @@
 
         </RelativeLayout>
 
-        <com.itbarx.custom.component.TextViewRegular
+        <com.itbarx.custom.component.TextViewListItemReg
             android:id="@+id/row_fragment_popular_screen_subtitle_textView"
             android:layout_width="wrap_content"
             android:layout_toRightOf="@id/row_fragment_popular_screen_user_videoView_container"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+
             android:text="Welcome to the way through america's news worth therefore it does not mean something good several municipalities declared bankruptcy before Detroit did but their deaths with smaller Stockton Calif million dollars while Detroit post eighteen and a half billion..."
             android:layout_marginLeft="5dp"
             android:textColor="#666666"

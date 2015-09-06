@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/row_fragment_request_screen_user_imageView_container"
-            android:textSize="23sp"
+
             android:layout_marginLeft="10dp"
             android:textColor="@android:color/black"
             android:layout_centerVertical="true"

@@ -5,15 +5,19 @@ import com.itbarx.adapter.ActivityFragmentListAdapter;
 import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
+import com.itbarx.custom.component.ButtonRegular;
+import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.enums.Fragments;
 import com.itbarx.listener.ActivityProcessesServiceListener;
 import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.model.activity.ActivityListModel;
 import com.itbarx.model.activity.ActivityModel;
 import com.itbarx.sl.ActivityProcessesServiceSL;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,13 +28,12 @@ import java.util.List;
 
 public class F_ActivityFragment extends Fragment {
 
-	Button btnOpenRequest;
+private	ButtonRegular btnOpenRequest,btnActivity;
+private TextViewRegular txtToolbarActivity;
 	Communicator comm;
-
-	ListView activityListView;
+private	ListView activityListView;
 	List<ActivityListModel> activityListModels;
-
-	T_SecondActivity t_secondActivity;
+private	T_SecondActivity t_secondActivity;
 
 	public F_ActivityFragment()
 	{
@@ -55,13 +58,22 @@ public class F_ActivityFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		//sends the message via communicator interface.
 		comm = (Communicator) getActivity();
-		btnOpenRequest = (Button) getActivity().findViewById(R.id.activity_fragment_request_button);
+		btnOpenRequest = (ButtonRegular) t_secondActivity.findViewById(R.id.activity_fragment_request_button);
 		btnOpenRequest.setOnClickListener(openRequestClickListener);
+		btnActivity = (ButtonRegular) t_secondActivity.findViewById(R.id.activity_fragment_activity_button);
+		txtToolbarActivity = (TextViewRegular) t_secondActivity.findViewById(R.id.activity_fragment_toolbar_text);
 		//fills up the listview
-		activityListView =(ListView)getActivity().findViewById(R.id.fragment_activity_screen_activities_listview);
+		activityListView =(ListView)t_secondActivity.findViewById(R.id.activity_fragment_screen_activities_listview);
 
 		//activityListView.setAdapter(null);
 		getActivityList(sendModel());
+		setTextSize();
+	}
+
+	private void setTextSize(){
+		txtToolbarActivity.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+		btnActivity.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
+		btnOpenRequest.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
 	}
 
 	//send data to web service
