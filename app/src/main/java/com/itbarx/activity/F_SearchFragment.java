@@ -15,8 +15,8 @@ import android.widget.EditText;
 
 public class F_SearchFragment extends Fragment {
 
-    TextViewRegular txtToolbar;
-    EditTextRegular searchPersonEdtTxt;
+ private   TextViewRegular txtToolbar;
+  private  EditTextRegular searchPersonEdtTxt;
 
     private T_SearchActivity t_searchActivity;
 
@@ -29,7 +29,7 @@ public class F_SearchFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+
         return inflater.inflate(R.layout.fragment_search_screen, container, false);
     }
 
@@ -38,8 +38,12 @@ public class F_SearchFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
        txtToolbar = (TextViewRegular) t_searchActivity.findViewById(R.id.search_fragment__toolbar_textView);
         searchPersonEdtTxt = (EditTextRegular) t_searchActivity.findViewById(R.id.search_fragment_screen_search_edittext);
+        setTextSize();
+
+    }
+
+    private void setTextSize(){
         txtToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
         searchPersonEdtTxt.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
-
     }
 }

@@ -7,6 +7,8 @@ import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.custom.component.ActivityFragmentItem;
 import com.itbarx.custom.component.ActivityFragmentItemAdapter;
+import com.itbarx.custom.component.ButtonRegular;
+import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.enums.Fragments;
 import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.listener.PostProcessesServiceListener;
@@ -18,10 +20,12 @@ import com.itbarx.model.post.PostPopularPostListModel;
 import com.itbarx.model.post.PostTimelineListForUserModel;
 import com.itbarx.model.post.PostWallListForUserModel;
 import com.itbarx.sl.PostProcessesServiceSL;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,12 +40,13 @@ import java.util.List;
 
 public class F_PopularFragment extends Fragment {
 
-    Button btnOpenTimeline;
+    Button btnOpenTimeline,btnPopular;
     Communicator comm;
     T_HomeActivity t_homeActivity;
     List<PostPopularPostListModel> postPopularPostListModels;
     //VideoView video;
     ListView reqVidListView;
+    TextViewRegular txtPopularToolbar;
 
     F_PopularFragment() {
     }
@@ -61,36 +66,6 @@ public class F_PopularFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-
-		/*
-        test=(ListView) getActivity().findViewById(R.id.test_listView);
-		ArrayList<ActivityFragmentItem> listOfItems=new ArrayList<ActivityFragmentItem>();
-		ActivityFragmentItem item;
-		for(int i=1;i<11;i++){
-			fullName=String.valueOf(i)+" full name";
-			if(i/2==0) {
-				action =  " liked";
-			}
-			else{
-				action =  " rebark";
-			}
-			your=" your";
-			bark=" bark";
-			//item = new ActivityFragmentItem(R.drawable.user_male_icon,fullName,action,your,bark);,
-			item = new ActivityFragmentItem(fullName,action,your,bark);
-			if(item!=null) {
-				listOfItems.add(item);
-			}
-
-		}
-
-		ActivityFragmentItemAdapter afa= new ActivityFragmentItemAdapter(getActivity(),listOfItems);
-		//	ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, stringArray);
-		test.setAdapter(afa);
-		//	test.setAdapter(adapter);
-*/
-
     }
 
     @Override
@@ -99,8 +74,10 @@ public class F_PopularFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         //sends the message via communicator interface.
         comm = (Communicator) getActivity();
-        btnOpenTimeline = (Button) getActivity().findViewById(R.id.popular_fragment_timeline_button);
+        btnOpenTimeline = (ButtonRegular) getActivity().findViewById(R.id.popular_fragment_timeline_button);
         btnOpenTimeline.setOnClickListener(openTimelineClickListener);
+        btnPopular =(ButtonRegular) getActivity().findViewById(R.id.popular_fragment_popular_button);
+        txtPopularToolbar = (TextViewRegular) t_homeActivity.findViewById(R.id.popular_toolbar_text);
 
         //fills up the listview
         reqVidListView = (ListView) getActivity().findViewById(R.id.popular_fragment_screen_listview);
@@ -110,6 +87,13 @@ public class F_PopularFragment extends Fragment {
         //Uri uri = Uri.parse("android.resource://" + t_homeActivity.getPackageName() + "/" + R.raw.sample);
         //video.setVideoURI(uri);
         //video.start();
+        setTextSize();
+    }
+    private void setTextSize() {
+        txtPopularToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+        btnOpenTimeline.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
+        btnPopular.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
+
     }
 
     private PostPopularModel sendModel() {

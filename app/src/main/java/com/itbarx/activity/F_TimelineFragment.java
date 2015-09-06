@@ -4,6 +4,8 @@ import com.itbarx.R;
 import com.itbarx.adapter.TimelineFragmentListAdapter;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
+import com.itbarx.custom.component.ButtonRegular;
+import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.enums.Fragments;
 import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.listener.PostProcessesServiceListener;
@@ -15,10 +17,12 @@ import com.itbarx.model.post.PostTimelineListForUserModel;
 import com.itbarx.model.post.PostTimelineModel;
 import com.itbarx.model.post.PostWallListForUserModel;
 import com.itbarx.sl.PostProcessesServiceSL;
+import com.itbarx.utils.TextSizeUtil;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,11 +34,12 @@ import java.util.List;
 
 public class F_TimelineFragment extends Fragment {
 
-	Button btnOpenPopular;
+	Button btnOpenPopular,btnTimeline;
 	Communicator comm;
 	T_HomeActivity t_homeActivity;
 	List<PostTimelineListForUserModel> postTimelineListForUserModels;
 	ListView timelineListView;
+	TextViewRegular txtTimelineToolbar;
 
 	@SuppressLint("ValidFragment")
 	F_TimelineFragment(){}
@@ -54,11 +59,21 @@ public class F_TimelineFragment extends Fragment {
 	super.onActivityCreated(savedInstanceState);
 	// t1 = (TextView) getActivity().findViewById(R.id.txt1);
 	comm = (Communicator) getActivity();
-	btnOpenPopular = (Button) getActivity().findViewById(R.id.timeline_fragment_popular_button);
+	btnOpenPopular = (ButtonRegular) t_homeActivity.findViewById(R.id.timeline_fragment_popular_button);
 	btnOpenPopular.setOnClickListener(openPopularClickListener);
+	btnTimeline = (ButtonRegular) t_homeActivity.findViewById(R.id.timeline_fragment_timeline_button);
+		txtTimelineToolbar = (TextViewRegular ) t_homeActivity.findViewById(R.id.timeline_toolbar_text);
 	//fills up the listView
 		timelineListView = (ListView) getActivity().findViewById(R.id.timeline_fragment_screen_ListView);
 		getTimelineList(sendModel());
+		setTextSize();
+	}
+
+	private void setTextSize() {
+		txtTimelineToolbar.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+		btnOpenPopular.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
+		btnTimeline.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getFragBtnTextSize());
+
 	}
 
 	private PostTimelineModel sendModel() {

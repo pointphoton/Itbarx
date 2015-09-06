@@ -16,7 +16,7 @@
         android:layout_weight="50"
         android:background="@color/toolbar_bg">
 
-        <TextView
+        <com.itbarx.custom.component.TextViewRegular
             android:id="@+id/timeline_toolbar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:layout_centerVertical="true"
             android:text="@string/populartimeline_fragment_screen_timeline_text"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_toolbar"
+
             />
     </RelativeLayout>
 
@@ -70,7 +70,6 @@
 
                 <com.itbarx.custom.component.ButtonRegular
                     android:id="@+id/timeline_fragment_popular_button"
-
                     style="@style/fragments_clickable_upper_buttons_default"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
@@ -87,7 +86,7 @@
                     android:layout_weight="1"
                     android:text="@string/populartimeline_fragment_screen_timeline_text"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_size_button"/>
+                   />
 
             </LinearLayout>
 

@@ -243,13 +243,13 @@
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="165"
-                    android:background="@drawable/login_activity_forgotpassword_button_border" >
+                     >
 
                     <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_forgotpassword_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/login_activity_button_forgotpassword_bg"
+                        android:background="@drawable/select_gray_button"
                         android:text="@string/login_activity_screen_forgotpassword_button_text"
                         android:textColor="@color/login_activity_button_forgotpassword_text"
                          />
@@ -265,13 +265,13 @@
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="165"
-                    android:background="@drawable/login_activity_loginbutton_border" >
+                    >
 
                     <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_login_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/login_activity_button_login_bg"
+                        android:background="@drawable/select_orange_button"
                         android:text="@string/login_activity_screen_login_button_text"
                         android:textColor="@color/white"
                          />
@@ -289,13 +289,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="50"
-                android:background="@drawable/login_activity_createnewuser_button_border" >
+                 >
 
                 <com.itbarx.custom.component.ButtonBold
                     android:id="@+id/login_activity_screen_createnewaccount_button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/login_activity_button_createnewaccount_bg"
+                    android:background="@drawable/select_red_button"
                     android:text="@string/login_activity_screen_createnewaccount_button_text"
                     android:textColor="@color/white"
                     />
@@ -386,13 +386,13 @@
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="165"
-                    android:background="@drawable/login_activity_facebook_button_border" >
+                    >
 
                     <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_facebook_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/button_facebook_bg"
+                        android:background="@drawable/select_facebook_button"
                         android:text="@string/login_activity_screen_facebook_button_text"
                         android:textColor="@color/white"
                         />
@@ -408,13 +408,13 @@
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="165"
-                    android:background="@drawable/login_activity_twitter_button_border" >
+                 >
 
                     <com.itbarx.custom.component.ButtonBold
                         android:id="@+id/login_activity_screen_twitter_button"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/button_twitter_bg"
+                        android:background="@drawable/select_twitter_button"
                         android:text="@string/login_activity_screen_twitter_button_text"
                       android:textColor="@color/white"
                         />

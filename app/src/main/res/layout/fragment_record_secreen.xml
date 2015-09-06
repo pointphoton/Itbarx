@@ -17,7 +17,7 @@
         android:layout_weight="50"
         android:background="@color/toolbar_bg">
 
-        <TextView
+        <com.itbarx.custom.component.TextViewRegular
             android:id="@+id/record_toolbar_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:text="@string/record_fragment_screen_toolbar_text"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_toolbar"
+
             />
     </RelativeLayout>
 
@@ -144,7 +144,7 @@
                     >
 
                     <com.itbarx.custom.component.TextViewBold
-                        android:id="@+id/textView"
+                        android:id="@+id/record_fragment_start_textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
