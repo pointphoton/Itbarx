@@ -180,7 +180,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
                     android:layout_weight="1"
-                    android:background="@drawable/border_top_editboxes_layout"
+
                     android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="10" 
@@ -231,7 +231,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
                     android:layout_weight="1"
-                   android:background="@drawable/border_inner_editboxes_layout"
+                   android:background="@drawable/border_inner_editbox"
                     android:orientation="horizontal"
                     android:weightSum="10" 
                       android:baselineAligned="false"
@@ -286,7 +286,7 @@
                     android:orientation="horizontal"
                     android:weightSum="10"
                     android:baselineAligned="false"
-                    android:background="@drawable/border_inner_editboxes_layout" >
+                    >
 
                     <RelativeLayout
                         android:layout_width="0dip"
@@ -338,7 +338,7 @@
                     android:orientation="horizontal"
                     android:weightSum="10" 
                     android:baselineAligned="false"
-                      android:background="@drawable/border_inner_editboxes_layout">
+                 >
 
                     <RelativeLayout
                         android:layout_width="0dip"
@@ -388,7 +388,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:weightSum="10" 
-                      android:background="@drawable/border_inner_editboxes_layout"
+
                       android:baselineAligned="false">
 
                     <RelativeLayout
@@ -512,7 +512,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                      android:minHeight="50dp"
-                    android:background="@drawable/border_top_editboxes_layout"
+
                     android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="10" 
@@ -564,7 +564,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                      android:minHeight="50dp"
-                    android:background="@drawable/border_top_editboxes_layout"
+
                     android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="10" 
@@ -616,7 +616,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                      android:minHeight="50dp"
-                    android:background="@drawable/border_top_editboxes_layout"
+
                     android:baselineAligned="false"
                     android:orientation="horizontal"
                     android:weightSum="10" 

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.itbarx.R;
 import com.itbarx.custom.component.TextViewBold;
+import com.itbarx.custom.component.TextViewListItemBold;
 import com.itbarx.custom.component.TextViewListItemReg;
 import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.model.activity.ActivityListModel;
@@ -55,7 +56,7 @@ public class ActivityFragmentListAdapter extends BaseAdapter {
                 //photo yu al
             }
 
-            TextViewBold txtFullname = (TextViewBold)convertView.findViewById(R.id.row_fragment_activity_screen_activities_fullName_textView);
+            TextViewListItemBold txtFullname = (TextViewListItemBold)convertView.findViewById(R.id.row_fragment_activity_screen_activities_fullName_textView);
             txtFullname.setText(model.getItBarxUserName());
 
             TextViewListItemReg txtAction= (TextViewListItemReg)convertView.findViewById(R.id.row_fragment_activity_screen_activities_action_textView);

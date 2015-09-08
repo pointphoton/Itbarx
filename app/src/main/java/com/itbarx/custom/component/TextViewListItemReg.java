@@ -38,7 +38,7 @@ public class TextViewListItemReg extends TextView {
     }
     private void setTextSizeList(){
         if (!isInEditMode()) {
-      setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getToolbarTextSize());
+      setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getListItemRegTextSize());
         }
         }
 

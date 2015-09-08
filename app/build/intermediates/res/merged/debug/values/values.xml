@@ -60,7 +60,9 @@
     <color name="facebook_blue">#3B5998</color>
     <item name="fragment_orange_button" type="color">#FFF89938</item>
     <item name="frame_bg_unfollow_friends_fragment" type="color">#FFBDB2AA</item>
+    <item name="hints_editText" type="color">#FFDEDEDE</item>
     <item name="icon_bg_search_fragment" type="color">#FFF89938</item>
+    <item name="icons_bg" type="color">#FFF6F6F6</item>
     <item name="icons_bg_forgotpassword_activity" type="color">#FFF6F6F6</item>
     <item name="imageview_addphoto_bg_createnewuser_activity" type="color">#FFF6F6F6</item>
     <item name="line_forgotpassword_activity" type="color">#FF464646</item>
@@ -160,14 +162,14 @@
     <string name="createnewaccount_activity_screen_email_text">e-posta</string>
     <string name="createnewaccount_activity_screen_facebook_button_text">facebook</string>
     <string name="createnewaccount_activity_screen_iagreetothe_text">Kabul ediyorum</string>
-    <string name="createnewaccount_activity_screen_name_text">isim</string>
+    <string name="createnewaccount_activity_screen_name_text">kullanıcı adı</string>
     <string name="createnewaccount_activity_screen_or_text">veya</string>
     <string name="createnewaccount_activity_screen_password_text">yeni şifre</string>
     <string name="createnewaccount_activity_screen_remembermeafterregister_text">Kayıt sonrası beni hatırla.</string>
     <string name="createnewaccount_activity_screen_repassword_text">yeni şifre tekrar</string>
     <string name="createnewaccount_activity_screen_toolbar_text">yeni kullanıcı oluştur</string>
     <string name="createnewaccount_activity_screen_twitter_button_text">twitter</string>
-    <string name="createnewaccount_activity_screen_useragreement_text">\u00A0kullanıcı anlaşmasını.</string>
+    <string name="createnewaccount_activity_screen_user_agreement_text">\u00A0<u>kullanıcı anlaşmasını</u>.</string>
     <string name="editprofile_activity_screen_aboutme_hint_edittext">hakkımda</string>
     <string name="editprofile_activity_screen_aboutme_text">hakkımda?</string>
     <string name="editprofile_activity_screen_basicinfo_text">kullanıcı bilgileri</string>

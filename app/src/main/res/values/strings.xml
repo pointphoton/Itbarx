@@ -33,12 +33,12 @@
     <!-- create new account activity screen -->
     <string name="createnewaccount_activity_screen_toolbar_text">yeni kullanıcı oluştur</string>
     <string name="createnewaccount_activity_screen_addphoto_text">add\nphoto\nhere</string>
-    <string name="createnewaccount_activity_screen_name_text">isim</string>
+    <string name="createnewaccount_activity_screen_name_text">kullanıcı adı</string>
     <string name="createnewaccount_activity_screen_email_text">e-posta</string>
     <string name="createnewaccount_activity_screen_password_text">yeni şifre</string>
     <string name="createnewaccount_activity_screen_repassword_text">yeni şifre tekrar</string>
     <string name="createnewaccount_activity_screen_iagreetothe_text">Kabul ediyorum</string>
-    <string name="createnewaccount_activity_screen_useragreement_text">\u00A0kullanıcı anlaşmasını.</string>
+    <string name="createnewaccount_activity_screen_user_agreement_text">\u00A0<u>kullanıcı anlaşmasını</u>.</string>
     <string name="createnewaccount_activity_screen_remembermeafterregister_text">Kayıt sonrası beni hatırla.</string>
     <string name="createnewaccount_activity_screen_done_button_text">tamam!</string>
     <string name="createnewaccount_activity_screen_or_text">veya</string>

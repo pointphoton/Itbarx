@@ -50,10 +50,11 @@ public class PopularFragmentListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = layoutInflater.inflate(R.layout.row_fragment_popular_screen_item, parent, false);
+        TextViewListItemReg text = (TextViewListItemReg) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
         PostPopularPostListModel model = (PostPopularPostListModel) getItem(position);
         if (model != null) {
             VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_popular_screen_user_videoView);
-            TextViewListItemReg text = (TextViewListItemReg) convertView.findViewById(R.id.row_fragment_popular_screen_subtitle_textView);
+
             MediaController controller = new MediaController(context);
 
 

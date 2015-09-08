@@ -85,16 +85,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="100"
-                android:background="@color/white"
                 android:orientation="vertical"
-                android:weightSum="2" >
+                android:weightSum="200"
+                android:background="@drawable/border_editboxes">
 
                 <LinearLayout
                     android:id="@+id/username_layout"
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
-                    android:layout_weight="1"
-                    android:background="@drawable/border_top_editboxes_layout"
+                    android:layout_weight="99"
                     android:orientation="horizontal"
                     android:weightSum="10" >
 
@@ -107,7 +106,8 @@
                         <ImageView
                             android:id="@+id/login_activity_screen_username_icon"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="5dip"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
@@ -127,25 +127,30 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#00000000"
-                            android:ems="10"
                             android:hint="@string/login_activity_screen_username_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/editprofile_activity_hints_edittext"
-
+                            android:textColor="@color/hints_editText"
+                            android:textColorHint="@color/hints_editText"
                             android:text="user5"
                            >
                             <requestFocus />
                         </com.itbarx.custom.component.EditTextRegular>
                     </RelativeLayout>
                 </LinearLayout>
-
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0dip"
+    android:layout_weight="2"
+    android:background="#E9E9E9"
+    android:visibility="visible"
+    />
                 <LinearLayout
                     android:id="@+id/password_layout"
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
-                    android:layout_weight="1"
-                    android:background="@drawable/border_inner_editboxes_layout"
+                    android:layout_weight="99"
+
                     android:orientation="horizontal"
                     android:weightSum="10" >
 
@@ -157,8 +162,9 @@
 
                         <ImageView
                             android:id="@+id/login_activity_screen_password_icon"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dip"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
@@ -178,12 +184,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="#00000000"
-                            android:ems="10"
                             android:hint="@string/login_activity_screen_password_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/editprofile_activity_hints_edittext"
+                            android:textColor="@color/hints_editText"
                             android:text="test"
+                            android:textColorHint="@color/hints_editText"
                           >
                              <requestFocus />
                         </com.itbarx.custom.component.EditTextRegular>
@@ -201,7 +207,7 @@
                 <RelativeLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="2" >
+                    android:layout_weight="1.5" >
 
                     <ImageView
                         android:id="@+id/login_activity_screen_rememberme_unchecked_icon"
@@ -210,6 +216,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
+                        android:padding="5dip"
                         android:scaleType="fitCenter"
                         android:src="@drawable/icon_remember_me_not_checked_login" />
                 </RelativeLayout>
@@ -219,7 +226,7 @@
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|center_vertical"
-                    android:layout_weight="8"
+                    android:layout_weight="8.5"
                     android:ems="10"
                     android:text="@string/login_activity_screen_rememberme_text"
                     />

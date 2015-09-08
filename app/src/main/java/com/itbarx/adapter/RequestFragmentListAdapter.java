@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.itbarx.R;
 import com.itbarx.custom.component.TextViewBold;
+import com.itbarx.custom.component.TextViewListItemBold;
 import com.itbarx.model.follow.PendingListByFollowingIdModel;
 
 import java.util.List;
@@ -55,7 +56,7 @@ public class RequestFragmentListAdapter extends BaseAdapter{
                 //photo yu al
             }
             //2.  take user name
-            TextViewBold txtFullname = (TextViewBold) convertView.findViewById(R.id.row_fragment_request_screen_fullName_textView);
+            TextViewListItemBold txtFullname = (TextViewListItemBold) convertView.findViewById(R.id.row_fragment_request_screen_fullName_textView);
             txtFullname.setText(model.getItBarxUserName());
 
             //3. take follow status of the user

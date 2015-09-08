@@ -8,6 +8,8 @@
     <item name="toolbar_bg" type="color">#FF464646</item>
     <item name="text_or" type="color">#FF666666</item>
     <item name="fragment_orange_button" type="color">#FFF89938</item>
+    <item name="hints_editText" type="color">#FFDEDEDE</item>
+    <item name="icons_bg" type="color">#FFF6F6F6</item>
 
     <!-- login activity -->
 

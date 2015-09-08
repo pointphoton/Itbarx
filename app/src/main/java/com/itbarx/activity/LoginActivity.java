@@ -99,11 +99,11 @@ public class LoginActivity extends BaseActivity {
     // ************************//
     // ---ATTRIBUTES---
     // ************************//
-    ButtonBold btnLogIn, btnCreateNewAcc, btnForgotPwd, btnFacebook, btnTwitter;
-    TextViewRegular txtToolbar;
-    TextViewBold txtViewRembMe, txtViewOr;
-    EditTextRegular edtUserName, edtPassword;
-    String strUserName, strPassword;
+  private  ButtonBold btnLogIn, btnCreateNewAcc, btnForgotPwd, btnFacebook, btnTwitter;
+   private TextViewRegular txtToolbar;
+   private TextViewBold txtViewRembMe, txtViewOr;
+   private EditTextRegular edtUserName, edtPassword;
+   private String strUserName, strPassword;
 
 
     @Override
@@ -217,7 +217,7 @@ public class LoginActivity extends BaseActivity {
         @Override
         public void onOneShotClick(View v) {
             // launchSubActivity(ForgotPasswordActivity.class);
-            launchSubActivity(TabContainer.class);
+            launchSubActivity(ForgotPasswordActivity.class);
             setProgress(R.string.ItbarxConnecting);
 
         }

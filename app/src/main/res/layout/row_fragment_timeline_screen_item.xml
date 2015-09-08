@@ -63,7 +63,7 @@
                 android:id="@+id/row_fragment_timeline_screen_time_info_TextView"
                 android:paddingLeft="5dp"
                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/row_fragment_timeline_screen_fullName_TextView"/>
+                android:layout_below="@id/row_fragment_timeline_screen_fullName_TextView"/>
 
 
 
@@ -96,11 +96,13 @@
 
 
             <VideoView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/row_fragment_timeline_screen_VideoView"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"/>
+                android:layout_alignParentLeft="true"
+
+                />
         </RelativeLayout>
 
         <View
@@ -113,16 +115,16 @@
             <RelativeLayout
                 android:id="@+id/row_fragment_timeline_screen_text_scroller_container"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="20"
 
               >
 
-            <com.itbarx.custom.component.TextViewRegular
+            <com.itbarx.custom.component.TextViewListItemReg
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="10dp"
-                android:text="New Text"
+                android:text="Text text deneme text subtitle. Text text deneme text subtitle. Text text deneme text subtitle. "
                 android:id="@+id/row_fragment_timeline_screen_subtitles_TextView"
                 />
 
@@ -194,7 +196,7 @@
                     android:layout_centerVertical="true"
                     android:text="106"
                     android:textColor="#666666"
-                    android:textSize="17sp"
+
                     />
             </RelativeLayout>
 
@@ -253,7 +255,7 @@
                     android:layout_centerVertical="true"
                     android:text="75"
                     android:textColor="#666666"
-                    android:textSize="17sp"
+
                     />
             </RelativeLayout>
 
@@ -312,7 +314,7 @@
                     android:layout_centerVertical="true"
                     android:text="210"
                     android:textColor="#666666"
-                    android:textSize="17sp"
+
                     />
             </RelativeLayout>
 

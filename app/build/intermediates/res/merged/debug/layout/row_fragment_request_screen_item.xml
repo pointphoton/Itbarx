@@ -22,8 +22,8 @@
             android:id="@+id/row_fragment_request_screen_user_imageView"
             android:background="@android:color/white"
             android:src="@drawable/user_male_icon"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
@@ -32,7 +32,7 @@
             />
             </RelativeLayout>
 
-        <com.itbarx.custom.component.TextViewBold
+        <com.itbarx.custom.component.TextViewListItemBold
             android:id="@+id/row_fragment_request_screen_fullName_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

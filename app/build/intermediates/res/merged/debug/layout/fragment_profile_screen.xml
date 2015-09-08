@@ -233,7 +233,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="@string/profile_fragment_screen_imagebutton_barks_text"
                                 android:textColor="#666666"
-                                android:textSize="12sp"
+
                                 />
                         </RelativeLayout>
 
@@ -293,7 +293,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="@string/profile_fragment_screen_imagebutton_followers_text"
                                 android:textColor="#666666"
-                                android:textSize="12sp"
+
                                 />
                         </RelativeLayout>
 
@@ -353,7 +353,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="@string/profile_fragment_screen_imagebutton_following_text"
                                 android:textColor="#666666"
-                                android:textSize="12sp"
+
                                 />
                         </RelativeLayout>
 
@@ -382,7 +382,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:background="@color/fragment_orange_button"
+                    android:background="@drawable/select_orange_button"
                     android:text="@string/profile_fragment_screen_edit_profile_text"
                     android:textColor="@color/white"
                     />
