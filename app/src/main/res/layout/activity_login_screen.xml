@@ -107,7 +107,7 @@
                             android:id="@+id/login_activity_screen_username_icon"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="5dip"
+                            android:padding="9dip"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
@@ -164,7 +164,7 @@
                             android:id="@+id/login_activity_screen_password_icon"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="5dip"
+                            android:padding="9dip"
                             android:layout_centerHorizontal="true"
                             android:layout_centerInParent="true"
                             android:layout_centerVertical="true"
@@ -211,12 +211,12 @@
 
                     <ImageView
                         android:id="@+id/login_activity_screen_rememberme_unchecked_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_centerHorizontal="true"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
-                        android:padding="5dip"
+                        android:padding="9dip"
                         android:scaleType="fitCenter"
                         android:src="@drawable/icon_remember_me_not_checked_login" />
                 </RelativeLayout>

@@ -1,10 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/main_bg"
-    android:orientation="vertical"
-    android:weightSum="62" >
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/main_bg"
+              android:orientation="vertical"
+              android:weightSum="62">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,16 +12,16 @@
         android:layout_weight="5"
         android:background="@color/toolbar_bg"
         android:orientation="horizontal"
-        android:weightSum="10" >
+        android:weightSum="10">
 
-<View
-    android:layout_width="0dip"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:visibility="invisible"
-    />
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            />
 
-        
+
         <com.itbarx.custom.component.TextViewRegular
             android:id="@+id/create_new_account_activity_screen_toolbar_textView"
             android:layout_width="0dip"
@@ -29,7 +29,7 @@
             android:layout_weight="8"
             android:gravity="center_vertical|center_horizontal|center"
             android:text="@string/createnewaccount_activity_screen_toolbar_text"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"/>
 
 
     </LinearLayout>
@@ -38,196 +38,145 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="57"
-        android:weightSum="34"
         android:orientation="horizontal"
+        android:weightSum="34"
         >
+
         <View
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
             android:visibility="invisible"/>
+
         <LinearLayout
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="33"
-            android:weightSum="570"
             android:orientation="vertical"
+            android:weightSum="570"
             >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="110"
-        android:orientation="vertical"
-        android:weightSum="11" >
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2" >
-        </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="110"
+                android:orientation="vertical"
+                android:weightSum="11">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="7"
-            android:orientation="horizontal"
-            android:weightSum="13" >
-
-            <View
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="5" />
-
-            <RelativeLayout
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="3" >
-
-                <ImageView
-                    android:id="@+id/activity_createnewaccount_screen_addphoto_image"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/imageview_addphoto_bg_createnewuser_activity"
-                    android:clickable="@bool/choose_true" />
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
+                </View>
 
-                <com.itbarx.custom.component.TextViewBold
-                    android:id="@+id/create_new_account_activity_screen_addPhoto_textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="@bool/choose_true"
-                    android:maxLines="3"
-                    android:text="@string/createnewaccount_activity_screen_addphoto_text" />
-            </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="7"
+                    android:orientation="horizontal"
+                    android:weightSum="13">
 
-            <View
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="5" />
-        </LinearLayout>
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="2" >
-        </View>
-    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:id="@+id/activity_createnewaccount_screen_addphoto_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/imageview_addphoto_bg_createnewuser_activity"
+                            android:clickable="@bool/choose_true"/>
+
+                        <com.itbarx.custom.component.TextViewBold
+                            android:id="@+id/create_new_account_activity_screen_addPhoto_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="@bool/choose_true"
+                            android:maxLines="3"
+                            android:text="@string/createnewaccount_activity_screen_addphoto_text"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="2">
+                </View>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="200"
+                android:background="@drawable/border_editboxes"
                 android:orientation="vertical"
                 android:weightSum="402"
-android:background="@drawable/border_editboxes"
                 >
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="99"
-        android:orientation="horizontal"
-        android:weightSum="10"
-
-       >
-
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@color/icons_bg"
-            >
-
-            <ImageView
-                android:id="@+id/activity_createnewaccount_screen_name_icon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dip"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_user_createnewaccount" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="8.5"
-            android:background="@color/white"
-            android:gravity="left|center_vertical" >
-
-        <com.itbarx.custom.component.EditTextRegular
-            android:id="@+id/create_new_account_activity_screen_userName_editText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00000000"
-            android:hint="@string/createnewaccount_activity_screen_name_text"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textColor="@color/hints_editText"
-            android:textColorHint="@color/hints_editText"
-           >
-
-            <requestFocus />
-        </com.itbarx.custom.component.EditTextRegular>
-        </RelativeLayout>
-    </LinearLayout>
-                <View
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
-                    android:layout_weight="2"
-                    android:background="#E9E9E9"
-                    android:visibility="visible"
-                    />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="99"
-        android:orientation="horizontal"
-        android:weightSum="10"
-      >
+                    android:layout_weight="99"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@color/icons_bg">
+                    >
 
-            <ImageView
-                android:id="@+id/activity_createnewaccount_screen_email_icon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dip"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_email_createnewaccount" />
-        </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/icons_bg"
+                        >
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="8.5"
-            android:background="@color/white"
-            android:gravity="left|center_vertical" >
+                        <ImageView
+                            android:id="@+id/activity_createnewaccount_screen_name_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:padding="9dip"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_user_createnewaccount"/>
+                    </RelativeLayout>
 
-        <com.itbarx.custom.component.EditTextRegular
-            android:id="@+id/create_new_account_activity_screen_eMail_editText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00000000"
-           android:hint="@string/createnewaccount_activity_screen_email_text"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textColorHint="@color/hints_editText"
-            android:textColor="@color/hints_editText"
-             >
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical">
 
-            <requestFocus />
-        </com.itbarx.custom.component.EditTextRegular>
-        </RelativeLayout>
-    </LinearLayout>
+                        <com.itbarx.custom.component.EditTextRegular
+                            android:id="@+id/create_new_account_activity_screen_userName_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:hint="@string/createnewaccount_activity_screen_name_text"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/hints_editText"
+                            android:textColorHint="@color/hints_editText"
+                            >
+
+                            <requestFocus/>
+                        </com.itbarx.custom.component.EditTextRegular>
+                    </RelativeLayout>
+                </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
@@ -236,55 +185,56 @@ android:background="@drawable/border_editboxes"
                     android:visibility="visible"
                     />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="99"
-        android:orientation="horizontal"
-        android:weightSum="10"
-     >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="99"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@color/icons_bg">
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/icons_bg">
 
-            <ImageView
-                android:id="@+id/activity_createnewaccount_screen_password_icon"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dip"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_password_createnewaccount" />
-        </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/activity_createnewaccount_screen_email_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:padding="9dip"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_email_createnewaccount"/>
+                    </RelativeLayout>
 
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical">
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="8.5"
-            android:background="@color/white"
-            android:gravity="left|center_vertical" >
-        <com.itbarx.custom.component.EditTextRegular
-            android:id="@+id/create_new_account_activity_screen_password_editText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-            android:textColor="@color/hints_editText"
-            android:background="#00000000"
-           android:hint="@string/createnewaccount_activity_screen_password_text"
-            android:inputType="textPersonName"
-            android:textColorHint="@color/hints_editText"
-           >
+                        <com.itbarx.custom.component.EditTextRegular
+                            android:id="@+id/create_new_account_activity_screen_eMail_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:hint="@string/createnewaccount_activity_screen_email_text"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/hints_editText"
+                            android:textColorHint="@color/hints_editText"
+                            >
 
-            <requestFocus />
-        </com.itbarx.custom.component.EditTextRegular>
-        </RelativeLayout>
-    </LinearLayout>
+                            <requestFocus/>
+                        </com.itbarx.custom.component.EditTextRegular>
+                    </RelativeLayout>
+                </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
@@ -292,154 +242,216 @@ android:background="@drawable/border_editboxes"
                     android:background="#E9E9E9"
                     android:visibility="visible"
                     />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="99"
-        android:orientation="horizontal"
-        android:weightSum="10"
-       >
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:background="@color/icons_bg">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="99"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
 
-            <ImageView
-                android:id="@+id/activity_createnewaccount_screen_repassword_icon"
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/icons_bg">
+
+                        <ImageView
+                            android:id="@+id/activity_createnewaccount_screen_password_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:padding="9dip"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_password_createnewaccount"/>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical">
+
+                        <com.itbarx.custom.component.EditTextRegular
+                            android:id="@+id/create_new_account_activity_screen_password_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:hint="@string/createnewaccount_activity_screen_password_text"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/hints_editText"
+                            android:textColorHint="@color/hints_editText"
+                            >
+
+                            <requestFocus/>
+                        </com.itbarx.custom.component.EditTextRegular>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="2"
+                    android:background="#E9E9E9"
+                    android:visibility="visible"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="99"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/icons_bg">
+
+                        <ImageView
+                            android:id="@+id/activity_createnewaccount_screen_repassword_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:padding="9dip"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_repassword_createnewaccount"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8.5"
+                        android:background="@color/white"
+                        android:gravity="left|center_vertical">
+
+                        <com.itbarx.custom.component.EditTextRegular
+                            android:id="@+id/create_new_account_activity_screen_rePassword_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#00000000"
+                            android:hint="@string/createnewaccount_activity_screen_repassword_text"
+                            android:inputType="textPersonName"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/hints_editText"
+                            android:textColorHint="@color/hints_editText"
+                            >
+
+                            <requestFocus/>
+                        </com.itbarx.custom.component.EditTextRegular>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:padding="5dip"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_repassword_createnewaccount" />
-        </RelativeLayout>
+                android:layout_height="0dip"
+                android:layout_weight="35"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="8.5"
-            android:background="@color/white"
-            android:gravity="left|center_vertical" >
-        <com.itbarx.custom.component.EditTextRegular
-            android:id="@+id/create_new_account_activity_screen_rePassword_editText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-                 android:hint="@string/createnewaccount_activity_screen_repassword_text"
-            android:inputType="textPersonName"
-            android:background="#00000000"
-            android:paddingLeft="10dp"
-            android:textColor="@color/hints_editText"
-            android:textColorHint="@color/hints_editText"
-          >
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
 
-            <requestFocus />
-        </com.itbarx.custom.component.EditTextRegular>
-        </RelativeLayout>
-    </LinearLayout>
-    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/create_new_account_activity_screen_agreetoAgreement_imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:padding="9dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_user_agreement_not_checked"/>
+                </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="35"
-        android:orientation="horizontal"
-        android:weightSum="10" >
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left|center"
+                    android:layout_weight="8.5"
+                    android:gravity="left|center"
+                    android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5" >
+                    <com.itbarx.custom.component.TextViewRegular
+                        android:id="@+id/create_new_account_activity_screen_agreeTo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:text="@string/createnewaccount_activity_screen_iagreetothe_text"
+                        />
 
-            <ImageView
-                android:id="@+id/create_new_account_activity_screen_agreetoAgreement_imageView"
+                    <com.itbarx.custom.component.TextViewRegular
+                        android:id="@+id/create_new_account_activity_screen_userAgreement_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clickable="@bool/choose_true"
+                        android:text="@string/createnewaccount_activity_screen_user_agreement_text"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="7dip"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_user_agreement_not_checked" />
-        </RelativeLayout>
+                android:layout_height="0dip"
+                android:layout_weight="35"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-        <LinearLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_gravity="left|center"
-            android:layout_weight="8.5"
-            android:gravity="left|center"
-            android:orientation="horizontal" >
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
 
-            <com.itbarx.custom.component.TextViewRegular
-                android:id="@+id/create_new_account_activity_screen_agreeTo_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"               
-                android:layout_weight="0"
-                android:text="@string/createnewaccount_activity_screen_iagreetothe_text"
-                />
+                    <ImageView
+                        android:id="@+id/create_new_account_activity_screen_rememberMe_imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:padding="9dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_remember_me_checked_createnewaccount"/>
+                </RelativeLayout>
 
-            <com.itbarx.custom.component.TextViewRegular
-                android:id="@+id/create_new_account_activity_screen_userAgreement_textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"               
-                android:layout_weight="1"
-                android:clickable="@bool/choose_true"
-                android:text="@string/createnewaccount_activity_screen_user_agreement_text"
-                />
-        </LinearLayout>
-    </LinearLayout>
+                <com.itbarx.custom.component.TextViewRegular
+                    android:id="@+id/create_new_account_activity_screen_rememberMe_textView"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="8.5"
+                    android:text="@string/createnewaccount_activity_screen_remembermeafterregister_text"
+                    />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="35"
-        android:orientation="horizontal"
-        android:weightSum="10" >
+            </LinearLayout>
 
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5" >
-
-            <ImageView
-                android:id="@+id/create_new_account_activity_screen_rememberMe_imageView"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="7dip"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/icon_remember_me_checked_createnewaccount" />
-        </RelativeLayout>
+                android:layout_height="0dip"
+                android:layout_weight="50">
 
-        <com.itbarx.custom.component.TextViewRegular
-            android:id="@+id/create_new_account_activity_screen_rememberMe_textView"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
-            android:layout_weight="8.5"
-            android:text="@string/createnewaccount_activity_screen_remembermeafterregister_text"
-            />
-
-    </LinearLayout>
-     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="50" >
-
-        <com.itbarx.custom.component.ButtonBold
-            android:id="@+id/create_new_account_activity_screen_ok_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/select_orange_button"
-            android:text="@string/createnewaccount_activity_screen_done_button_text"
-            android:textColor="@color/white" />
-    </LinearLayout>
+                <com.itbarx.custom.component.ButtonBold
+                    android:id="@+id/create_new_account_activity_screen_ok_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/select_orange_button"
+                    android:text="@string/createnewaccount_activity_screen_done_button_text"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/login_activitry_or_layout"
@@ -447,27 +459,27 @@ android:background="@drawable/border_editboxes"
                 android:layout_height="0dip"
                 android:layout_weight="40"
                 android:orientation="horizontal"
-                android:weightSum="34" >
+                android:weightSum="34">
 
                 <View
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="10"
-                    android:visibility="invisible" >
+                    android:visibility="invisible">
                 </View>
 
                 <RelativeLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="4" >
+                    android:layout_weight="4">
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#c0c0c0"
                         android:layout_centerHorizontal="true"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
+                        android:background="#c0c0c0"
                         android:gravity="center"/>
 
                 </RelativeLayout>
@@ -475,7 +487,7 @@ android:background="@drawable/border_editboxes"
                 <RelativeLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="6" >
+                    android:layout_weight="6">
 
                     <com.itbarx.custom.component.TextViewBold
                         android:id="@+id/create_new_account_activity_screen_or_textView"
@@ -494,15 +506,15 @@ android:background="@drawable/border_editboxes"
                 <RelativeLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="4" >
+                    android:layout_weight="4">
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#c0c0c0"
                         android:layout_centerHorizontal="true"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
+                        android:background="#c0c0c0"
                         android:gravity="center"/>
                 </RelativeLayout>
 
@@ -510,48 +522,48 @@ android:background="@drawable/border_editboxes"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="10"
-                    android:visibility="invisible" >
+                    android:visibility="invisible">
                 </View>
             </LinearLayout>
 
             <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="50"
-        android:orientation="horizontal"
-        android:weightSum="345" >
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="50"
+                android:orientation="horizontal"
+                android:weightSum="345">
 
-        <com.itbarx.custom.component.ButtonBold
-            android:id="@+id/create_new_account_activity_screen_facebook_button"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="165"
-            android:background="@drawable/select_facebook_button"
-            android:text="@string/createnewaccount_activity_screen_facebook_button_text"
-            android:textColor="@color/white" />
+                <com.itbarx.custom.component.ButtonBold
+                    android:id="@+id/create_new_account_activity_screen_facebook_button"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="165"
+                    android:background="@drawable/select_facebook_button"
+                    android:text="@string/createnewaccount_activity_screen_facebook_button_text"
+                    android:textColor="@color/white"/>
 
-        <View
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="15" />
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15"/>
 
-        <com.itbarx.custom.component.ButtonBold
-            android:id="@+id/create_new_account_activity_screen_twitter_button"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="165"
-            android:background="@drawable/select_twitter_button"
-            android:text="@string/createnewaccount_activity_screen_twitter_button_text"
-            android:textColor="@color/white"
-           />
-    </LinearLayout>
+                <com.itbarx.custom.component.ButtonBold
+                    android:id="@+id/create_new_account_activity_screen_twitter_button"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="165"
+                    android:background="@drawable/select_twitter_button"
+                    android:text="@string/createnewaccount_activity_screen_twitter_button_text"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="50" >
-    </View>
-</LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="50">
+            </View>
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout><!-- From: file:/G:/SSD_Develop/ProjectFiles/Itbarx/app/src/main/res/layout/activity_create_new_account_screen.xml -->

@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.MediaController;
+import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import com.itbarx.R;
@@ -16,6 +18,7 @@ import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewListItemBold;
 import com.itbarx.custom.component.TextViewListItemReg;
 import com.itbarx.custom.component.TextViewRegular;
+import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.model.post.PostTimelineListForUserModel;
 import com.itbarx.utils.TextSizeUtil;
 
@@ -71,9 +74,14 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
         //add reply count
         TextViewBold txtReply = (TextViewBold) convertView.findViewById(R.id.row_fragment_timeline_screen_reply_TextView);
         txtReply.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getTimelineMiniButtonTextSize());
+//video image view
+     //   MediaController controller = new MediaController(context);
+        ImageView videoPlayImg= (ImageView)convertView.findViewById(R.id.row_fragment_timeline_screen_video_thumbnail_play_ImageView);
 
-        PostTimelineListForUserModel model = (PostTimelineListForUserModel) getItem(position);
-        if (model != null) {
+       // VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_timeline_screen_VideoView);
+
+       PostTimelineListForUserModel model = (PostTimelineListForUserModel) getItem(position);
+  if (model != null) {
             //small user photo
             ImageView imgPhoto = (ImageView) convertView.findViewById(R.id.row_fragment_timeline_screen_user_imageView);
             if (model.getPostOwnerPhoto() != null && !model.getPostOwnerPhoto().equalsIgnoreCase("")) {
@@ -85,15 +93,18 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
             String addedDate = model.getAddedDate().replace("T", " ").substring(0, model.getAddedDate().indexOf("."));
             txtTimeInfo.setText(addedDate + " " + " eklendi.");
             //posted video
-            VideoView video = (VideoView) convertView.findViewById(R.id.row_fragment_timeline_screen_VideoView);
+
+            videoPlayImg.setTag(model);
+            videoPlayImg.setOnClickListener(playClickListener);
+
             if (model.getIsAdultContent().equalsIgnoreCase("false") && model.getPostURL() != null && !model.getPostURL().equalsIgnoreCase("") && model.getIsDeleted().equalsIgnoreCase("false")) {
                 Uri uri = Uri.parse("http://itbarxapp.azurewebsites.net" + model.getPostURL());
-                video.setVideoURI(uri);
+            //    video.setVideoURI(uri);
                 //   video.start();
 
             } else {
                 Uri uri = Uri.parse("android.resource://" + ItbarxGlobal.getInstance().getPackageName() + "/" + R.raw.sample);
-                video.setVideoURI(uri);
+              //  video.setVideoURI(uri);
                 //  video.start();
             }
             //text to speech
@@ -111,4 +122,16 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
         }
       return convertView;
     }
+    OneShotOnClickListener playClickListener = new OneShotOnClickListener(500){
+        @Override
+        public void onOneShotClick(View v) {
+
+            PostTimelineListForUserModel model = null;
+            if (v.getTag()!=null) {
+                ImageView img = (ImageView)v;
+                model=(PostTimelineListForUserModel)img.getTag();
+                //activity çağır
+            }
+        }
+    };
 }

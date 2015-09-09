@@ -36,12 +36,9 @@
     <item name="editprofile_activity_save_button" type="color">#FFF89938</item>
 
     <!-- forgot password activity activity -->
-    <item name="line_forgotpassword_activity" type="color">#FF464646</item>
-    <item name="icons_bg_forgotpassword_activity" type="color">#FFF6F6F6</item>
-    <item name="textview_userinputs_hints_forgotpassword_activity" type="color">#FFDEDEDE</item>
-    <item name="button_sendmeemailcode_bg_forgotpassword_activity" type="color">#FFE98B2C</item>
-    <item name="button_change_bg_forgotpassword_activity" type="color">#FFFF9933</item>
-    <item name="textview_changepassword_forgotpassword_activity" type="color">#FFFF9933</item>
+    <item name="forgot_password_activity_info_text" type="color">#FF464646</item>
+    <item name="forgot_password_activity_line" type="color">#FF464646</item>
+    <item name="forgot_password_activity_change_password_text" type="color">#E98B2C</item>
 
     <!-- user agreement activity -->
     <item name="textview_useragreemnet_useragreemnet_activity" type="color">#FF666666</item>

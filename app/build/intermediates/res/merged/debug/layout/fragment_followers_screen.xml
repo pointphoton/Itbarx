@@ -97,8 +97,8 @@
                         android:ems="10"
                         android:hint="@string/fragment_screen_search_hint_text"
                         android:inputType="text"
-                        android:textColor="@color/textview_userinputs_hints_forgotpassword_activity"
-                        android:textSize="@dimen/small_text_size" >
+
+                        >
 
                         <requestFocus />
                     </EditText>

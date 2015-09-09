@@ -10,10 +10,10 @@ public class TextSizeUtil {
     private static float DENSITY = ItbarxGlobal.getDENSITY();
 
     //COMMON SD
-    private static float EDIT_BOX_TEXT_SIZE = 27f;
-    private static float TOOLBAR_TEXT_SIZE = 35f;
-    private static float BUTTON_TEXT_SIZE = 25f;
-    private static float FRAGMENT_UPPER_BUTTON = 27f;
+    private static float EDIT_BOX_TEXT_SIZE = 24f;
+    private static float TOOLBAR_TEXT_SIZE = 30f;
+    private static float BUTTON_TEXT_SIZE = 24f;
+    private static float FRAGMENT_UPPER_BUTTON = 24f;
     //COMMON HD
     private static float EDIT_BOX_TEXT_SIZE_HD = EDIT_BOX_TEXT_SIZE * 1.4f;
     private static float TOOLBAR_TEXT_SIZE_HD = TOOLBAR_TEXT_SIZE * 1.4f;
@@ -39,7 +39,7 @@ public class TextSizeUtil {
     //-------------------------------------------------------------------------------------------
     //LOGIN SD
     private static float LOGIN_OR_TEXT_SIZE = 27f;
-    private static float LOGIN_REMEMBER_ME_TEXT_SIZE = 30f;
+    private static float LOGIN_REMEMBER_ME_TEXT_SIZE = 23f;
     //LOGIN HD
     private static float LOGIN_OR_TEXT_SIZE_HD = LOGIN_OR_TEXT_SIZE * 1.4f;
     private static float LOGIN_REMEMBER_ME_TEXT_SIZE_HD = LOGIN_REMEMBER_ME_TEXT_SIZE * 1.4f;
@@ -48,7 +48,19 @@ public class TextSizeUtil {
     private static float LOGIN_REMEMBER_ME_TEXT_SIZE_FULL_HD = LOGIN_REMEMBER_ME_TEXT_SIZE * 2f;
     //-------------------------------------------------------------------------------------------
     //CREATE NEW USER SD
-    private static float CREATE_ADDPHOTO_TEXT_SIZE = 21f;
+    private static float FORGOT_CHANGE_PASSWORD_TEXT_SIZE = 23f;
+    private static float FORGOT_UPPER_INFO_TEXT_SIZE = 19f;
+    //CREATE NEW USERHD
+    private static float FORGOT_CHANGE_PASSWORD_TEXT_SIZE_HD = FORGOT_CHANGE_PASSWORD_TEXT_SIZE * 1.4f;
+    private static float FORGOT_UPPER_INFO_TEXT_SIZE_HD = FORGOT_UPPER_INFO_TEXT_SIZE * 1.4f;
+    //CREATE NEW USER FULL HD
+    private static float FORGOT_CHANGE_PASSWORD_TEXT_SIZE_FULL_HD = FORGOT_CHANGE_PASSWORD_TEXT_SIZE * 2f;
+    private static float FORGOT_UPPER_INFO_TEXT_SIZE_FULL_HD = FORGOT_UPPER_INFO_TEXT_SIZE * 2f;
+
+    //-------------------------------------------------------------------------------------------
+
+    //CREATE NEW USER SD
+    private static float CREATE_ADDPHOTO_TEXT_SIZE = 20f;
     private static float CREATE_MIDDLE_INFO_TEXT_SIZE = 19f;
     //CREATE NEW USERHD
     private static float CREATE_ADDPHOTO_TEXT_SIZE_HD = CREATE_ADDPHOTO_TEXT_SIZE * 1.4f;
@@ -57,12 +69,11 @@ public class TextSizeUtil {
     private static float CREATE_ADDPHOTO_TEXT_SIZE_FULL_HD = CREATE_ADDPHOTO_TEXT_SIZE * 2f;
     private static float CREATE_MIDDLE_INFO_TEXT_SIZE_FULL_HD = CREATE_MIDDLE_INFO_TEXT_SIZE * 2f;
 
-    //-------------------------------------------------------------------------------------------
     // -------------------------------------------------------------------------------------------
     //TIMELINE FRAGMENT SD
     private static float TIMELINE_USERNAME_TEXT_SIZE = 19f;
     private static float TIMELINE_MINS_TEXT_SIZE = 17f;
-    private static float TIMELINE_MINI_BUTTON_TEXT_SIZE = 19f;
+    private static float TIMELINE_MINI_BUTTON_TEXT_SIZE = 21f;
     //TIMELINE FRAGMENT HD
     private static float TIMELINE_USERNAME_TEXT_SIZE_HD = TIMELINE_MINS_TEXT_SIZE * 1.4f;
     private static float TIMELINE_MINS_TEXT_SIZE_HD = LOGIN_OR_TEXT_SIZE * 1.4f;
@@ -184,7 +195,7 @@ public class TextSizeUtil {
     }
     //-------------------------------------------------------------------------------------------
     //CREATE NEW USER COMPONENTS METHODS
-    public static float getCreateAddphotoTextSize() {
+    public static float getCreateAddPhotoTextSize() {
         if (DENSITY > 2.0) {
             return (CREATE_ADDPHOTO_TEXT_SIZE_FULL_HD / DENSITY);
         } else if (DENSITY > 1.0) {
@@ -205,6 +216,28 @@ public class TextSizeUtil {
     }
     //-------------------------------------------------------------------------------------------
 
+    //CREATE NEW USER COMPONENTS METHODS
+    public static float getForgotChangePasswordTextSize() {
+        if (DENSITY > 2.0) {
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE_FULL_HD / DENSITY);
+        } else if (DENSITY > 1.0) {
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE_HD / DENSITY);
+        }
+
+        return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE / DENSITY);
+    }
+
+    public static float getForgotUpperInfoTextSize() {
+        if (DENSITY > 2.0) {
+            return (FORGOT_UPPER_INFO_TEXT_SIZE_FULL_HD / DENSITY);
+        } else if (DENSITY > 1.0) {
+            return (FORGOT_UPPER_INFO_TEXT_SIZE_HD / DENSITY);
+        }
+
+        return FORGOT_UPPER_INFO_TEXT_SIZE;
+    }
+
+    //-------------------------------------------------------------------------------------------
     //  TIMELINE FRAGMENT METHODS
 
     public static float getTimelineUsernameTextSize(){

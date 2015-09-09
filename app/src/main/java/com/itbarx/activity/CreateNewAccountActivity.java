@@ -1,14 +1,26 @@
 package com.itbarx.activity;
 
 import com.itbarx.R;
+import com.itbarx.application.ItbarxGlobal;
+import com.itbarx.common.ResponseServiceModel;
+import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.custom.component.ButtonBold;
 import com.itbarx.custom.component.EditTextRegular;
 import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewRegular;
+import com.itbarx.listener.AccountProcessesServiceListener;
+import com.itbarx.listener.OneShotOnClickListener;
+import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
+import com.itbarx.model.account.AccountSignUpModel;
+import com.itbarx.model.account.EditProfileModel;
+import com.itbarx.model.account.GetEditProfileModel;
+import com.itbarx.model.account.LoginModel;
+import com.itbarx.sl.AccountProcessesServiceSL;
 import com.itbarx.utils.TextSizeUtil;
 
 import android.content.Context;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.ImageView;
 
 public class CreateNewAccountActivity extends BaseActivity {
@@ -18,7 +30,7 @@ public class CreateNewAccountActivity extends BaseActivity {
     // ************************//
     private TextViewRegular txtToolbar, txtAccept, txtUserAgrrement, txtRememberMe;
     private EditTextRegular edtUserName, edtEmail, edtPassword, edtRePassword;
-    private ButtonBold btnOk, btnTwitter, btnFacebook;
+    private ButtonBold btnDone, btnTwitter, btnFacebook;
     private TextViewBold txtViewOr, txtAddPhoto;
     private ImageView rememberMeIcon;
 
@@ -41,7 +53,7 @@ public class CreateNewAccountActivity extends BaseActivity {
         edtEmail = (EditTextRegular) findViewById(R.id.create_new_account_activity_screen_eMail_editText);
         edtPassword = (EditTextRegular) findViewById(R.id.create_new_account_activity_screen_password_editText);
         edtRePassword = (EditTextRegular) findViewById(R.id.create_new_account_activity_screen_rePassword_editText);
-        btnOk = (ButtonBold) findViewById(R.id.create_new_account_activity_screen_ok_button);
+        btnDone = (ButtonBold) findViewById(R.id.create_new_account_activity_screen_ok_button);
         btnTwitter = (ButtonBold) findViewById(R.id.create_new_account_activity_screen_twitter_button);
         btnFacebook = (ButtonBold) findViewById(R.id.create_new_account_activity_screen_facebook_button);
         txtViewOr = (TextViewBold) findViewById(R.id.create_new_account_activity_screen_or_textView);
@@ -55,7 +67,7 @@ public class CreateNewAccountActivity extends BaseActivity {
 
     private void setCompText() {
 
-        btnOk.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
+        btnDone.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
         btnFacebook.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
         btnTwitter.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getButtonTextSize());
         txtViewOr.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getLoginOrTextSize());
@@ -64,10 +76,114 @@ public class CreateNewAccountActivity extends BaseActivity {
         edtPassword.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
         edtEmail.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
         edtRePassword.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getEditBoxTextSize());
-        txtAddPhoto.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getCreateAddphotoTextSize());
+        txtAddPhoto.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getCreateAddPhotoTextSize());
         txtAccept.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getCreateMiddleInfoTextSize());
         txtUserAgrrement.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getCreateMiddleInfoTextSize());
         txtRememberMe.setTextSize(TypedValue.COMPLEX_UNIT_SP, TextSizeUtil.getCreateMiddleInfoTextSize());
 
     }
+    // ***********************************************//
+    // ---CREATE NEW ACCOUNT ACTIVITY ACTION METHODS---
+    // ***********************************************//
+
+    // DONE BUTTON EVENTS
+
+    private void signUp() {
+
+
+        btnDone.setOnClickListener(newUserClickListener);
+    }
+
+    // DONE BUTTON LISTENER
+    OneShotOnClickListener newUserClickListener = new OneShotOnClickListener(500) {
+
+        @Override
+        public void onOneShotClick(View v) {
+            String strUserName = "";
+            String strEmail = "";
+            String strPassword = "";
+            String strRePassword = "";
+
+            if (edtUserName.getText().toString() != null) {
+                strUserName = edtUserName.getText().toString();
+            }
+            if (edtEmail.getText().toString() != null) {
+                strEmail = edtEmail.getText().toString();
+            }
+            if (edtPassword.getText().toString() != null) {
+                strPassword = edtPassword.getText().toString();
+            }
+            if (edtRePassword.getText().toString() != null) {
+                strRePassword = edtRePassword.getText().toString();
+            }
+
+            if(strPassword.equals(strRePassword))
+            {
+                setSignUpAccount(new AccountSignUpModel(strUserName, strPassword, strRePassword, strEmail, ""));
+            }
+
+                      // Toast.makeText(getApplicationContext(), strUserName + " " + strPassword, Toast.LENGTH_LONG).show();
+
+        }
+    };
+
+    // ---SIGNUP---
+    protected void setSignUpAccount(AccountSignUpModel signUpModel) {
+        AccountProcessesServiceSL accountServiceSL = new AccountProcessesServiceSL(getContext(), accountProcessesServiceListener, R.string.root_service_url);
+        accountServiceSL.setSignUpAccount(signUpModel);
+        showProgress(getString(R.string.ItbarxConnecting));
+
+    }
+
+    AccountProcessesServiceListener accountProcessesServiceListener = new AccountProcessesServiceListener() {
+        @Override
+        public void logInAccount(AccountGetUserByLoginInfoModel loginModelResponse) {
+            dismissProgress();
+        }
+
+        @Override
+        public void signUpAccount(AccountGetUserByLoginInfoModel loginModelResponse) {
+            dismissProgress();
+            ItbarxGlobal global = ItbarxGlobal.setInstance(CreateNewAccountActivity.this);
+            global.setAccountModel(loginModelResponse);
+            launchSubActivity(TabContainer.class);
+
+        }
+
+        @Override
+        public void forgotAccount(String forgotResponse) {
+            dismissProgress();
+        }
+
+        @Override
+        public void changePassByCode(AccountGetUserByLoginInfoModel loginModelResponse) {
+            dismissProgress();
+        }
+
+        @Override
+        public void getEditProfileAccount(GetEditProfileModel getEditProfileModel) {
+            dismissProgress();
+        }
+
+        @Override
+        public void editProfileAccount(EditProfileModel editProfileModel) {
+            dismissProgress();
+        }
+
+        @Override
+        public void deleteProfileAccount(Boolean isDeleted) {
+            dismissProgress();
+        }
+
+        @Override
+        public void onComplete(ResponseServiceModel onComplete) {
+            dismissProgress();
+        }
+
+        @Override
+        public void onError(ServiceErrorModel onError) {
+            dismissProgress();
+        }
+    };
+
 }
