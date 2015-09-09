@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/main_bg"
+              android:orientation="vertical"
+              android:weightSum="600">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="50"
+        android:background="@color/toolbar_bg"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            />
+
+
+        <com.itbarx.custom.component.TextViewRegular
+            android:id="@+id/bark_activity_screen_toolbar_textView"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:text="@string/createnewaccount_activity_screen_toolbar_text"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="350"
+
+        >
+        <ImageView
+            android:id="@+id/bark_activity_screen_name_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+           android:scaleType="centerCrop"
+            android:src="@drawable/thumbnail"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/row_fragment_timeline_screen_video_thumbnail_play_ImageView"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_icon"
+            android:padding="50dp"
+            android:scaleType="centerInside"
+            android:clickable="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="100"
+        android:background="#F89938"
+
+        >
+        <com.itbarx.custom.component.TextViewRegular
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="49"
+        android:background="#F89938"
+        >
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="#F48009"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="50"
+        android:background="@drawable/border_bark_bottom_layout"
+
+
+        >
+
+
+    </LinearLayout>
+
+
+    </LinearLayout>

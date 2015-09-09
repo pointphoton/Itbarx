@@ -56,6 +56,9 @@
     <string name="forgotpassword_activity_screen_newrepassword_hint_text">yeni şifre tekrar</string>
     <string name="forgotpassword_activity_screen_change_button_text">değiştir</string>
 
+    <!-- bark activity screen -->
+    <string name="bark_activity_screen_toolbar_text">kullanıcı adı</string>
+
     <!-- user agreement activity screen -->
     <string name="useragreement_activity_screen_toolbar_text">kullanıcı anlaşması</string>
     <string name="useragreement_activity_screen_accept_button_text">kullanıcı anlaşmasını kabul et</string>
