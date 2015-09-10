@@ -1,6 +1,7 @@
 package com.itbarx.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -13,6 +14,10 @@ import android.widget.RelativeLayout;
 import android.widget.VideoView;
 
 import com.itbarx.R;
+import com.itbarx.activity.BarkActivity;
+import com.itbarx.activity.BarkStarter;
+import com.itbarx.activity.F_TimelineFragment;
+import com.itbarx.activity.TabContainer;
 import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.custom.component.TextViewBold;
 import com.itbarx.custom.component.TextViewListItemBold;
@@ -30,6 +35,7 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
 
     Context context;
     List<PostTimelineListForUserModel> list;
+    BarkStarter barkStarter;
 
 
     public TimelineFragmentListAdapter(Context context, List<PostTimelineListForUserModel> postTimelineListForUserModels){
@@ -125,13 +131,15 @@ public class TimelineFragmentListAdapter extends BaseAdapter {
     OneShotOnClickListener playClickListener = new OneShotOnClickListener(500){
         @Override
         public void onOneShotClick(View v) {
-
+            barkStarter.start(true);
+        }
+/*
             PostTimelineListForUserModel model = null;
             if (v.getTag()!=null) {
                 ImageView img = (ImageView)v;
                 model=(PostTimelineListForUserModel)img.getTag();
-                //activity çağır
+                barkStarter.start(true);
             }
-        }
+        }*/
     };
 }

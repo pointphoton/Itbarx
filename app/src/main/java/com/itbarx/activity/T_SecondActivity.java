@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -11,7 +12,7 @@ import com.itbarx.R;
 import com.itbarx.enums.Fragments;
 
 
-public class T_SecondActivity extends BaseActivity implements Communicator {
+public class T_SecondActivity extends BaseActivity implements Communicator ,BarkStarter {
     @Override
     protected int getLayoutResourceId() {
         return R.layout.t_second_activity;
@@ -59,5 +60,10 @@ public class T_SecondActivity extends BaseActivity implements Communicator {
             act.setVisibility(View.VISIBLE);
         }
 
+    }
+
+    @Override
+    public void start(boolean isStarting) {
+        if(isStarting==true)launchSubActivity(BarkActivity.class);
     }
 }

@@ -142,7 +142,7 @@
                         >
 
                         <ImageView
-                            android:id="@+id/activity_createnewaccount_screen_name_icon"
+                            android:id="@+id/activity_createnewaccount_screen_name_imageView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
@@ -200,7 +200,7 @@
                         android:background="@color/icons_bg">
 
                         <ImageView
-                            android:id="@+id/activity_createnewaccount_screen_email_icon"
+                            android:id="@+id/activity_createnewaccount_screen_email_imageView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
@@ -258,7 +258,7 @@
                         android:background="@color/icons_bg">
 
                         <ImageView
-                            android:id="@+id/activity_createnewaccount_screen_password_icon"
+                            android:id="@+id/activity_createnewaccount_screen_password_imageView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"
@@ -317,7 +317,7 @@
                         android:background="@color/icons_bg">
 
                         <ImageView
-                            android:id="@+id/activity_createnewaccount_screen_repassword_icon"
+                            android:id="@+id/activity_createnewaccount_screen_repassword_imageView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerHorizontal="true"

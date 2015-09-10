@@ -154,6 +154,7 @@
     <string name="activityrequest_fragment_screen_activity_text">etkinlik</string>
     <string name="activityrequest_fragment_screen_request_text">istek</string>
     <string name="app_name">Itbarx</string>
+    <string name="bark_activity_screen_toolbar_text">kullanıcı adı</string>
     <string name="createnewaccount_activity_screen_addphoto_text">add\nphoto\nhere</string>
     <string name="createnewaccount_activity_screen_done_button_text">tamam!</string>
     <string name="createnewaccount_activity_screen_email_text">e-posta</string>

@@ -32,7 +32,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class F_TimelineFragment extends Fragment {
+public class F_TimelineFragment extends Fragment{
 
 	Button btnOpenPopular,btnTimeline;
 	Communicator comm;
@@ -148,5 +148,8 @@ public class F_TimelineFragment extends Fragment {
 			t_homeActivity.dismissProgress();
 		}
 	};
+
+
+
 
 }
