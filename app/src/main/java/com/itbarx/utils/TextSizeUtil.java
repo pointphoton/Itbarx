@@ -10,9 +10,9 @@ public class TextSizeUtil {
     private static class Factor {
 
         private static float FACTOR_1_2 = 1.2f;
-        private static float FACTOR_1_5 = 1.4f;
-        private static float FACTOR_2 = 2f;
-        private static float FACTOR_3 = 3f;
+        private static float FACTOR_1_5 = 1f;
+        private static float FACTOR_2 = 1.3f;
+        private static float FACTOR_3 = 2f;
 
         public static float getFactor1_2() {
             return FACTOR_1_2;
@@ -55,7 +55,7 @@ public class TextSizeUtil {
     //-------------------------------------------------------------------------------------------
     //FORGOT PASSWORD
     private static float FORGOT_CHANGE_PASSWORD_TEXT_SIZE = 23f;
-    private static float FORGOT_UPPER_INFO_TEXT_SIZE = 19f;
+    private static float FORGOT_UPPER_INFO_TEXT_SIZE = 18f;
 
     //-------------------------------------------------------------------------------------------
 
@@ -87,10 +87,7 @@ public class TextSizeUtil {
     //-------------------------------------------------------------------------------------------
     //RECORD FRAGMENT SD
     private static float RECORD_START_TEXT_SIZE = 23f;
-    //RECORD FRAGMENT HD
-    private static float RECORD_START_TEXT_SIZE_HD = RECORD_START_TEXT_SIZE * 1.4f;
-    //RECORD FRAGMENT FULL HD
-    private static float RECORD_START_TEXT_SIZE_FULL_HD = RECORD_START_TEXT_SIZE * 2f;
+
     //-------------------------------------------------------------------------------------------
 
     //COMMON COMPONENTS METHODS
@@ -150,13 +147,31 @@ public class TextSizeUtil {
     //-------------------------------------------------------------------------------------------
     //LIST VIEW ITEM TEXTVIEW METHODS
     public static float getListItemRegTextSize() {
+        if (DENSITY >= 3.0)
+            return (LIST_VIEW_REG_ITEM_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (LIST_VIEW_REG_ITEM_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (LIST_VIEW_REG_ITEM_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (LIST_VIEW_REG_ITEM_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
+            return LIST_VIEW_REG_ITEM_TEXT_SIZE;
 
-        return LIST_VIEW_REG_ITEM_TEXT_SIZE;
     }
 
     public static float getListItemBoldTextSize() {
+        if (DENSITY >= 3.0)
+            return (LIST_VIEW_BOLD_ITEM_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (LIST_VIEW_BOLD_ITEM_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (LIST_VIEW_BOLD_ITEM_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (LIST_VIEW_BOLD_ITEM_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
+            return LIST_VIEW_BOLD_ITEM_TEXT_SIZE;
 
-        return LIST_VIEW_BOLD_ITEM_TEXT_SIZE;
 
     }
     //-------------------------------------------------------------------------------------------
@@ -176,33 +191,72 @@ public class TextSizeUtil {
     }
 
     public static float getLoginRememberMeTextSize() {
-
-
-        return LOGIN_REMEMBER_ME_TEXT_SIZE;
+        if (DENSITY >= 3.0)
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (LOGIN_REMEMBER_ME_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
+            return LOGIN_REMEMBER_ME_TEXT_SIZE;
     }
 
     //-------------------------------------------------------------------------------------------
     //CREATE NEW USER COMPONENTS METHODS
     public static float getCreateAddPhotoTextSize() {
-
-        return (CREATE_ADDPHOTO_TEXT_SIZE / DENSITY);
+        if (DENSITY >= 3.0)
+            return (CREATE_ADDPHOTO_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (CREATE_ADDPHOTO_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (CREATE_ADDPHOTO_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (CREATE_ADDPHOTO_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
+            return CREATE_ADDPHOTO_TEXT_SIZE;
     }
 
     public static float getCreateMiddleInfoTextSize() {
 
-
+        if (DENSITY >= 3.0)
+            return (CREATE_MIDDLE_INFO_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (CREATE_MIDDLE_INFO_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (CREATE_MIDDLE_INFO_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (CREATE_MIDDLE_INFO_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return CREATE_MIDDLE_INFO_TEXT_SIZE;
     }
     //-------------------------------------------------------------------------------------------
 
     //FORGOT PASSWORD COMPONENTS METHODS
     public static float getForgotChangePasswordTextSize() {
-
-        return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE / DENSITY);
+        if (DENSITY >= 3.0)
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (FORGOT_CHANGE_PASSWORD_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
+        return FORGOT_CHANGE_PASSWORD_TEXT_SIZE;
     }
 
     public static float getForgotUpperInfoTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (FORGOT_UPPER_INFO_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (FORGOT_UPPER_INFO_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (FORGOT_UPPER_INFO_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (FORGOT_UPPER_INFO_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return FORGOT_UPPER_INFO_TEXT_SIZE;
     }
 
@@ -210,17 +264,41 @@ public class TextSizeUtil {
 
     //BARK ACTIVITY COMPONENTS METHODS
     public static float getBarkSubtitleTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (BARK_SUBTITLE_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (BARK_SUBTITLE_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (BARK_SUBTITLE_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (BARK_SUBTITLE_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return BARK_SUBTITLE_TEXT_SIZE;
     }
 
     public static float getBarkCountTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (BARK_COUNT_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (BARK_COUNT_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (BARK_COUNT_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (BARK_COUNT_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return BARK_COUNT_TEXT_SIZE;
     }
 
     public static float getBarkMiniBtnTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (BARK_MINI_BTN_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (BARK_MINI_BTN_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (BARK_MINI_BTN_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (BARK_MINI_BTN_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return BARK_MINI_BTN_TEXT_SIZE;
     }
 
@@ -229,18 +307,42 @@ public class TextSizeUtil {
     //  TIMELINE FRAGMENT METHODS
 
     public static float getTimelineUsernameTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (TIMELINE_USERNAME_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (TIMELINE_USERNAME_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (TIMELINE_USERNAME_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (TIMELINE_USERNAME_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return TIMELINE_USERNAME_TEXT_SIZE;
     }
 
     public static float getTimelineMinsTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (TIMELINE_MINS_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (TIMELINE_MINS_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (TIMELINE_MINS_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (TIMELINE_MINS_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return TIMELINE_MINS_TEXT_SIZE;
 
     }
 
     public static float getTimelineMiniButtonTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (TIMELINE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (TIMELINE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (TIMELINE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (TIMELINE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return TIMELINE_MINI_BUTTON_TEXT_SIZE;
 
 
@@ -249,36 +351,84 @@ public class TextSizeUtil {
     //-------------------------------------------------------------------------------------------
     //  RECORD FRAGMENT COMPONENTS METHODS
     public static float getRecordStartTextSize() {
+        if (DENSITY >= 3.0)
+            return (RECORD_START_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (RECORD_START_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (RECORD_START_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (RECORD_START_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
 
-
-        return (RECORD_START_TEXT_SIZE / DENSITY);
+        return RECORD_START_TEXT_SIZE;
     }
 
     //-------------------------------------------------------------------------------------------
     //PROFILE FRAGMENT COMPONENTS METHODS
     public static float getProfileUsernameTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (PROFILE_USERNAME_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (PROFILE_USERNAME_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (PROFILE_USERNAME_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (PROFILE_USERNAME_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
 
         return PROFILE_USERNAME_TEXT_SIZE;
     }
 
     public static float getProfileUserBioTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (PROFILE_USER_BIO_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (PROFILE_USER_BIO_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (PROFILE_USER_BIO_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (PROFILE_USER_BIO_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return PROFILE_USER_BIO_TEXT_SIZE;
     }
 
     public static float getProfileUserPlaceTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (PROFILE_USER_PLACE_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (PROFILE_USER_PLACE_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (PROFILE_USER_PLACE_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (PROFILE_USER_PLACE_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return PROFILE_USER_PLACE_TEXT_SIZE;
     }
 
     public static float getProfileMiniButtonCountTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return PROFILE_MINI_BUTTON_COUNT_TEXT_SIZE;
     }
 
     public static float getProfileMiniButtonTextSize() {
-
+        if (DENSITY >= 3.0)
+            return (PROFILE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor3()) / DENSITY;
+        else if (DENSITY >= 2.0)
+            return (PROFILE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor2()) / DENSITY;
+        else if (DENSITY >= 1.5)
+            return (PROFILE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor1_5()) / DENSITY;
+        else if (DENSITY >= 1.2)
+            return (PROFILE_MINI_BUTTON_TEXT_SIZE * Factor.getFactor1_2()) / DENSITY;
+        else
         return PROFILE_MINI_BUTTON_TEXT_SIZE;
     }
 

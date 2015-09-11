@@ -9,6 +9,7 @@
     <item name="text_or" type="color">#FF666666</item>
     <item name="fragment_orange_button" type="color">#FFF89938</item>
     <item name="hints_editText" type="color">#FFDEDEDE</item>
+    <item name="texts_editText" type="color">#FFB7B7B7</item>
     <item name="icons_bg" type="color">#FFF6F6F6</item>
 
     <!-- login activity -->
@@ -21,10 +22,11 @@
     <item name="login_activity_icons_bg" type="color">#FFF6F6F6</item>
 
     <!-- create new user activity activity -->
-    <item name="imageview_addphoto_bg_createnewuser_activity" type="color">#FFF6F6F6</item>
-    <item name="textview_addphoto_createnewuser_activity" type="color">#FFDEDEDE</item>
-    <item name="textview_userinputs_hints_createnewuser_activity" type="color">#FFDEDEDE</item>
-    <item name="button_done_bg_createnewuser_activity" type="color">#FFFF9933</item>
+    <item name="create_new_user_addPhoto_icon_imageView" type="color">#FFF6F6F6</item>
+    <item name="create_new_user_addPhoto_text" type="color">#FFB7B7B7</item>
+    <item name="create_new_user_userAgreemnt_text" type="color">#FFB7B7B7</item>
+    <item name="create_new_user_button_done_bg" type="color">#FFFF9933</item>
+    <item name="create_new_user_iAgreeTo_text" type="color">#FFFF9933</item>
 
     <!-- edit profile activity activity -->
     <item name="editprofile_activity_imageview_addphoto_bg" type="color">#FFF6F6F6</item>

@@ -235,7 +235,7 @@ public class BaseServicePostClientSL<T> extends AsyncTask<String, Void, String> 
 	if (serviceStatus) {
 		ServiceErrorHelper helper = new ServiceErrorHelper();
 		ServiceErrorModel serviceErrorModel = helper.getServiceErrorModel(responseEvent.getResponseData());
-		// TODO:Diyet uzmani hatası
+
 		if (serviceErrorModel != null) {
 		for (ServiceErrorClientListener errorlistener : errorlisteners) {
 			errorlistener.onError(serviceErrorModel);

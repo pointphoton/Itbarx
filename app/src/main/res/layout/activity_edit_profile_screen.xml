@@ -117,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                        
-                        android:background="@color/imageview_addphoto_bg_createnewuser_activity"
+                        android:background="@color/create_new_user_addPhoto_icon_imageView"
                         android:clickable="true" />
                 </RelativeLayout>
 

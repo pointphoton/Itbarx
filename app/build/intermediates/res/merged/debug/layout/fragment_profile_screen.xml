@@ -155,13 +155,13 @@
                             android:textSize="@dimen/small_text_size"/>
 
                         <com.itbarx.custom.component.TextViewBold
-                            android:id="@+id/profile_fragment_screen_atmail_text"
+                            android:id="@+id/profile_fragment_screen_itBarkUserName_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:lines="1"
                             android:text="@string/profile_fragment_screen_userinfo_atmail_text"
-                            android:textColor="@color/button_done_bg_createnewuser_activity"
+                            android:textColor="@color/create_new_user_button_done_bg"
 
                             android:textSize="@dimen/createnewuser_secreen_useragreement_text_size"/>
 
@@ -206,7 +206,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="106"
                                 android:textColor="#666666"
-                                android:textSize="14sp"
+
                                 />
 
                         </RelativeLayout>
@@ -266,7 +266,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="33"
                                 android:textColor="#666666"
-                                android:textSize="14sp"
+
                                 />
 
                         </RelativeLayout>
@@ -326,7 +326,7 @@
                                 android:layout_centerVertical="true"
                                 android:text="85"
                                 android:textColor="#666666"
-                                android:textSize="14sp"
+
                                 />
 
                         </RelativeLayout>

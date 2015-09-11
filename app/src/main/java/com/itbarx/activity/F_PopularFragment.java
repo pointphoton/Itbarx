@@ -12,6 +12,7 @@ import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.enums.Fragments;
 import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.listener.PostProcessesServiceListener;
+import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostGetPostDetailModel;
 import com.itbarx.model.post.PostGetWallInfoModel;
 import com.itbarx.model.post.PostNewPostListModel;
@@ -40,13 +41,13 @@ import java.util.List;
 
 public class F_PopularFragment extends Fragment {
 
-    ButtonRegular btnOpenTimeline,btnPopular;
+ private   ButtonRegular btnOpenTimeline,btnPopular;
     Communicator comm;
     T_HomeActivity t_homeActivity;
-    List<PostPopularPostListModel> postPopularPostListModels;
+  private  List<PostPopularPostListModel> postPopularPostListModels;
     //VideoView video;
-    ListView reqVidListView;
-    TextViewRegular txtPopularToolbar;
+  private  ListView reqVidListView;
+  private  TextViewRegular txtPopularToolbar;
 
     F_PopularFragment() {
     }
@@ -97,8 +98,14 @@ public class F_PopularFragment extends Fragment {
     }
 
     private PostPopularModel sendModel() {
-        PostPopularModel model = new PostPopularModel("10032", "1", "10");
+        PostPopularModel model=new PostPopularModel();
         //	PostPopularModel model = new  PostPopularModel("10027","1","10");
+        AccountGetUserByLoginInfoModel loginInfoModel= ItbarxGlobal.getInstance().getAccountModel();
+        if(loginInfoModel!=null) {
+          model.setUserID(loginInfoModel.getUserID());
+           model.setPage("1");
+            model.setRecPerPage("10");
+        }
         return model;
     }
 

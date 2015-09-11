@@ -130,7 +130,7 @@
                             android:hint="@string/login_activity_screen_username_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:textColorHint="@color/hints_editText"
                             android:text="user5"
                            >
@@ -187,7 +187,7 @@
                             android:hint="@string/login_activity_screen_password_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:text="test"
                             android:textColorHint="@color/hints_editText"
                           >

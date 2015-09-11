@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
+
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:background="@drawable/main_bg"
@@ -90,7 +90,7 @@
                             android:id="@+id/activity_createnewaccount_screen_addphoto_image"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@color/imageview_addphoto_bg_createnewuser_activity"
+                            android:background="@color/create_new_user_addPhoto_icon_imageView"
                             android:clickable="@bool/choose_true"/>
 
                         <com.itbarx.custom.component.TextViewBold
@@ -99,6 +99,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="@bool/choose_true"
                             android:maxLines="3"
+                            android:textColor="@color/create_new_user_addPhoto_text"
                             android:text="@string/createnewaccount_activity_screen_addphoto_text"/>
                     </RelativeLayout>
 
@@ -168,7 +169,7 @@
                             android:hint="@string/createnewaccount_activity_screen_name_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:textColorHint="@color/hints_editText"
                             >
 
@@ -226,7 +227,7 @@
                             android:hint="@string/createnewaccount_activity_screen_email_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:textColorHint="@color/hints_editText"
                             >
 
@@ -285,7 +286,7 @@
                             android:hint="@string/createnewaccount_activity_screen_password_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:textColorHint="@color/hints_editText"
                             >
 
@@ -343,7 +344,7 @@
                             android:hint="@string/createnewaccount_activity_screen_repassword_text"
                             android:inputType="textPersonName"
                             android:paddingLeft="10dp"
-                            android:textColor="@color/hints_editText"
+                            android:textColor="@color/texts_editText"
                             android:textColorHint="@color/hints_editText"
                             >
 
@@ -390,6 +391,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0"
+                        android:textColor="@color/create_new_user_userAgreemnt_text"
                         android:text="@string/createnewaccount_activity_screen_iagreetothe_text"
                         />
 
@@ -399,6 +401,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:clickable="@bool/choose_true"
+                        android:textColor="@color/create_new_user_userAgreemnt_text"
                         android:text="@string/createnewaccount_activity_screen_user_agreement_text"
                         />
                 </LinearLayout>
@@ -435,6 +438,7 @@
                     android:layout_gravity="left|center_vertical"
                     android:layout_weight="8.5"
                     android:text="@string/createnewaccount_activity_screen_remembermeafterregister_text"
+                    android:textColor="@color/create_new_user_iAgreeTo_text"
                     />
 
             </LinearLayout>
@@ -496,7 +500,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_centerInParent="true"
                         android:layout_centerVertical="true"
-                        android:ems="10"
                         android:gravity="center"
                         android:text="@string/login_activity_screen_or_text"
                         android:textColor="@color/login_activity_text_or"

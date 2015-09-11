@@ -2,6 +2,7 @@ package com.itbarx.activity;
 
 import com.itbarx.R;
 import com.itbarx.adapter.RequestFragmentListAdapter;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.custom.component.ButtonRegular;
@@ -91,7 +92,10 @@ public class F_RequestFragment extends Fragment {
     //send data to the web service
     private FollowerListModel sendModel() {
 
-        FollowerListModel sendModel = new FollowerListModel("10032", "1", "10");
+        FollowerListModel sendModel = new FollowerListModel();
+        sendModel.setPage("1");
+        sendModel.setRecPerPage("10");
+        sendModel.setFollowingId(ItbarxGlobal.getInstance().getAccountModel().getUserID());
         return sendModel;
 
     }

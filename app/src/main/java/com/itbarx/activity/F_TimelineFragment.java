@@ -2,6 +2,7 @@ package com.itbarx.activity;
 
 import com.itbarx.R;
 import com.itbarx.adapter.TimelineFragmentListAdapter;
+import com.itbarx.application.ItbarxGlobal;
 import com.itbarx.common.ResponseServiceModel;
 import com.itbarx.common.ServiceErrorModel;
 import com.itbarx.custom.component.ButtonRegular;
@@ -9,6 +10,7 @@ import com.itbarx.custom.component.TextViewRegular;
 import com.itbarx.enums.Fragments;
 import com.itbarx.listener.OneShotOnClickListener;
 import com.itbarx.listener.PostProcessesServiceListener;
+import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
 import com.itbarx.model.post.PostGetPostDetailModel;
 import com.itbarx.model.post.PostGetWallInfoModel;
 import com.itbarx.model.post.PostNewPostListModel;
@@ -77,8 +79,14 @@ public class F_TimelineFragment extends Fragment{
 	}
 
 	private PostTimelineModel sendModel() {
-		PostTimelineModel model = new PostTimelineModel("10032", "1", "10");
+		PostTimelineModel model =new PostTimelineModel();
 		//	PostPopularModel model = new  PostPopularModel("10027","1","10");
+		AccountGetUserByLoginInfoModel loginInfoModel= ItbarxGlobal.getInstance().getAccountModel();
+		if(loginInfoModel!=null) {
+			model.setUserID(loginInfoModel.getUserID());
+			model.setPage("1");
+			model.setRecPerPage("10");
+		}
 		return model;
 	}
 

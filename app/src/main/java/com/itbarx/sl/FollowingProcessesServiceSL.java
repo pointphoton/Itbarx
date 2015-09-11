@@ -487,7 +487,7 @@ public class FollowingProcessesServiceSL extends BasePostServiceSL<String> {
 
 	@Override
 	public void onGETReceive(ResponseServiceModel<String> responseEvent) {
-	// TODO Auto-generated method stub
+		String result = responseEvent.getResponseData();
 
 	}
 

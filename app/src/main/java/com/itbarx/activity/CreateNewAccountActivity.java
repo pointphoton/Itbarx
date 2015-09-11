@@ -63,6 +63,7 @@ public class CreateNewAccountActivity extends BaseActivity {
         txtRememberMe = (TextViewRegular) findViewById(R.id.create_new_account_activity_screen_rememberMe_textView);
         rememberMeIcon = (ImageView) findViewById(R.id.create_new_account_activity_screen_rememberMe_imageView);
         setCompText();
+        signUp();
     }
 
     private void setCompText() {

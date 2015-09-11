@@ -3,10 +3,12 @@ package com.itbarx.utils;
 import java.util.List;
 
 import org.apache.http.NameValuePair;
+import org.json.JSONObject;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
 import com.itbarx.common.ServiceResponseModel;
 import com.itbarx.enums.GlobalDataForWS;
 
@@ -49,11 +51,11 @@ public class ItbarxUtils {
 	try {
 		JsonElement jelement = new JsonParser().parse(jsonResult);
 		JsonObject jobject = jelement.getAsJsonObject();
-		jobject = jobject.getAsJsonObject(GlobalDataForWS.DATA.toString());
+		JsonElement element = jobject.get(GlobalDataForWS.DATA.toString());
 
-		if (jobject != null) {
+		if (element != null) {
 
-		model.setModel(jobject.toString());
+		model.setModel(element.toString());
 
 		}
 
