@@ -52,6 +52,7 @@ public class F_ProfileOthersFragment  extends Fragment {
 
     public F_ProfileOthersFragment() {
 
+
     }
 
     public F_ProfileOthersFragment(T_ProfileActivity t_profileActivity) {
