@@ -65,8 +65,8 @@ public class AccountModelParserJSON {
 	return forgot;
 	}
 
-	public Boolean getDeleteProfileModelFromJSON(String json) {
-	Boolean isDeleted = null;
+	public String getDeleteProfileModelFromJSON(String json) {
+	String isDeleted = null;
 	try {
 		Type type = new TypeToken<Boolean>() {
 		}.getType();

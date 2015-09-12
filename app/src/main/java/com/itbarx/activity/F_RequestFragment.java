@@ -95,7 +95,8 @@ public class F_RequestFragment extends Fragment {
         FollowerListModel sendModel = new FollowerListModel();
         sendModel.setPage("1");
         sendModel.setRecPerPage("10");
-        sendModel.setFollowingId(ItbarxGlobal.getInstance().getAccountModel().getUserID());
+     //   sendModel.setFollowingId(ItbarxGlobal.getInstance().getAccountModel().getUserID());
+        sendModel.setFollowingId("10032");
         return sendModel;
 
     }

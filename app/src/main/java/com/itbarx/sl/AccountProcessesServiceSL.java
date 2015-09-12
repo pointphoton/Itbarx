@@ -292,11 +292,11 @@ public class AccountProcessesServiceSL extends BasePostServiceSL<String> {
 
 	{
 		ServiceResponseModel model = ItbarxUtils.getServiceResponseModelDataKey(result);
-		Boolean isDeletedResponse = null;
+		String isDeletedResponse = null;
 		if (model != null) {
 		AccountModelParserJSON accountModelParserJSON = new AccountModelParserJSON();
 		isDeletedResponse = accountModelParserJSON.getDeleteProfileModelFromJSON(model.getModel());
-		if (isDeletedResponse == null || isDeletedResponse == false) {
+		if (isDeletedResponse == null) {
 			ServiceErrorModel<String> errorModel = new ServiceErrorModel<String>();
 			errorModel.setDescription(context.getString(R.string.BrokenData));
 			accountServiceListener.onError(errorModel);

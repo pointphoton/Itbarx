@@ -19,5 +19,5 @@ public interface AccountProcessesServiceListener<T> extends BaseServiceListener<
 
 	public void editProfileAccount(EditProfileModel editProfileModel);
 
-	public void deleteProfileAccount(Boolean isDeleted);
+	public void deleteProfileAccount(String isDeleted);
 }

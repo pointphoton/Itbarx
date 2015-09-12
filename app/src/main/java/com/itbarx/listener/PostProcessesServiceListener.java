@@ -23,6 +23,6 @@ public interface PostProcessesServiceListener<T> extends BaseServiceListener<T> 
 
 	public void getPostDetail(PostGetPostDetailModel postDetailModel);
 
-	public void isAdded(Boolean isAdded);
+	public void isAdded(String isAdded);
 
 }

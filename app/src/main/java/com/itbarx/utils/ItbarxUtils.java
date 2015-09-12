@@ -66,6 +66,7 @@ public class ItbarxUtils {
 	return model;
 
 	}
+
 	public static ServiceResponseModel getServiceResponseArrayModelDataKey(String jsonResult) {
 
 		ServiceResponseModel model = new ServiceResponseModel();

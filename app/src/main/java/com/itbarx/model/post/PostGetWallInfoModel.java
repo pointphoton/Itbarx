@@ -2,134 +2,124 @@ package com.itbarx.model.post;
 
 public class PostGetWallInfoModel {
 
-	private String userID;
+	private String userId;
 	private String name;
-	private String mentionName;
+	private String mentionname;
 	private String userName;
 	private String description;
 	private String userProfilePhoto;
-	private String locationNAme;
-	private String rebarkCount;
-	private String followingCount;
-	private String followerCount;
-	private String isYUourFollower;
-	private String areYouFollowing;
+	private String locationName;
+	private String RebarkCount;
+	private String FollowingCount;
+	private String FollowerCount;
+	private String IsYourFollower;
+	private String AreYouFollowing;
 
-	public PostGetWallInfoModel() {
-	super();
+	public String getUserId() {
+		return userId;
 	}
 
-	public PostGetWallInfoModel(String userID, String name, String mentionName, String userName, String description, String userProfilePhoto, String locationNAme, String rebarkCount,
-		String followingCount, String followerCount, String isYUourFollower, String areYouFollowing) {
-	super();
-	this.userID = userID;
-	this.name = name;
-	this.mentionName = mentionName;
-	this.userName = userName;
-	this.description = description;
-	this.userProfilePhoto = userProfilePhoto;
-	this.locationNAme = locationNAme;
-	this.rebarkCount = rebarkCount;
-	this.followingCount = followingCount;
-	this.followerCount = followerCount;
-	this.isYUourFollower = isYUourFollower;
-	this.areYouFollowing = areYouFollowing;
-	}
-
-	public String getUserID() {
-	return userID;
-	}
-
-	public void setUserID(String userID) {
-	this.userID = userID;
+	public PostGetWallInfoModel setUserId(String userId) {
+		this.userId = userId;
+		return this;
 	}
 
 	public String getName() {
-	return name;
+		return name;
 	}
 
-	public void setName(String name) {
-	this.name = name;
+	public PostGetWallInfoModel setName(String name) {
+		this.name = name;
+		return this;
 	}
 
-	public String getMentionName() {
-	return mentionName;
+	public String getMentionname() {
+		return mentionname;
 	}
 
-	public void setMentionName(String mentionName) {
-	this.mentionName = mentionName;
+	public PostGetWallInfoModel setMentionname(String mentionname) {
+		this.mentionname = mentionname;
+		return this;
 	}
 
 	public String getUserName() {
-	return userName;
+		return userName;
 	}
 
-	public void setUserName(String userName) {
-	this.userName = userName;
+	public PostGetWallInfoModel setUserName(String userName) {
+		this.userName = userName;
+		return this;
 	}
 
 	public String getDescription() {
-	return description;
+		return description;
 	}
 
-	public void setDescription(String description) {
-	this.description = description;
+	public PostGetWallInfoModel setDescription(String description) {
+		this.description = description;
+		return this;
 	}
 
 	public String getUserProfilePhoto() {
-	return userProfilePhoto;
+		return userProfilePhoto;
 	}
 
-	public void setUserProfilePhoto(String userProfilePhoto) {
-	this.userProfilePhoto = userProfilePhoto;
+	public PostGetWallInfoModel setUserProfilePhoto(String userProfilePhoto) {
+		this.userProfilePhoto = userProfilePhoto;
+		return this;
 	}
 
-	public String getLocationNAme() {
-	return locationNAme;
+	public String getLocationName() {
+		return locationName;
 	}
 
-	public void setLocationNAme(String locationNAme) {
-	this.locationNAme = locationNAme;
+	public PostGetWallInfoModel setLocationName(String locationName) {
+		this.locationName = locationName;
+		return this;
 	}
 
 	public String getRebarkCount() {
-	return rebarkCount;
+		return RebarkCount;
 	}
 
-	public void setRebarkCount(String rebarkCount) {
-	this.rebarkCount = rebarkCount;
+	public PostGetWallInfoModel setRebarkCount(String rebarkCount) {
+		RebarkCount = rebarkCount;
+		return this;
 	}
 
 	public String getFollowingCount() {
-	return followingCount;
+		return FollowingCount;
 	}
 
-	public void setFollowingCount(String followingCount) {
-	this.followingCount = followingCount;
+	public PostGetWallInfoModel setFollowingCount(String followingCount) {
+		FollowingCount = followingCount;
+		return this;
 	}
 
 	public String getFollowerCount() {
-	return followerCount;
+		return FollowerCount;
 	}
 
-	public void setFollowerCount(String followerCount) {
-	this.followerCount = followerCount;
+	public PostGetWallInfoModel setFollowerCount(String followerCount) {
+		FollowerCount = followerCount;
+		return this;
 	}
 
-	public String getIsYUourFollower() {
-	return isYUourFollower;
+	public String getIsYourFollower() {
+		return IsYourFollower;
 	}
 
-	public void setIsYUourFollower(String isYUourFollower) {
-	this.isYUourFollower = isYUourFollower;
+	public PostGetWallInfoModel setIsYourFollower(String isYourFollower) {
+		IsYourFollower = isYourFollower;
+		return this;
 	}
 
 	public String getAreYouFollowing() {
-	return areYouFollowing;
+		return AreYouFollowing;
 	}
 
-	public void setAreYouFollowing(String areYouFollowing) {
-	this.areYouFollowing = areYouFollowing;
+	public PostGetWallInfoModel setAreYouFollowing(String areYouFollowing) {
+		AreYouFollowing = areYouFollowing;
+		return this;
 	}
-
 }

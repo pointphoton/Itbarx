@@ -19,9 +19,9 @@ import java.util.List;
 /**
  * TODO: Add a class header comment!
  */
-public class T_ProfileActivity extends  BaseActivity implements ProfileActivityCommunicator{
+public class T_ProfileActivity extends  BaseActivity {
 
-    String followerCount;
+   // String followerCount;
 
     @Override
     protected int getLayoutResourceId() {
@@ -47,7 +47,7 @@ public class T_ProfileActivity extends  BaseActivity implements ProfileActivityC
 
     @Override
     protected void initViews() {
-        getFollowerCount(sendFollowerModel());
+       // getFollowerCount(sendFollowerModel());
         setFragment(new F_ProfileFragment(T_ProfileActivity.this));
 
     }
@@ -60,7 +60,7 @@ public class T_ProfileActivity extends  BaseActivity implements ProfileActivityC
     }
 
     //TAKE FOLLOWER COUNT
-
+/*
     private FollowingModel sendFollowerModel(){
         return new FollowingModel(ItbarxGlobal.getInstance().getAccountModel().getUserID());
     }
@@ -151,4 +151,5 @@ public class T_ProfileActivity extends  BaseActivity implements ProfileActivityC
     public String sendFollowerCountText() {
         return followerCount;
     }
+*/
 }

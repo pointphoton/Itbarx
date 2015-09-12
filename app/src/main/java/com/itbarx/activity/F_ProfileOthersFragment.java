@@ -1,30 +1,5 @@
 package com.itbarx.activity;
 
-import com.itbarx.R;
-import com.itbarx.adapter.ProfilFragmentListAdapter;
-import com.itbarx.application.ItbarxGlobal;
-import com.itbarx.common.ResponseServiceModel;
-import com.itbarx.common.ServiceErrorModel;
-import com.itbarx.custom.component.ButtonBold;
-import com.itbarx.custom.component.TextViewBold;
-import com.itbarx.custom.component.TextViewRegular;
-import com.itbarx.listener.AccountProcessesServiceListener;
-import com.itbarx.listener.FollowingProcessesServiceListener;
-import com.itbarx.listener.PostProcessesServiceListener;
-import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
-import com.itbarx.model.account.EditProfileModel;
-import com.itbarx.model.account.GetEditProfileIdModel;
-import com.itbarx.model.account.GetEditProfileModel;
-import com.itbarx.model.follow.FollowingModel;
-import com.itbarx.model.post.PostGetPostDetailModel;
-import com.itbarx.model.post.PostGetWallInfoModel;
-import com.itbarx.model.post.PostPopularPostListModel;
-import com.itbarx.model.post.PostWallInfoModel;
-import com.itbarx.sl.AccountProcessesServiceSL;
-import com.itbarx.sl.FollowingProcessesServiceSL;
-import com.itbarx.sl.PostProcessesServiceSL;
-import com.itbarx.utils.TextSizeUtil;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -33,12 +8,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.MediaController;
 import android.widget.VideoView;
+
+import com.itbarx.R;
+import com.itbarx.application.ItbarxGlobal;
+import com.itbarx.common.ResponseServiceModel;
+import com.itbarx.common.ServiceErrorModel;
+import com.itbarx.custom.component.ButtonBold;
+import com.itbarx.custom.component.TextViewBold;
+import com.itbarx.custom.component.TextViewRegular;
+import com.itbarx.listener.PostProcessesServiceListener;
+import com.itbarx.model.account.AccountGetUserByLoginInfoModel;
+import com.itbarx.model.account.GetEditProfileModel;
+import com.itbarx.model.post.PostGetPostDetailModel;
+import com.itbarx.model.post.PostGetWallInfoModel;
+import com.itbarx.model.post.PostPopularPostListModel;
+import com.itbarx.model.post.PostWallInfoModel;
+import com.itbarx.sl.PostProcessesServiceSL;
+import com.itbarx.utils.TextSizeUtil;
 
 import java.util.List;
 
-public class F_ProfileFragment extends Fragment {
+/**
+ * TODO: Add a class header comment!
+ */
+public class F_ProfileOthersFragment  extends Fragment {
 
     private T_ProfileActivity t_profileActivity;
     private AccountGetUserByLoginInfoModel accLoginInfoModel;
@@ -56,11 +50,11 @@ public class F_ProfileFragment extends Fragment {
     ListView userProfilePopularPostsListView;
     private VideoView video;
 
-    public F_ProfileFragment() {
+    public F_ProfileOthersFragment() {
 
     }
 
-    public F_ProfileFragment(T_ProfileActivity t_profileActivity) {
+    public F_ProfileOthersFragment(T_ProfileActivity t_profileActivity) {
         this.t_profileActivity = t_profileActivity;
     }
 

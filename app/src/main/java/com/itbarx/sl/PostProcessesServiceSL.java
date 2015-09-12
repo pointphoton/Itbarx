@@ -255,6 +255,20 @@ public class PostProcessesServiceSL extends BasePostServiceSL<String> {
 		postProcessesServiceListener.getPostDetail(postGetPostDetailModelResponse);
 		}
 	}
+	else if (responseEvent.getMethodName().equalsIgnoreCase(PostProcessLinks.ADD_POST.toString())) {
+		ServiceResponseModel model = ItbarxUtils.getServiceResponseModelDataKey(result);
+		String isAddedModelResponse = null;
+		if (model != null) {
+			isAddedModelResponse = new PostModelParserJSON().getPostAddModelFromJSON(model.getModel());
+		}
+		if (isAddedModelResponse == null) {
+			ServiceErrorModel<String> errorModel = new ServiceErrorModel<String>();
+			errorModel.setDescription(context.getString(R.string.BrokenData));
+			postProcessesServiceListener.onError(errorModel);
+		} else {
+			postProcessesServiceListener.isAdded(isAddedModelResponse);
+		}
+	}
 	}
 
 	@Override

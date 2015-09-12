@@ -4,102 +4,92 @@ public class PostGetPostDetailModel {
 
 	private String userID;
 	private String itBarxUserName;
-	private String postID;
-	private String addedDate;
-	private String postSpeechToText;
-	private String postLikeCount;
-	private String postReplyCount;
-	private String postRebarkCount;
-	private String postURL;
-
-	public PostGetPostDetailModel() {
-	super();
-	}
-
-	public PostGetPostDetailModel(String userID, String itBarxUserName, String postID, String addedDate, String postSpeechToText, String postLikeCount, String postReplyCount, String postRebarkCount,
-		String postURL) {
-	super();
-	this.userID = userID;
-	this.itBarxUserName = itBarxUserName;
-	this.postID = postID;
-	this.addedDate = addedDate;
-	this.postSpeechToText = postSpeechToText;
-	this.postLikeCount = postLikeCount;
-	this.postReplyCount = postReplyCount;
-	this.postRebarkCount = postRebarkCount;
-	this.postURL = postURL;
-	}
+	private String PostID;
+	private String AddedDate;
+	private String PostSpeechToText;
+	private String PostLikeCount;
+	private String PostReplyCount;
+	private String PostRebarkCount;
+	private String PostURL;
 
 	public String getUserID() {
-	return userID;
+		return userID;
 	}
 
-	public void setUserID(String userID) {
-	this.userID = userID;
+	public PostGetPostDetailModel setUserID(String userID) {
+		this.userID = userID;
+		return this;
 	}
 
 	public String getItBarxUserName() {
-	return itBarxUserName;
+		return itBarxUserName;
 	}
 
-	public void setItBarxUserName(String itBarxUserName) {
-	this.itBarxUserName = itBarxUserName;
+	public PostGetPostDetailModel setItBarxUserName(String itBarxUserName) {
+		this.itBarxUserName = itBarxUserName;
+		return this;
 	}
 
 	public String getPostID() {
-	return postID;
+		return PostID;
 	}
 
-	public void setPostID(String postID) {
-	this.postID = postID;
+	public PostGetPostDetailModel setPostID(String postID) {
+		PostID = postID;
+		return this;
 	}
 
 	public String getAddedDate() {
-	return addedDate;
+		return AddedDate;
 	}
 
-	public void setAddedDate(String addedDate) {
-	this.addedDate = addedDate;
+	public PostGetPostDetailModel setAddedDate(String addedDate) {
+		AddedDate = addedDate;
+		return this;
 	}
 
 	public String getPostSpeechToText() {
-	return postSpeechToText;
+		return PostSpeechToText;
 	}
 
-	public void setPostSpeechToText(String postSpeechToText) {
-	this.postSpeechToText = postSpeechToText;
+	public PostGetPostDetailModel setPostSpeechToText(String postSpeechToText) {
+		PostSpeechToText = postSpeechToText;
+		return this;
 	}
 
 	public String getPostLikeCount() {
-	return postLikeCount;
+		return PostLikeCount;
 	}
 
-	public void setPostLikeCount(String postLikeCount) {
-	this.postLikeCount = postLikeCount;
+	public PostGetPostDetailModel setPostLikeCount(String postLikeCount) {
+		PostLikeCount = postLikeCount;
+		return this;
 	}
 
 	public String getPostReplyCount() {
-	return postReplyCount;
+		return PostReplyCount;
 	}
 
-	public void setPostReplyCount(String postReplyCount) {
-	this.postReplyCount = postReplyCount;
+	public PostGetPostDetailModel setPostReplyCount(String postReplyCount) {
+		PostReplyCount = postReplyCount;
+		return this;
 	}
 
 	public String getPostRebarkCount() {
-	return postRebarkCount;
+		return PostRebarkCount;
 	}
 
-	public void setPostRebarkCount(String postRebarkCount) {
-	this.postRebarkCount = postRebarkCount;
+	public PostGetPostDetailModel setPostRebarkCount(String postRebarkCount) {
+		PostRebarkCount = postRebarkCount;
+		return this;
 	}
 
 	public String getPostURL() {
-	return postURL;
+		return PostURL;
 	}
 
-	public void setPostURL(String postURL) {
-	this.postURL = postURL;
+	public PostGetPostDetailModel setPostURL(String postURL) {
+		PostURL = postURL;
+		return this;
 	}
-
 }

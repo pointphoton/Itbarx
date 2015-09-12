@@ -111,5 +111,19 @@ public class PostModelParserJSON {
 
 	return model;
 	}
+	public String getPostAddModelFromJSON(String json) {
 
+		String model = null;
+		try {
+			Type type = new TypeToken<PostGetPostDetailModel>() {
+			}.getType();
+
+			model = new Gson().fromJson(json, type);
+
+		} catch (Exception ex) {
+			Log.d("getPostAddModelFromJSON JSON PARSER", ex.getMessage());
+		}
+
+		return model;
+	}
 }
