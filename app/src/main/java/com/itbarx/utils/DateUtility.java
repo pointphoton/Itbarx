@@ -9,8 +9,6 @@ import java.sql.Time;
 
 
 
-
-
 public class DateUtility {
 
 	public static String ConvertToDateString(Date date)
